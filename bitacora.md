@@ -56,6 +56,11 @@ La Doñita, El Tali
 
 ## Ideas para la guía de proyecto
 
+<!-- - ¿Qué se espera del proyecto? -->
+<!--   - Que los estudiantes aprendan a trabajar en equipo, a organizarse, a planificar, a realizar una colecta de datos de campo, a analizar e interpretar los datos, y a redactar un manuscrito científico. -->
+<!--   - Que los estudiantes aprendan a utilizar herramientas tecnológicas para la colecta y análisis de datos. -->
+<!--   - Que los estudiantes desarrollen habilidades de comunicación científica. -->
+
 - Básicos
 
   - En el campus de la UASD o en el Malecón
@@ -82,7 +87,21 @@ La Doñita, El Tali
   - La variabilidad diaria de ka temperatura, la luminosidad, o incluso
     el ruido, podría influir sobre determinadas especies
 
-- Proyect sombrilla
+- Temas y grupos biológicos
+
+  - Relación/asociación entre especies
+  - Relación/asociación especie-hábitat
+  - Distribución real y potencial de una especie
+  - Composición/agrupamiento en la comunidad
+  - Análisis de la diversidad de una comunidad
+  - Tecnología aplicada a la ecología
+    - Hardware: cámaras trampa, sensores ambientales, rastreadores de
+      fauna, proyectos DIY en general
+    - Aplicaciones, software (ODK, R, Python, IA, etc.)
+  - Estudios comparativos entre localidades, usando el mismo grupo
+    biológico y la misma metodología
+
+- Proyecto sombrilla
 
 ## Productos a generar (uso interno)
 
@@ -99,7 +118,13 @@ La Doñita, El Tali
       …), descripción básica de las herramientas tecnológicas que se
       utilizarán durante el curso, proyectos, prácticas, exámenes.
   - Días 1 a 3. Definición de proyecto.
-  - Unidad 1 a 4. (¡PRÓXIMO ENCUENTRO!)
+  - Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en
+    parte teórica y parte de temas de proyectos con ejemplos aplicados
+    para que puedan ver de qué trata cada tema.
+  - ¿Unidades 5 en adelante?
+  - Guía de proyecto (con los temas, metodología, cronograma, recursos
+    tecnológicos y analógicos disponibles, etc.)
+  - Actualizar programas de asignaturas
 
 - Lista de posibles proyectos/ideas de investigación, proyectos
   aplicados (no olvidarlos), lista dinámica/expandible por estudiantes
@@ -114,8 +139,24 @@ La Doñita, El Tali
 
 ## ¿Qué nos propusimos hoy?
 
-- - Lista de posibles proyectos/ideas de investigación, proyectos
-    aplicados (no olvidarlos), lista dinámica/expandible por estudiantes
+- ~~Lista de posibles proyectos/ideas de investigación, proyectos
+  aplicados (no olvidarlos), lista dinámica/expandible por estudiantes.
+  SÍ~~
+
+- Definición del primer mes de clases. NO.
+
+## ¿Qué logramos hoy?
+
+- Iniciar la guía de proyecto y organizamos los temas.
+
+# 13 de agosto, 2025
+
+## ¿Qué nos propusimos hoy?
+
 - Definición del primer mes de clases
+
+- Actualizar programas de asignaturas
+
+- …
 
 ## ¿Qué logramos hoy?

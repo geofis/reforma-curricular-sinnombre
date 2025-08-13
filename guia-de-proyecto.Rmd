@@ -26,8 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Apps como iNaturalist para registro y georreferenciación, ODK, QGIS
 - Sensores de bajo costo (basados en placas Arduino o Raspberry Pi) para mediciones ambientales
 - Drones para fotogrametría de áreas inaccesibles
-**Tecnología:** Software R para análisis estadístico.  
-**Entregable:** Diagrama de redes tróficas + cálculo de biodiversidad por zona.
+- Software R para análisis estadístico.  
 
 
 ### Evaluación

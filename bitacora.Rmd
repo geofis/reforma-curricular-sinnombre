@@ -104,6 +104,8 @@ knitr::opts_chunk$set(echo = TRUE)
   - Días 1 a 3. Definición de proyecto.
   - Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en parte teórica y parte de temas de proyectos con ejemplos aplicados para que puedan ver de qué trata cada tema.
   - ¿Unidades 5 en adelante?
+  - Guía de proyecto (con los temas, metodología, cronograma, recursos tecnológicos y analógicos disponibles, etc.)
+  - Actualizar programas de asignaturas
   
 - Lista de posibles proyectos/ideas de investigación, proyectos aplicados (no olvidarlos), lista dinámica/expandible por estudiantes
 
@@ -117,9 +119,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## ¿Qué nos propusimos hoy?
 
-- - Lista de posibles proyectos/ideas de investigación, proyectos aplicados (no olvidarlos), lista dinámica/expandible por estudiantes
+- ~~Lista de posibles proyectos/ideas de investigación, proyectos aplicados (no olvidarlos), lista dinámica/expandible por estudiantes. SÍ~~
+
+- Definición del primer mes de clases. NO.
+
+## ¿Qué logramos hoy?
+
+- Iniciar la guía de proyecto y organizamos los temas.
+
+# 13 de agosto, 2025
+
+## ¿Qué nos propusimos hoy?
 
 - Definición del primer mes de clases
+
+- Actualizar programas de asignaturas
+
+- ...
 
 ## ¿Qué logramos hoy?
 
