@@ -7,6 +7,7 @@ output:
     fig_caption: yes
     # reference_docx: "plantillas/apa-student-paper-template-universidad-arizona.docx"
     reference_docx: "plantilla-programas.dotx"
+    number_sections: false
 date: "2025-01-31"
 csl: "apa-es.csl"
 bibliography: bibliografia.bib
@@ -25,9 +26,146 @@ knitr::opts_chunk$set(
   fig.pos = 'H')
 ```
 
+<!-- # Programa de la asignatura: Biogeografía -->
+
+# Básicos
+
+## Recursos de enseñanza
+
+- Conferencia tradicional
+
+- Guía de preguntas y debate
+
+- Memorización
+
+- Estudios de caso
+
+- Línea de tiempo
+
+## Ideas comunes
+
+- Ideas centrales: contenido dinámico, investigación y itinerarios de autoaprendizaje. Herramientas para garantizar el autoaprendizaje en el futuro. Hay que enseñar cómo aprender de forma autodidacta, pero sin perder rigor, más apretar que abarcar, estudiar el libro, memorizar (qué memorizar: lo básico), técnicas que elegir.
+
+## Objetivo
+
+- Objetivo: Resolver problemas científicos y prácticos mediante investigación, autoaprendizaje, técnicas numéricas y uso de tecnologías aplicadas. 
+
+## Salidas aplicadas/sector privado/industria, además de investigación
+
+- Consultoría ambiental
+
+- ONGD
+
+- Ecoturismo y uso público y puesta en valor
+
+- Conservación de la naturaleza
+
+- Agricultura y ganadería (producción, monitoreo, etc.), plagas, agroindustria
+
+## Modalidad
+
+- Todo modular
+
+- Tecnología muy presente (ODK, servidores, IA, programación)
+
+- Prácticas de aula que incluyan ejercicios, en los que se vean en la necesidad de resolver problemas, repasando la base teórica
+
+- El examen no desaparece, aunque con poco valor.
+
+- El proyecto conjunto:
+  - Biodiversidad y distribución 
+  - Con entregas por parejas (para valoración independiente, si se caen personas o en el grupo, se valora a quienes queden, dar opción para no trabajar en grupos de 2, sino individualmente), y roles el proyecto conjunto.
+  - Cada grupo terminaría sus análisis con un documento de manuscrito.
+  - Si dos o más grupos se quieren reunir para manuscrito conjunto, perfecto, pero si falla, se vuelve a la idea de manuscritos por grupos.
+
+## Ideas para la guía de proyecto
+
+<!-- - ¿Qué se espera del proyecto? -->
+
+<!--   - Que los estudiantes aprendan a trabajar en equipo, a organizarse, a planificar, a realizar una colecta de datos de campo, a analizar e interpretar los datos, y a redactar un manuscrito científico. -->
+<!--   - Que los estudiantes aprendan a utilizar herramientas tecnológicas para la colecta y análisis de datos. -->
+<!--   - Que los estudiantes desarrollen habilidades de comunicación científica. -->
+
+
+- Básicos
+
+  - En el campus de la UASD o en el Malecón
+  - El proyecto debe ser realizable
+  - Desde mediados de septiembre hasta mediados-finales de noviembre (9 a 10 semanas)
+  - ¿Qué se hará en el tiempo de proyecto?
+    - Colecta de datos de campo
+    - Análisis
+    - Interpretación
+    - Redacción del manuscrito (IMRaD)
+  - La colecta de datos de campo debe ser realizable en el horario laboral del área de estudio (si aplica), siempre considerando las medidas de seguridad (poder llegar a casa a una hora "decente")
+
+- ¿Qué cambios ambientales ocurren en el período de trabajo?
+
+  - Precipitación (de menor a mayor)
+  - Reducción del fotoperiodo (de mayor a menor)
+  - En cuanto a la biodiversidad, se suman las aves migratorias; algunas especies de insectos aumentan o disminuyen en su población
+  - La caducifolia aparece en algunos casos
+  - Aunque en menor medida, la temperatura cambia de mayor a menor
+  - La variabilidad diaria de ka temperatura, la luminosidad, o incluso el ruido, podría influir sobre determinadas especies
+
+- Temas y grupos biológicos
+
+  - Relación/asociación entre especies
+  - Relación/asociación especie-hábitat
+  - Distribución real y potencial de una especie
+  - Composición/agrupamiento en la comunidad
+  - Análisis de la diversidad de una comunidad
+  - Tecnología aplicada a la ecología
+    - Hardware: cámaras trampa, sensores ambientales, rastreadores de fauna, proyectos DIY en general
+    - Aplicaciones, software (ODK, R, Python, IA, etc.)
+  - Estudios comparativos entre localidades, usando el mismo grupo biológico y la misma metodología
+  
+- Proyecto sombrilla
 
 
 
-# Bibliografía {.unnumbered}
+
+# Unidad 1. Fundamentos y contexto de la biogeografía
+
+- **Definiciones y alcance**: aplicaciones, preguntas en biogeografía, temas comunes e interdisciplinarios.  
+
+- **Epistemología e historia**: reseña histórica de las ciencias naturales y sus implicaciones hacia la biogeografía.  
+
+- **Fuentes de información**: revistas científicas y manuales habituales en biogeografía.  
+
+- **La "plantilla" geográfica**: definiciones, elementos comunes, importancia para el análisis biogeográfico, nociones básicas de cartografía.  
+
+# Unidad 2. Factores físicos y ambientales
+
+- **Clima**: balance energético, radiación electromagnética, fundamentos astronómicos, temperatura, circulación general atmosférica, humedad y precipitación, biomas determinados por el clima, variación del clima.  
+
+- **Ambiente acuático**: agua en la Tierra, interacción con la luz, propiedades físicas y químicas en relación con la profundidad, ambientes de agua dulce.  
+
+- **Ambiente terrestre**: constricciones físicas, luz, suelo.  
+
+# Unidad 3. Distribución, dinámica y evolución de la biodiversidad
+
+- **Distribución de especies**: ámbito (range) geográfico, individuos y poblaciones en los estudios de distribución, límites del ámbito, patrones derivados, predicción de ámbitos, "leyes".  
+
+- **Distribución de comunidades**: definiciones, organización, comunidades en el tiempo y en el espacio, biomas terrestres, comunidades acuáticas, geografía de los ecosistemas.  
+
+- **Dispersión e inmigración**: definiciones como procesos ecológicos, expansión del ámbito, mecanismos, barreras, establecimiento de colonias.  
+
+- **Especiación y extinción**: definiciones, sistemática, macroevolución, evolución en el registro fósil.  
+
+# Unidad 4. Historia geológica, linajes, islas y biogeografía de La Española
+
+- **Cambios en la Tierra**: tiempo geológico, deriva de los continentes, expansión de los fondos oceánicos, tectónica de placas, modelo actual, consecuencias climáticas y biogeográficas de la tectónica de placas.
+
+- **Diversificación e historia de los linajes**: clasificación de la biodiversidad en el tiempo, inferencias sobre relaciones evolutivas, filogenética, filogeografía.  
+
+- **Biogeografía insular**: islas en los estudios biogeográficos, importancia, patrones insulares, origen y justificación de la teoría del equilibrio, desarrollo más allá de la teoría clásica.  
+
+- **Biogeografía de La Española**: origen geológico y configuración actual, diversidad de hábitats y especies endémicas, influencia de barreras físicas internas y relaciones biogeográficas con otras islas y el continente.  
+
+
+
+
+# Bibliografía
 
 
