@@ -2,107 +2,6 @@ Bitácora
 ================
 La Doñita, El Tali
 
-# Contenido dinámico
-
-## Ideas comunes
-
-- Ideas centrales: investigación y itinerarios de autoaprendizaje.
-  Herramientas para garantizar el autoaprendizaje en el futuro. Hay que
-  enseñar cómo aprender de forma autodidacta, pero sin perder rigor, más
-  apretar que abarcar, estudiar el libro, memorizar (qué memorizar: lo
-  básico), técnicas que elegir.
-
-## Objetivo
-
-- Objetivo: Resolver problemas científicos y prácticos mediante
-  investigación, autoaprendizaje, técnicas numéricas y uso de
-  tecnologías aplicadas.
-
-## Salidas aplicadas/sector privado/industria, además de investigación
-
-- Consultoría ambiental
-
-- ONGD
-
-- Ecoturismo y uso público y puesta en valor
-
-- Conservación de la naturaleza
-
-- Agricultura y ganadería (producción, monitoreo, etc.), plagas,
-  agroindustria
-
-## Modalidad
-
-- Todo modular
-
-- Tecnología muy presente (ODK, servidores, IA, programación)
-
-- Prácticas de aula que incluyan ejercicios, en los que se vean en la
-  necesidad de resolver problemas, repasando la base teórica
-
-- El examen no desaparece, aunque con poco valor.
-
-- El proyecto conjunto:
-
-  - Biodiversidad y distribución
-  - Con entregas por parejas (para valoración independiente, si se caen
-    personas o en el grupo, se valora a quienes queden, dar opción para
-    no trabajar en grupos de 2, sino individualmente), y roles el
-    proyecto conjunto.
-  - Cada grupo terminaría sus análisis con un documento de manuscrito.
-  - Si dos o más grupos se quieren reunir para manuscrito conjunto,
-    perfecto, pero si falla, se vuelve a la idea de manuscritos por
-    grupos.
-
-## Ideas para la guía de proyecto
-
-<!-- - ¿Qué se espera del proyecto? -->
-<!--   - Que los estudiantes aprendan a trabajar en equipo, a organizarse, a planificar, a realizar una colecta de datos de campo, a analizar e interpretar los datos, y a redactar un manuscrito científico. -->
-<!--   - Que los estudiantes aprendan a utilizar herramientas tecnológicas para la colecta y análisis de datos. -->
-<!--   - Que los estudiantes desarrollen habilidades de comunicación científica. -->
-
-- Básicos
-
-  - En el campus de la UASD o en el Malecón
-  - El proyecto debe ser realizable
-  - Desde mediados de septiembre hasta mediados-finales de noviembre (9
-    a 10 semanas)
-  - ¿Qué se hará en el tiempo de proyecto?
-    - Colecta de datos de campo
-    - Análisis
-    - Interpretación
-    - Redacción del manuscrito (IMRaD)
-  - La colecta de datos de campo debe ser realizable en el horario
-    laboral del área de estudio (si aplica), siempre considerando las
-    medidas de seguridad (poder llegar a casa a una hora “decente”)
-
-- ¿Qué cambios ambientales ocurren en el período de trabajo?
-
-  - Precipitación (de menor a mayor)
-  - Reducción del fotoperiodo (de mayor a menor)
-  - En cuanto a la biodiversidad, se suman las aves migratorias; algunas
-    especies de insectos aumentan o disminuyen en su población
-  - La caducifolia aparece en algunos casos
-  - Aunque en menor medida, la temperatura cambia de mayor a menor
-  - La variabilidad diaria de ka temperatura, la luminosidad, o incluso
-    el ruido, podría influir sobre determinadas especies
-
-- Temas y grupos biológicos
-
-  - Relación/asociación entre especies
-  - Relación/asociación especie-hábitat
-  - Distribución real y potencial de una especie
-  - Composición/agrupamiento en la comunidad
-  - Análisis de la diversidad de una comunidad
-  - Tecnología aplicada a la ecología
-    - Hardware: cámaras trampa, sensores ambientales, rastreadores de
-      fauna, proyectos DIY en general
-    - Aplicaciones, software (ODK, R, Python, IA, etc.)
-  - Estudios comparativos entre localidades, usando el mismo grupo
-    biológico y la misma metodología
-
-- Proyecto sombrilla
-
 ## Productos a generar (uso interno)
 
 - Esquema.
@@ -134,6 +33,8 @@ La Doñita, El Tali
 
 - Programas de asignaturas reformados
 
+- Ver asignaturas Conservación y Geomorfología
+
 # 11 de agosto, 2025
 
 ## ¿Qué nos propusimos hoy?
@@ -156,14 +57,42 @@ La Doñita, El Tali
 
 ## ¿Qué nos propusimos hoy?
 
-- Actualizar programas de asignaturas
+- Actualizar programas de asignaturas.
+
+  - Editada parte básica/común de los programas de ambas asignaturas.
+  - Reestructurado el programa a cuatro unidades.
+
+- Diapositivas de bienvenida.
 
 - Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en parte
   teórica y parte de temas de proyectos con ejemplos aplicados para que
   puedan ver de qué trata cada tema.
 
-- Prácticas de semanas 1 a 4, guías de prácticas
+  - Crear la clase de la Unidad 1 de Ecología II (Fundamentos de
+    Ecología de Poblaciones) usando uno o varios de los recursos de
+    aprendizajes.
+
+- Prácticas de semanas 1 a 4, guías de prácticas.
 
 - …
 
 ## ¿Qué logramos hoy?
+
+~~- Actualizar programas de asignaturas. SÍ~~
+
+~~- Editada parte básica/común de los programas de ambas asignaturas.
+SÍ~~ ~~- Reestructurado el programa a cuatro unidades. SÍ~~
+
+~~- Diapositivas de bienvenida. PARCIAL~~
+
+NOS QUEDAMOS AQUÍ:
+
+- Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en parte
+  teórica y parte de temas de proyectos con ejemplos aplicados para que
+  puedan ver de qué trata cada tema. NO
+
+  - Crear la clase de la Unidad 1 de Ecología II (Fundamentos de
+    Ecología de Poblaciones) usando uno o varios de los recursos de
+    aprendizajes. NO
+
+- Prácticas de semanas 1 a 4, guías de prácticas. NO

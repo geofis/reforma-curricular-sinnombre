@@ -56,15 +56,36 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## ¿Qué nos propusimos hoy?
 
-- Actualizar programas de asignaturas
+- Actualizar programas de asignaturas.
+
+  - Editada parte básica/común de los programas de ambas asignaturas.
+  - Reestructurado el programa a cuatro unidades.
+
+- Diapositivas de bienvenida.
 
 - Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en parte teórica y parte de temas de proyectos con ejemplos aplicados para que puedan ver de qué trata cada tema.
 
-- Prácticas de semanas 1 a 4, guías de prácticas
+  - Crear la clase de la Unidad 1 de Ecología II (Fundamentos de Ecología de Poblaciones) usando uno o varios de los recursos de aprendizajes.
+
+- Prácticas de semanas 1 a 4, guías de prácticas.
 
 - ...
 
 ## ¿Qué logramos hoy?
 
+~~- Actualizar programas de asignaturas. SÍ~~
+
+  ~~- Editada parte básica/común de los programas de ambas asignaturas. SÍ~~
+  ~~- Reestructurado el programa a cuatro unidades. SÍ~~
+
+~~- Diapositivas de bienvenida. PARCIAL~~
+
+NOS QUEDAMOS AQUÍ:
+
+- Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en parte teórica y parte de temas de proyectos con ejemplos aplicados para que puedan ver de qué trata cada tema. NO
+
+  - Crear la clase de la Unidad 1 de Ecología II (Fundamentos de Ecología de Poblaciones) usando uno o varios de los recursos de aprendizajes. NO
+
+- Prácticas de semanas 1 a 4, guías de prácticas. NO
 
 
