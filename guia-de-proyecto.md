@@ -10,12 +10,19 @@ La Doñita, El Tali
 
 ### Entregables
 
-- Manuscrito en Overleaf.
-- Scripts reproducibles
+- Manuscrito en Overleaf
+- Scripts reproducibles (GitHub)
+- Base de datos de especies y hábitats (e.g. Dryad, Zenodo)
+- Opcional: mapas (interactivos o no), infografías, videos,
+  presentaciones
 
 ### Tecnología
 
-- Apps como iNaturalist para registro y georreferenciación, ODK, QGIS.
+- Apps como iNaturalist para registro y georreferenciación, ODK, QGIS
+- Sensores de bajo costo (basados en placas Arduino o Raspberry Pi) para
+  mediciones ambientales
+- Drones para fotogrametría de áreas inaccesibles
+- Software R para análisis estadístico.
 
 ### Evaluación
 
@@ -37,53 +44,35 @@ cobertura arbórea, construidas) para identificar posibles interacciones
 cobertura arbórea, construidas) para identificar posibles interacciones
 (ej: insectos-polínizadores, aves-semillas).
 
-- Distribución real y potencial de una especie
+### Tema: Distribución real y potencial de una especie
 
-- Composición/agrupamiento en la comunidad
+**Metodología:**
 
-- Análisis de la diversidad de una comunidad
+- Muestreos en el campus usando metodología específica para el grupo
+  elegido
+- Modelado de distribución (SDM)
 
-- Tecnología aplicada a la ecología
+### Tema: Composición/agrupamiento en la comunidad
 
-  - Hardware: cámaras trampa, sensores ambientales, rastreadores de
-    fauna, proyectos DIY en general
-  - Aplicaciones, software (ODK, R, Python, IA, etc.)
+**Metodología:**
+
+- Análisis de redes tróficas en microhábitats (ej: estanque, huerto).  
+- Índices de diversidad (Shannon, Simpson).
+
+### Tema: Análisis de la diversidad de una comunidad
+
+### Tema: Tecnología aplicada a la ecología
+
+- Hardware: cámaras trampa, sensores ambientales, rastreadores de fauna,
+  proyectos DIY en general
+- Aplicaciones, software (ODK, R, Python, IA, etc.)
 
 ### Tema: Estudios comparativos entre hábitats y/o localidades
 
 **Metodología:**. Comparar hábitats (ej: ajardinamientos, áreas con
 herbáceas o con coberturas, áreas pavimentada), usando el mismo grupo
 biológico y la misma técnica analítica - Registrar especies clave
-(plantas, aves, insectos) y variables ambientales (humedad, luz,
-suelo).  
-**Tecnología:** Sensores de bajo costo (Arduino) para mediciones
-ambientales.  
-**Entregable:** Infografía comparativa + base de datos de especies por
-hábitat.
-
-## SUBPRODUCTOS (para parejas):
-
-Cada subproducto incluye objetivo específico, metodología y entregable.
-
-### 3. Subproyecto: “Mapas de Biodiversidad”
-
-**Tema:** Distribución de especies.  
-**Metodología:**  
-- Muestreo por transectos en el campus.  
-- Modelado de distribución con herramientas SIG (QGIS).  
-**Tecnología:** Drones para fotogrametría de áreas inaccesibles.  
-**Entregable:** Mapa interactivo (web) con capas de distribución +
-informe de patrones espaciales.
-
-### 4. Subproyecto: “Comunidades en Conexión”
-
-**Tema:** Composición/agrupamiento comunitario.  
-**Metodología:**  
-- Análisis de redes tróficas en microhábitats (ej: estanque, huerto).  
-- Índices de diversidad (Shannon, Simpson).  
-**Tecnología:** Software R para análisis estadístico.  
-**Entregable:** Diagrama de redes tróficas + cálculo de biodiversidad
-por zona.
+(plantas, aves, insectos) y variables ambientales (humedad, luz, suelo).
 
 ### 5. Subproyecto: “Bio-Sonidos del Campus”
 

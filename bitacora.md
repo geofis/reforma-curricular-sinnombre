@@ -105,7 +105,7 @@ La Doñita, El Tali
 
 ## Productos a generar (uso interno)
 
-- ~~Esquema~~.
+- Esquema.
 
 - Bloque teórico y de definición de proyecto:
 
@@ -121,19 +121,18 @@ La Doñita, El Tali
   - Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en
     parte teórica y parte de temas de proyectos con ejemplos aplicados
     para que puedan ver de qué trata cada tema.
+  - Prácticas de semanas 1 a 4, guías de prácticas
   - ¿Unidades 5 en adelante?
+  - Prácticas de semana 5 en adelante
   - Guía de proyecto (con los temas, metodología, cronograma, recursos
     tecnológicos y analógicos disponibles, etc.)
-  - Actualizar programas de asignaturas
 
 - Lista de posibles proyectos/ideas de investigación, proyectos
   aplicados (no olvidarlos), lista dinámica/expandible por estudiantes
 
 - Lista de técnicas imprescindibles de la materia en cuestión
 
-- Documento de programa reformado
-
-- Prácticas, guías de prácticas
+- Programas de asignaturas reformados
 
 # 11 de agosto, 2025
 
@@ -143,19 +142,27 @@ La Doñita, El Tali
   aplicados (no olvidarlos), lista dinámica/expandible por estudiantes.
   SÍ~~
 
+~~- Definición de día 0~~
+
 - Definición del primer mes de clases. NO.
 
 ## ¿Qué logramos hoy?
 
 - Iniciar la guía de proyecto y organizamos los temas.
 
+- Definición de día 0
+
 # 13 de agosto, 2025
 
 ## ¿Qué nos propusimos hoy?
 
-- Definición del primer mes de clases
-
 - Actualizar programas de asignaturas
+
+- Unidad 1 a 4 (teoría). (¡PRÓXIMO ENCUENTRO!). Esto se divide en parte
+  teórica y parte de temas de proyectos con ejemplos aplicados para que
+  puedan ver de qué trata cada tema.
+
+- Prácticas de semanas 1 a 4, guías de prácticas
 
 - …
 
