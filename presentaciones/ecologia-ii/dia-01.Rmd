@@ -26,8 +26,8 @@ background-image: url(img/fondo.jpg)
 # ¡Bienvenidas y bienvenidos!
 
 - **Fechas**:
-  - NU-103 y LM-305: del **18 de agosto al 7 de diciembre, 2025**, de 4 a 10 pm
-  - **Salida de campo**: SÍ, HABRÁ SALIDA DE CAMPO
+  - NU-103 y LM-305: del **18 de agosto al 14 de diciembre, 2025**, de 4 a 10 pm
+  - **Salida de campo**: Sí
 
 - **Logística**
 
@@ -41,11 +41,15 @@ background-image: url(img/fondo.jpg)
   
   - Recomendaciones para las actividades de campos/exteriores
 
+---
+
 - **Presentación general del contenido**
 
   - Programa
   
-  - Evaluación, consulta y votación para puntuación
+  - Evaluación
+  
+  <!-- - consulta y votación para puntuación -->
   
   - Libros de texto
   
@@ -55,7 +59,7 @@ background-image: url(img/fondo.jpg)
 
 ## Formulario
 
-Por favor, completa [este formulario](https://forms.gle/eG8JEh71ZFfZwgsi6).
+Por favor, completa este formulario: [https://forms.gle/eG8JEh71ZFfZwgsi6](https://forms.gle/eG8JEh71ZFfZwgsi6)
 
 ```{r, warning=F, message=F, echo=F}
 library(qrcode)
@@ -68,122 +72,73 @@ invisible(dev.off())
 
 ---
 
-## Calendario de oferta de formación continua
+## Organización del curso
 
-Visita [este calendario](https://calendar.google.com/calendar/u/0/embed?src=c_e2675d36ebc399b645ea939b0bfdf0156c9ed9c8805219cd1cc0ef07b82d141f@group.calendar.google.com&ctz=America/Santo_Domingo), por si te interesa la oferta de formación que ofreceré durante este verano.
+```{r, warning=F, message=F, echo=F}
+library(magick)
+
+# Leer el PDF (puedes indicar página con [1], [2], etc.)
+pdf_img <- image_read_pdf("../../esquema-comun-materias/esquema-comun-materias.pdf",
+                          density = 300)  # density mejora resolución
+
+# Guardar como JPG
+image_write(pdf_img, path = "esquema-comun-materias.jpg", format = "jpg")
+```
+
+![](esquema-comun-materias.jpg)
 
 ---
 
 ## Autopresentación
 
-- Nombres, apellidos.
+- Nombres, apellidos
 
-- Formación y/o área profesional.
+- Formación y/o área profesional
 
-- Municipio de residencia.
+- Municipio de residencia
 
-- Una expectativa del curso.
-
----
-
-# Objetivos del curso
-
-- **Introducir conceptos básicos** de geología y geomorfología relevantes para estudiantes de biología.
-
-- **Relacionar el medio físico con los procesos ecológicos**, evolutivos y de distribución de especies.
-
-- **Explorar formas del terreno y materiales geológicos** en mapas y en campo.
-
-- **Familiarizarse con el lenguaje geológico** y con herramientas básicas para su interpretación.
-
-- **Interpretar las formas del relieve y las estructuras geológicas** como condicionantes del hábitat, la dispersión y la evolución de las especies
-
----
-
-# ¿Por qué geología y geomorfología?
-
-- Las especies no se distribuyen al azar: el **suelo, el relieve y la litología** son filtros ecológicos.
-
-- La **evolución biológica** está entrelazada con la evolución geológica de la Tierra, y con el modelado de su superficie.
-
-- Para comprender hábitats, corredores, barreras y procesos ecológicos, debemos conocer el **medio físico**.
-
----
-
-# ¿Qué haremos?
-
-### En las sesiones de aula:
-
-- Cartografía geológica y geomorfológica básica.
-
-- Identificación de formas del relieve.
-
-- Mapas, cortes geológicos y principios estratigráficos.
-
-- Interpretación de paisajes con fotografías aéreas, imágenes satelitales y mapas topográficos.
-
----
-
-### En la salida de campo:
-
-- Observación directa de Formaciones geológicas y formas del relieve.
-
-- Reconocimiento de procesos geomorfológicos activos.
-
-- Registro en hojas de campo y formularios electrónicos (aunque esto último dependerá de varios factores).
-
-- Colectar muestras de mano.
-
-- En función de la salida de campo finalmente elegida: sección de río, perfil de playa.
-
----
-
-# Evaluación y participación
-
-- Este curso **no es evaluado con notas**.
-
-- Sin embargo, se espera:
-
-  - Participación activa en discusiones
-  
-  - Cumplimiento de tareas prácticas
-  
-  - Asistencia puntual
+- Una expectativa de la materia
 
 ---
 
 # ¿Qué necesitas?
 
-- Libreta o bitácora.
+- Libreta o bitácora
 
-- Lápiz o bolígrafo.
+- Lápiz o bolígrafo
 
-- Teléfono móvil.
+- Teléfono móvil
 
-- Ropa cómoda para la salida de campo (botas, gorra, agua, protector solar).
+- Ropa cómoda para la salida de campo (botas, gorra, agua, protector solar)
 
-- Si tienes una PC portátil, tráela para las sesiones de aula (opcional).
+- Si tienes una PC portátil, tráela para las sesiones de aula (opcional)
 
 - ¡Curiosidad y ganas de observar el mundo físico!
 
 ---
 
-# Algunas publicaciones  del ámbito geomorfológico
+# Algunas publicaciones  del ámbito de la ecología
 
-- Geomorphology
+- Ecology
 
-- Geomorphica
+- Ecography
 
-- Earth Surface Processes and Landforms
+- Biotropica
+
+- Journal of Ecology
+
+- Oikos
+
+- Peer Community Journal. Comunidad de revisión por pares Peer Community In Ecology (PCI Ecology)
 
 
 ---
 
 class: center, middle
 
-# Comencemos
+<!-- # Comencemos -->
 
-### "No se vislumbra vestigio de un principio, ni perspectiva de un fin."  
-### — *James Hutton*
+<!-- ### "No se vislumbra vestigio de un principio, ni perspectiva de un fin." -->
+<!-- ### — *James Hutton* -->
 
-Esto, traducido, sería algo así como "seguimos ..."
+<!-- Esto, traducido, sería algo así como "seguimos ..." -->
