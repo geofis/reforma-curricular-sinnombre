@@ -7,6 +7,7 @@ date: "Actualizado: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    mathjax: "default"
     nature:
       highlightStyle: github
       highlightLines: true
@@ -35,7 +36,7 @@ library(ggrepel)
 
 ```{css, echo=FALSE}
 .title-slide {
-  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3');
+  background-image: url('fondo.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -158,40 +159,39 @@ ggplot(timeline_data, aes(x = Year, y = Y)) +
 ```
 
 ---
-
 class: small
 
 # 🎯 Pioneros y Contribuciones Clave
 
 .pull-left[
-## .green[Thomas Malthus (1798)]
+### .green[Thomas Malthus (1798)]
 - **"Ensayo sobre el Principio de Población"**
 - Crecimiento geométrico vs. aritmético
 - Base del crecimiento exponencial
 
-## .green[Alfred Lotka (1925)]
+### .green[Alfred Lotka (1925)]
 - **"Elements of Physical Biology"**
 - Matemáticas en biología
 - Ecuaciones diferenciales poblacionales
 
-## .green[Vito Volterra (1926)]
+### .green[Vito Volterra (1926)]
 - **Modelo depredador-presa**
 - Oscilaciones poblacionales
 - Fundamentos de la dinámica comunitaria
 ]
 
 .pull-right[
-## .green[Warder Allee (1931)]
+### .green[Warder Allee (1931)]
 - **"Animal Aggregations"**
 - Efecto Allee (densidad-dependencia positiva)
 - Importancia en conservación
 
-## .green[Georgii Gause (1934)]
+### .green[Georgii Gause (1934)]
 - **"The Struggle for Existence"**
 - Principio de exclusión competitiva
 - Experimentos de laboratorio clásicos
 
-## .green[Robert MacArthur (1967)]
+### .green[Robert MacArthur (1967)]
 - **Teoría r-K**
 - Estrategias de vida
 - Biogeografía de islas
@@ -199,27 +199,29 @@ class: small
 
 ---
 
-class: small
+class: large
 
 # 📈 Evolución Conceptual de la Disciplina
 
-.box[
-### .blue[Fase 1: Descriptiva (1798-1920)]
+.pull-left[
+## .blue[Fase 1: Descriptiva<br>(1798-1920)]
 - Observaciones naturales
 - Descripciones cualitativas
 - Censos poblacionales básicos
 
-### .blue[Fase 2: Matemática (1920-1950)]
+## .blue[Fase 2: Matemática<br>(1920-1950)]
 - Modelos cuantitativos
 - Ecuaciones diferenciales
 - Teoría poblacional formal
+]
 
-### .blue[Fase 3: Experimental (1950-1980)]
+.pull-left[
+## .blue[Fase 3: Experimental<br>(1950-1980)]
 - Validación empírica
 - Experimentos controlados
 - Ecología de campo
 
-### .blue[Fase 4: Integrativa (1980-presente)]
+## .small.blue[Fase 4: Integrativa<br>(1980-presente)]
 - Enfoque multidisciplinario
 - Biología molecular + ecología
 - Modelado computacional
@@ -240,13 +242,13 @@ class: inverse, center, middle
 ## .green[¿Qué es una Población?]
 
 **Definición:** Grupo de individuos de la **misma especie** que:
-- Ocupan un **área geográfica definida**
+- Ocupan un **área geográfica y tiempo definidos**
 - Interactúan entre sí (reproducción, competencia)
 - Comparten un **pool genético común**
 - Tienen potencial reproductivo conjunto
 ]
 
---
+---
 
 ## 🎯 Características Fundamentales
 
@@ -254,12 +256,13 @@ class: inverse, center, middle
 ### **Propiedades Estadísticas**
 - .highlight[**Tamaño (N)**]: Número total de individuos
 - .highlight[**Densidad (D)**]: Individuos por unidad de área
-- .highlight[**Biomasa**]: Peso total de la población
+- .highlight[**Biomasa**]: Peso estimado de la población
 ]
 
 .pull-right[
 ### **Propiedades Dinámicas**
 - .highlight[**Tasas vitales**]: Natalidad, mortalidad
+- .highlight[**Tasas de movimiento**]: emigración, inmigración
 - .highlight[**Estructura**]: Edad, sexo, tamaño
 - .highlight[**Distribución espacial**]: Patrones geográficos
 ]
@@ -274,12 +277,12 @@ class: inverse, center, middle
 **N** = Número total de individuos en la población en un momento dado
 ]
 
---
+---
 
 ## .blue[Densidad Poblacional (D)]
 
 .pull-left[
-### **Densidad Cruda**
+### **Densidad Bruta**
 .equation[
 D = N / A
 ]
@@ -298,12 +301,15 @@ Donde:
 - Más relevante biológicamente
 ]
 
---
+---
 
 .box[
 ### 🔍 **Ejemplo Práctico**
 - **Población de venados:** 200 individuos en 1000 ha
 - **Densidad cruda:** 0.2 venados/ha
+
+<br>
+
 - **Pero solo 300 ha son bosque apropiado**
 - **Densidad ecológica:** 0.67 venados/ha
 ]
@@ -338,7 +344,7 @@ regular_y <- rep(seq(1, 9, by = 2), each = 5)
 spatial_data <- data.frame(
   x = c(random_x, grouped_x, regular_x),
   y = c(random_y, grouped_y, regular_y),
-  pattern = rep(c("Aleatorio", "Agrupado", "Regular"), 
+  pattern = rep(c("Aleatorio", "Agregado", "Uniforme"), 
                 c(length(random_x), length(grouped_x), length(regular_x)))
 )
 
@@ -346,9 +352,11 @@ ggplot(spatial_data, aes(x, y)) +
   geom_point(size = 2, color = "#2E8B57") +
   facet_wrap(~pattern, ncol = 3) +
   theme_minimal() +
-  theme(strip.text = element_text(size = 14, face = "bold"),
-        axis.title = element_text(size = 12)) +
-  labs(title = "Patrones de Distribución Espacial en Poblaciones",
+  theme(size = 18) + 
+  theme(strip.text = element_text(size = 16, face = "bold"),
+        axis.title = element_text(size = 14),
+        plot.title = element_text(size = 18)) +
+  labs(title = "Patrones de Distribución Espacial en Poblaciones\n",
        x = "Coordenada X", y = "Coordenada Y") +
   coord_fixed()
 ```
@@ -384,8 +392,8 @@ ggplot(spatial_data, aes(x, y)) +
 I = n[(Σx²) - N] / [N(N-1)]
 ]
 - I = 1: Aleatorio
-- I > 1: Agrupado  
-- I < 1: Regular
+- I > 1: Agregado  
+- I < 1: Uniforme
 ]
 
 ---

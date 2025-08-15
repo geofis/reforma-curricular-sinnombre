@@ -36,7 +36,7 @@ class: center, middle, inverse, title-slide
 
 &lt;style type="text/css"&gt;
 .title-slide {
-  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3');
+  background-image: url('fondo.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -127,40 +127,39 @@ class: inverse, center, middle
 &lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/timeline-1.png" width="100%" /&gt;
 
 ---
-
-class: small, medium
+class: small
 
 # 🎯 Pioneros y Contribuciones Clave
 
 .pull-left[
-## .green[Thomas Malthus (1798)]
+### .green[Thomas Malthus (1798)]
 - **"Ensayo sobre el Principio de Población"**
 - Crecimiento geométrico vs. aritmético
 - Base del crecimiento exponencial
 
-## .green[Alfred Lotka (1925)]
+### .green[Alfred Lotka (1925)]
 - **"Elements of Physical Biology"**
 - Matemáticas en biología
 - Ecuaciones diferenciales poblacionales
 
-## .green[Vito Volterra (1926)]
+### .green[Vito Volterra (1926)]
 - **Modelo depredador-presa**
 - Oscilaciones poblacionales
 - Fundamentos de la dinámica comunitaria
 ]
 
 .pull-right[
-## .green[Warder Allee (1931)]
+### .green[Warder Allee (1931)]
 - **"Animal Aggregations"**
 - Efecto Allee (densidad-dependencia positiva)
 - Importancia en conservación
 
-## .green[Georgii Gause (1934)]
+### .green[Georgii Gause (1934)]
 - **"The Struggle for Existence"**
 - Principio de exclusión competitiva
 - Experimentos de laboratorio clásicos
 
-## .green[Robert MacArthur (1967)]
+### .green[Robert MacArthur (1967)]
 - **Teoría r-K**
 - Estrategias de vida
 - Biogeografía de islas
@@ -168,27 +167,29 @@ class: small, medium
 
 ---
 
-class: small
+class: large
 
 # 📈 Evolución Conceptual de la Disciplina
 
-.box[
-### .blue[Fase 1: Descriptiva (1798-1920)]
+.pull-left[
+## .blue[Fase 1: Descriptiva&lt;br&gt;(1798-1920)]
 - Observaciones naturales
 - Descripciones cualitativas
 - Censos poblacionales básicos
 
-### .blue[Fase 2: Matemática (1920-1950)]
+## .blue[Fase 2: Matemática&lt;br&gt;(1920-1950)]
 - Modelos cuantitativos
 - Ecuaciones diferenciales
 - Teoría poblacional formal
+]
 
-### .blue[Fase 3: Experimental (1950-1980)]
+.pull-left[
+## .blue[Fase 3: Experimental&lt;br&gt;(1950-1980)]
 - Validación empírica
 - Experimentos controlados
 - Ecología de campo
 
-### .blue[Fase 4: Integrativa (1980-presente)]
+## .small.blue[Fase 4: Integrativa&lt;br&gt;(1980-presente)]
 - Enfoque multidisciplinario
 - Biología molecular + ecología
 - Modelado computacional
@@ -209,13 +210,13 @@ class: inverse, center, middle
 ## .green[¿Qué es una Población?]
 
 **Definición:** Grupo de individuos de la **misma especie** que:
-- Ocupan un **área geográfica definida**
+- Ocupan un **área geográfica y tiempo definidos**
 - Interactúan entre sí (reproducción, competencia)
 - Comparten un **pool genético común**
 - Tienen potencial reproductivo conjunto
 ]
 
---
+---
 
 ## 🎯 Características Fundamentales
 
@@ -223,12 +224,13 @@ class: inverse, center, middle
 ### **Propiedades Estadísticas**
 - .highlight[**Tamaño (N)**]: Número total de individuos
 - .highlight[**Densidad (D)**]: Individuos por unidad de área
-- .highlight[**Biomasa**]: Peso total de la población
+- .highlight[**Biomasa**]: Peso estimado de la población
 ]
 
 .pull-right[
 ### **Propiedades Dinámicas**
 - .highlight[**Tasas vitales**]: Natalidad, mortalidad
+- .highlight[**Tasas de movimiento**]: emigración, inmigración
 - .highlight[**Estructura**]: Edad, sexo, tamaño
 - .highlight[**Distribución espacial**]: Patrones geográficos
 ]
@@ -243,12 +245,12 @@ class: inverse, center, middle
 **N** = Número total de individuos en la población en un momento dado
 ]
 
---
+---
 
 ## .blue[Densidad Poblacional (D)]
 
 .pull-left[
-### **Densidad Cruda**
+### **Densidad Bruta**
 .equation[
 D = N / A
 ]
@@ -267,12 +269,15 @@ Donde:
 - Más relevante biológicamente
 ]
 
---
+---
 
 .box[
 ### 🔍 **Ejemplo Práctico**
 - **Población de venados:** 200 individuos en 1000 ha
 - **Densidad cruda:** 0.2 venados/ha
+
+&lt;br&gt;
+
 - **Pero solo 300 ha son bosque apropiado**
 - **Densidad ecológica:** 0.67 venados/ha
 ]
@@ -314,8 +319,8 @@ Donde:
 I = n[(Σx²) - N] / [N(N-1)]
 ]
 - I = 1: Aleatorio
-- I &gt; 1: Agrupado  
-- I &lt; 1: Regular
+- I &gt; 1: Agregado  
+- I &lt; 1: Uniforme
 ]
 
 ---
@@ -559,9 +564,9 @@ class: inverse, center, middle
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-  "highlightStyle": "github",
-  "highlightLines": true,
-  "countIncrementalSlides": false
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
