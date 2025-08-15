@@ -252,7 +252,9 @@ class: inverse, center, middle
 .pull-left[
 ### **Densidad Bruta**
 .equation[
+$$
 D = N / A
+$$
 ]
 Donde:
 - **N** = Tamaño poblacional  
@@ -262,10 +264,13 @@ Donde:
 .pull-right[
 ### **Densidad Ecológica**
 .equation[
-D_eco = N / A_util
+$$
+D\_{eco} = \frac{N}{A\_{util}}
+$$
 ]
+
 Donde:
-- **A_util** = Área de hábitat utilizable
+- A&lt;sub&gt;util&lt;/sub&gt; = Área de hábitat utilizable
 - Más relevante biológicamente
 ]
 
@@ -284,11 +289,6 @@ Donde:
 
 ---
 
-# 🗺️ Distribución Espacial
-
-&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/spatial_patterns-1.png" width="100%" /&gt;
-
----
 
 # 🎯 Tipos de Distribución Espacial
 
@@ -303,7 +303,7 @@ Donde:
 - **Grupos o manchones**
 - Recursos heterogéneos
 - Comportamiento social
-- **Ejemplo:** Peces en cardúmenes
+- Ejemplo: Peces en cardúmenes
 ]
 
 .pull-right[
@@ -311,12 +311,15 @@ Donde:
 - **Espaciado uniforme**
 - Competencia por recursos
 - Territorialidad
-- **Ejemplo:** Árboles en bosque maduro
+- Ejemplo: Árboles en bosque maduro
 
-## .blue[🔍 Índices de Dispersión]
+## .blue[4. Índices de Dispersión]
 .equation[
 **Índice de Morisita**
-I = n[(Σx²) - N] / [N(N-1)]
+&lt;br&gt;
+$$
+I = n \, \frac{\left( \sum x^2 \right) - N}{N \, (N - 1)}
+$$
 ]
 - I = 1: Aleatorio
 - I &gt; 1: Agregado  
@@ -325,13 +328,12 @@ I = n[(Σx²) - N] / [N(N-1)]
 
 ---
 
-# 👥 Estructura Etaria y Demográfica
+# 🗺️ Distribución Espacial
 
-## .blue[Pirámides Poblacionales]
-
-&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/age_pyramids-1.png" width="100%" /&gt;
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/spatial_patterns-1.png" width="100%" /&gt;
 
 ---
+class: small
 
 # 📈 Interpretación de Estructuras Etarias
 
@@ -373,6 +375,16 @@ I = n[(Σx²) - N] / [N(N-1)]
 ]
 
 ---
+
+## .blue[Pirámides Poblacionales]
+
+
+
+# 👥 Estructura Etaria y Demográfica
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/age_pyramids2-1.png" width="100%" /&gt;
+
+---
 class: inverse, center, middle
 
 # 📊 BLOQUE 3
@@ -385,7 +397,9 @@ class: inverse, center, middle
 ## .blue[Ecuación Fundamental]
 
 .equation[
-**dN/dt = rN**
+$$
+dN/dt = rN
+$$
 
 Donde:
 - **N** = Tamaño poblacional
@@ -394,15 +408,20 @@ Donde:
 - **dN/dt** = Cambio en el tamaño poblacional
 ]
 
---
+---
 
 ## .blue[Solución de la Ecuación]
 
 .equation[
-**N(t) = N₀e^(rt)**
+$$
+N(t) = N\_0e^{rt}
+$$
 
 Donde:
-- **N₀** = Población inicial
+- **N** = Tamaño poblacional
+- **t** = Tiempo
+- **r** = Tasa intrínseca de crecimiento
+- **N&lt;sub&gt;0&lt;/sub&gt;** = Población inicial
 - **e** = Base del logaritmo natural (2.718...)
 ]
 
@@ -425,14 +444,20 @@ Donde:
 - **Crecimiento sin límites**
 ]
 
---
+---
 
 ## .blue[Ecuación Logística]
 
 .equation[
-**dN/dt = rN(1 - N/K)**
+$$
+dN/dt = rN(1 - N/K)
+$$
 
 Donde:
+- **N** = Tamaño poblacional
+- **t** = Tiempo
+- **r** = Tasa intrínseca de crecimiento
+- **N&lt;sub&gt;0&lt;/sub&gt;** = Población inicial
 - **K** = Capacidad de carga del ambiente
 - **(1 - N/K)** = Factor de resistencia ambiental
 ]
@@ -442,7 +467,9 @@ Donde:
 ## .blue[Solución de la Ecuación Logística]
 
 .equation[
-**N(t) = K / (1 + ((K-N₀)/N₀)e^(-rt))**
+$$
+N(t) = \frac{K}{(1 + ((K-N₀)/N\_0)e^{-rt})}
+$$
 ]
 
 ---
@@ -477,9 +504,16 @@ En poblaciones **muy pequeñas**, el crecimiento per cápita **disminuye** debid
 ## .blue[Modelo Matemático con Efecto Allee]
 
 .equation[
-**dN/dt = rN(1 - N/K)(N/A - 1)**
+$$
+dN/dt = rN\frac{1 - (N/K)}{(N/A) - 1}
+$$
 
 Donde:
+- **N** = Tamaño poblacional
+- **t** = Tiempo
+- **r** = Tasa intrínseca de crecimiento
+- **N&lt;sub&gt;0&lt;/sub&gt;** = Población inicial
+- **K** = Capacidad de carga del ambiente
 - **A** = Tamaño poblacional umbral mínimo
 - Si N &lt; A → dN/dt &lt; 0 (extinción)
 - Si A &lt; N &lt; K → dN/dt &gt; 0 (crecimiento)
@@ -492,8 +526,9 @@ Donde:
 &lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/allee_effect-1.png" width="100%" /&gt;
 
 ---
+class: small
 
-# 🌍 Importancia del Efecto Allee en Conservación
+# 🌍 Importancia Efecto Allee en Conservación
 
 .pull-left[
 ## .red[Consecuencias Críticas]
@@ -512,21 +547,21 @@ Donde:
 .pull-right[
 ## .green[Ejemplos Reales]
 
-### **Paloma Migratoria**
-- Comportamiento gregario obligado
-- Extinción por debajo del umbral social
+- **Paloma Migratoria**
+  - Comportamiento gregario obligado
+  - Extinción por debajo del umbral social
 
-### **Rinoceronte de Java**
-- &lt; 80 individuos actuales
-- Dificultad para encontrar pareja
+- **Rinoceronte de Java**
+  - &lt; 80 individuos actuales
+  - Dificultad para encontrar pareja
 
-### **Plantas con Polinización Especializada**
-- Baja densidad → polinización insuficiente
-- **Fragmentación de hábitat crítica**
+- **Plantas con Polinización Especializada**
+  - Baja densidad → polinización insuficiente
+  - **Fragmentación de hábitat crítica**
 
 .box[
-### 🎯 **Implicación para Manejo**
-Restaurar poblaciones por **encima** del umbral de Allee
+🎯 **Implicación para el manejo**
+  - Restaurar poblaciones por **encima** del umbral de Allee
 ]
 ]
 
@@ -551,15 +586,48 @@ class: inverse, center, middle
 - No importa cuán abundantes sean otros recursos
 ]
 
---
+---
 
 .equation[
 **Factor Limitante** = min{R₁, R₂, R₃, ..., Rₙ}
 ]
 
-### 🌱 **Ejemplos:**
-- **
+### 🌱 **Ejemplos Específicos:**
 
+.pull-left.small[
+### **Plantas Acuáticas**
+- **Agua abundante:** ✅ 100%
+- **Luz solar:** ✅ 90%
+- **CO₂:** ✅ 85%
+- **Nitrógeno:** ⚠️ **30%** ← LIMITANTE
+- **Fósforo:** ✅ 70%
+
+**Resultado:** Crecimiento limitado al 30%
+]
+
+.pull-right.small[
+### **Cultivo de Café (RD)**
+- **Temperatura:** ✅ Óptima
+- **Precipitación:** ✅ Adecuada
+- **Suelo orgánico:** ✅ Rico
+- **Potasio:** ⚠️ **DEFICIENTE** ← LIMITANTE
+- **Mano de obra:** ✅ Disponible
+
+**Resultado:** Rendimiento bajo por falta de K
+]
+
+---
+
+### 🔍 **Caso Práctico: Bosque Nublado Sierra de Bahoruco**
+.box.compact[
+- **Humedad:** 95% (abundante)
+- **Temperatura:** Ideal para crecimiento
+- **Suelo profundo:** Disponible
+- **Radiación solar:** **LIMITADO por nubes** ← FACTOR MÍNIMO
+- **Nutrientes:** Moderados
+
+**Consecuencia:** La vegetación se adapta a **baja luminosidad**, determinando la estructura del bosque.
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

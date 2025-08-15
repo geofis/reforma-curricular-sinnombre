@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
   fig.height = 8, 
   fig.retina = 3,
   out.width = "100%",
-  cache = FALSE,
+  cache = TRUE,
   echo = FALSE,
   message = FALSE, 
   warning = FALSE,
@@ -284,7 +284,9 @@ class: inverse, center, middle
 .pull-left[
 ### **Densidad Bruta**
 .equation[
+$$
 D = N / A
+$$
 ]
 Donde:
 - **N** = Tamaño poblacional  
@@ -294,10 +296,13 @@ Donde:
 .pull-right[
 ### **Densidad Ecológica**
 .equation[
-D_eco = N / A_util
+$$
+D\_{eco} = \frac{N}{A\_{util}}
+$$
 ]
+
 Donde:
-- **A_util** = Área de hábitat utilizable
+- A<sub>util</sub> = Área de hábitat utilizable
 - Más relevante biológicamente
 ]
 
@@ -312,6 +317,45 @@ Donde:
 
 - **Pero solo 300 ha son bosque apropiado**
 - **Densidad ecológica:** 0.67 venados/ha
+]
+
+---
+
+
+# 🎯 Tipos de Distribución Espacial
+
+.pull-left[
+## .green[1. Distribución Aleatoria]
+- **Sin patrón aparente**
+- Ambiente homogéneo
+- Sin interacciones fuertes
+- **Ejemplo:** Plantas pioneras en campo abierto
+
+## .green[2. Distribución Agrupada]
+- **Grupos o manchones**
+- Recursos heterogéneos
+- Comportamiento social
+- Ejemplo: Peces en cardúmenes
+]
+
+.pull-right[
+## .green[3. Distribución Regular]
+- **Espaciado uniforme**
+- Competencia por recursos
+- Territorialidad
+- Ejemplo: Árboles en bosque maduro
+
+## .blue[4. Índices de Dispersión]
+.equation[
+**Índice de Morisita**
+<br>
+$$
+I = n \, \frac{\left( \sum x^2 \right) - N}{N \, (N - 1)}
+$$
+]
+- I = 1: Aleatorio
+- I > 1: Agregado  
+- I < 1: Uniforme
 ]
 
 ---
@@ -362,83 +406,7 @@ ggplot(spatial_data, aes(x, y)) +
 ```
 
 ---
-
-# 🎯 Tipos de Distribución Espacial
-
-.pull-left[
-## .green[1. Distribución Aleatoria]
-- **Sin patrón aparente**
-- Ambiente homogéneo
-- Sin interacciones fuertes
-- **Ejemplo:** Plantas pioneras en campo abierto
-
-## .green[2. Distribución Agrupada]
-- **Grupos o manchones**
-- Recursos heterogéneos
-- Comportamiento social
-- **Ejemplo:** Peces en cardúmenes
-]
-
-.pull-right[
-## .green[3. Distribución Regular]
-- **Espaciado uniforme**
-- Competencia por recursos
-- Territorialidad
-- **Ejemplo:** Árboles en bosque maduro
-
-## .blue[🔍 Índices de Dispersión]
-.equation[
-**Índice de Morisita**
-I = n[(Σx²) - N] / [N(N-1)]
-]
-- I = 1: Aleatorio
-- I > 1: Agregado  
-- I < 1: Uniforme
-]
-
----
-
-# 👥 Estructura Etaria y Demográfica
-
-## .blue[Pirámides Poblacionales]
-
-```{r age_pyramids, fig.height=5}
-# Datos para diferentes tipos de pirámides poblacionales
-expansive <- data.frame(
-  age_group = factor(c("0-10", "11-20", "21-30", "31-40", "41-50", "51+"),
-                     levels = c("0-10", "11-20", "21-30", "31-40", "41-50", "51+")),
-  population = c(40, 35, 25, 15, 10, 5),
-  type = "Expansiva"
-)
-
-stable <- data.frame(
-  age_group = factor(c("0-10", "11-20", "21-30", "31-40", "41-50", "51+"),
-                     levels = c("0-10", "11-20", "21-30", "31-40", "41-50", "51+")),
-  population = c(20, 20, 20, 20, 15, 10),
-  type = "Estable"
-)
-
-constrictive <- data.frame(
-  age_group = factor(c("0-10", "11-20", "21-30", "31-40", "41-50", "51+"),
-                     levels = c("0-10", "11-20", "21-30", "31-40", "41-50", "51+")),
-  population = c(5, 10, 15, 25, 30, 35),
-  type = "Constrictiva"
-)
-
-pyramid_data <- rbind(expansive, stable, constrictive)
-
-ggplot(pyramid_data, aes(x = age_group, y = population, fill = type)) +
-  geom_col() +
-  facet_wrap(~type, ncol = 3) +
-  scale_fill_manual(values = c("#FF6B6B", "#4ECDC4", "#45B7D1")) +
-  theme_minimal() +
-  theme(legend.position = "none",
-        strip.text = element_text(size = 12, face = "bold")) +
-  labs(title = "Tipos de Estructuras Etarias Poblacionales",
-       x = "Grupo Etario", y = "Porcentaje de la Población")
-```
-
----
+class: small
 
 # 📈 Interpretación de Estructuras Etarias
 
@@ -480,6 +448,137 @@ ggplot(pyramid_data, aes(x = age_group, y = population, fill = type)) +
 ]
 
 ---
+
+## .blue[Pirámides Poblacionales]
+
+```{r age_pyramids, fig.height=5, eval=F}
+# Datos para diferentes tipos de pirámides poblacionales
+expansive <- data.frame(
+  age_group = factor(c("0-10", "11-20", "21-30", "31-40", "41-50", "51+"),
+                     levels = c("0-10", "11-20", "21-30", "31-40", "41-50", "51+")),
+  population = c(40, 35, 25, 15, 10, 5),
+  type = "Expansiva"
+)
+
+stable <- data.frame(
+  age_group = factor(c("0-10", "11-20", "21-30", "31-40", "41-50", "51+"),
+                     levels = c("0-10", "11-20", "21-30", "31-40", "41-50", "51+")),
+  population = c(20, 20, 20, 20, 15, 10),
+  type = "Estable"
+)
+
+constrictive <- data.frame(
+  age_group = factor(c("0-10", "11-20", "21-30", "31-40", "41-50", "51+"),
+                     levels = c("0-10", "11-20", "21-30", "31-40", "41-50", "51+")),
+  population = c(5, 10, 15, 25, 30, 35),
+  type = "Constrictiva"
+)
+
+pyramid_data <- rbind(expansive, stable, constrictive)
+
+ggplot(pyramid_data, aes(x = age_group, y = population, fill = type)) +
+  geom_col() +
+  facet_wrap(~type, ncol = 3) +
+  scale_fill_manual(values = c("#FF6B6B", "#4ECDC4", "#45B7D1")) +
+  theme_minimal() +
+  theme(legend.position = "none", text = element_text(size = 16)) +
+  labs(title = "Tipos de Estructuras Etarias Poblacionales",
+       x = "Grupo Etario", y = "Porcentaje de la Población")
+```
+
+# 👥 Estructura Etaria y Demográfica
+
+```{r age_pyramids2, fig.height=5}
+library(tidyverse)
+
+# --- 1) Datos base (como los que ya tenías) -------------------------------
+niveles_edad <- c("0-10","11-20","21-30","31-40","41-50","51+")
+expansive <- tibble(
+  age_group = factor(niveles_edad, levels = niveles_edad),
+  population = c(40, 35, 25, 15, 10, 5),
+  type = "Expansiva"
+)
+stable <- tibble(
+  age_group = factor(niveles_edad, levels = niveles_edad),
+  population = c(20, 20, 20, 20, 15, 10),
+  type = "Estable"
+)
+constrictive <- tibble(
+  age_group = factor(niveles_edad, levels = niveles_edad),
+  population = c(5, 10, 15, 25, 30, 35),
+  type = "Constrictiva"
+)
+
+pyramid_data <- bind_rows(expansive, stable, constrictive)
+
+# --- 2) Reparto por sexo (ajústalo si quieres un patrón "típico") ---------
+# # Opción A (neutral, simple): 50/50 en todos los grupos
+# sex_share <- tibble(
+#   age_group = factor(niveles_edad, levels = niveles_edad),
+#   male_share = c(0.50, 0.50, 0.50, 0.50, 0.50, 0.50)
+# )
+
+# Opción B (más "típica"): leve mayoría masculina en jóvenes y femenina en mayores
+sex_share <- tibble(
+  age_group = factor(niveles_edad, levels = niveles_edad),
+  male_share = c(0.6, 0.51, 0.50, 0.49, 0.48, 0.4)
+)
+
+# --- 3) Expandir a hombres/mujeres y preparar valores (negativo = hombres) --
+df <- pyramid_data %>%
+  left_join(sex_share, by = "age_group") %>%
+  mutate(
+    male_pop   = population * male_share,
+    female_pop = population * (1 - male_share)
+  ) %>%
+  select(type, age_group, male_pop, female_pop) %>%
+  pivot_longer(cols = c(male_pop, female_pop),
+               names_to = "sex", values_to = "pop") %>%
+  mutate(
+    sex  = recode(sex,
+                  male_pop = "Hombres ♂",
+                  female_pop = "Mujeres ♀"),
+    yval = if_else(sex == "Hombres ♂", -pop, pop)   # izquierda hombres
+  )
+
+# Límite simétrico para que quede centrada
+y_lim <- max(abs(df$yval)) * 1.15
+
+# Etiquetas ♂/♀ en los extremos de cada facet
+labels <- tibble(
+  type = unique(df$type),
+  xlab = factor(tail(niveles_edad, 1), levels = niveles_edad),  # fila superior (51+)
+  left_y  = -0.92 * y_lim,
+  right_y =  0.92 * y_lim
+)
+
+# --- 4) Gráfico: pirámide por tipo, color por grupo etario -----------------
+ggplot(df, aes(x = age_group, y = yval, fill = age_group)) +
+  geom_col(width = 0.9) +
+  coord_flip() +
+  facet_wrap(~ type, nrow = 1) +
+  # eje con valores absolutos
+  scale_y_continuous(labels = ~abs(.), limits = c(-y_lim, y_lim)) +
+  scale_fill_brewer(palette = "Spectral", name = "Grupo etario") +
+  # Etiquetas de lado (hombres/mujeres) por panel
+  geom_text(data = labels, aes(x = xlab, y = left_y, label = "♂"),
+            inherit.aes = FALSE, hjust = 0, fontface = "bold", size = 8) +
+  geom_text(data = labels, aes(x = xlab, y = right_y, label = "♀"),
+            inherit.aes = FALSE, hjust = 1, fontface = "bold", size = 8) +
+  labs(
+    title = "Pirámides Poblacionales por Tipo",
+    x = "Grupo etario",
+    y = "Porcentaje de la población"
+  ) +
+  theme_minimal(base_size = 20) +
+  theme(
+    legend.position = "bottom",
+    text = element_text(size = 20)
+    # strip.text = element_text(face = "bold")
+  )
+```
+
+---
 class: inverse, center, middle
 
 # 📊 BLOQUE 3
@@ -492,7 +591,9 @@ class: inverse, center, middle
 ## .blue[Ecuación Fundamental]
 
 .equation[
-**dN/dt = rN**
+$$
+dN/dt = rN
+$$
 
 Donde:
 - **N** = Tamaño poblacional
@@ -501,15 +602,20 @@ Donde:
 - **dN/dt** = Cambio en el tamaño poblacional
 ]
 
---
+---
 
 ## .blue[Solución de la Ecuación]
 
 .equation[
-**N(t) = N₀e^(rt)**
+$$
+N(t) = N\_0e^{rt}
+$$
 
 Donde:
-- **N₀** = Población inicial
+- **N** = Tamaño poblacional
+- **t** = Tiempo
+- **r** = Tasa intrínseca de crecimiento
+- **N<sub>0</sub>** = Población inicial
 - **e** = Base del logaritmo natural (2.718...)
 ]
 
@@ -544,7 +650,8 @@ ggplot(exp_data, aes(x = time, y = population, color = r_value)) +
   scale_y_log10() +
   theme_minimal() +
   theme(legend.title = element_blank(),
-        legend.text = element_text(size = 12),
+        text = element_text(size = 18),
+        # legend.text = element_text(size = 12),
         plot.title = element_text(size = 16, face = "bold", hjust = 0.5)) +
   labs(title = "Crecimiento Poblacional Exponencial",
        subtitle = "N₀ = 10 individuos",
@@ -565,14 +672,20 @@ ggplot(exp_data, aes(x = time, y = population, color = r_value)) +
 - **Crecimiento sin límites**
 ]
 
---
+---
 
 ## .blue[Ecuación Logística]
 
 .equation[
-**dN/dt = rN(1 - N/K)**
+$$
+dN/dt = rN(1 - N/K)
+$$
 
 Donde:
+- **N** = Tamaño poblacional
+- **t** = Tiempo
+- **r** = Tasa intrínseca de crecimiento
+- **N<sub>0</sub>** = Población inicial
 - **K** = Capacidad de carga del ambiente
 - **(1 - N/K)** = Factor de resistencia ambiental
 ]
@@ -582,7 +695,9 @@ Donde:
 ## .blue[Solución de la Ecuación Logística]
 
 .equation[
-**N(t) = K / (1 + ((K-N₀)/N₀)e^(-rt))**
+$$
+N(t) = \frac{K}{(1 + ((K-N₀)/N\_0)e^{-rt})}
+$$
 ]
 
 ---
@@ -620,7 +735,8 @@ ggplot(growth_data, aes(x = time, y = population, color = model)) +
   scale_color_manual(values = c("#FF6B6B", "#4ECDC4")) +
   theme_minimal() +
   theme(legend.title = element_blank(),
-        legend.text = element_text(size = 12),
+        # legend.text = element_text(size = 12),
+        text = element_text(size = 18),
         plot.title = element_text(size = 16, face = "bold", hjust = 0.5)) +
   labs(title = "Comparación de Modelos de Crecimiento Poblacional",
        subtitle = "N₀ = 5, r = 0.3, K = 100",
@@ -662,18 +778,20 @@ ggplot(phases_data, aes(x = time, y = population)) +
            alpha = 0.2, fill = "orange") +
   annotate("rect", xmin = 12, xmax = 20, ymin = 90, ymax = 105, 
            alpha = 0.2, fill = "lightblue") +
-  annotate("text", x = 1.5, y = 110, label = "FASE LAG\n(Crecimiento lento)", 
-           fontface = "bold", hjust = 0.5) +
-  annotate("text", x = 7.5, y = 110, label = "FASE EXPONENCIAL\n(Crecimiento rápido)", 
-           fontface = "bold", hjust = 0.5) +
-  annotate("text", x = 16, y = 110, label = "FASE EQUILIBRIO\n(Estabilización)", 
-           fontface = "bold", hjust = 0.5) +
+  annotate("text", x = 1.5, y = 115, label = "FASE LAG\n(Crecimiento lento)", 
+           fontface = "bold", hjust = 0.5, size = 5) +
+  annotate("text", x = 7.5, y = 115, label = "FASE EXPONENCIAL\n(Crecimiento rápido)", 
+           fontface = "bold", hjust = 0.5, size = 5) +
+  annotate("text", x = 16, y = 115, label = "FASE EQUILIBRIO\n(Estabilización)", 
+           fontface = "bold", hjust = 0.5, size = 5) +
   annotate("text", x = 15, y = K + 5, label = "K (Capacidad de Carga)", 
-           color = "red", fontface = "bold") +
+           color = "red", fontface = "bold", size = 4) +
   annotate("text", x = 15, y = K/2 + 5, label = "K/2 (Punto de inflexión)", 
-           color = "blue", fontface = "bold") +
+           color = "blue", fontface = "bold", size = 4) +
   theme_minimal() +
-  theme(plot.title = element_text(size = 16, face = "bold", hjust = 0.5)) +
+  theme(
+    text = element_text(size = 20),
+    plot.title = element_text(size = 22, face = "bold", hjust = 0.5)) +
   labs(title = "Fases del Crecimiento Logístico",
        x = "Tiempo", 
        y = "Tamaño Poblacional") +
@@ -700,9 +818,16 @@ En poblaciones **muy pequeñas**, el crecimiento per cápita **disminuye** debid
 ## .blue[Modelo Matemático con Efecto Allee]
 
 .equation[
-**dN/dt = rN(1 - N/K)(N/A - 1)**
+$$
+dN/dt = rN\frac{1 - (N/K)}{(N/A) - 1}
+$$
 
 Donde:
+- **N** = Tamaño poblacional
+- **t** = Tiempo
+- **r** = Tasa intrínseca de crecimiento
+- **N<sub>0</sub>** = Población inicial
+- **K** = Capacidad de carga del ambiente
 - **A** = Tamaño poblacional umbral mínimo
 - Si N < A → dN/dt < 0 (extinción)
 - Si A < N < K → dN/dt > 0 (crecimiento)
@@ -738,22 +863,24 @@ ggplot(allee_data, aes(x = population, y = growth_rate, color = model)) +
   geom_vline(xintercept = A, linetype = "dotted", color = "red", size = 1) +
   geom_vline(xintercept = K, linetype = "dotted", color = "blue", size = 1) +
   annotate("text", x = A + 5, y = 0.05, label = "Umbral Allee", 
-           color = "red", angle = 90, fontface = "bold") +
+           color = "red", angle = 90, fontface = "bold", size = 6) +
   annotate("text", x = K + 5, y = 0.05, label = "Capacidad Carga", 
-           color = "blue", angle = 90, fontface = "bold") +
+           color = "blue", angle = 90, fontface = "bold", size = 6) +
   scale_color_manual(values = c("#FF6B6B", "#4ECDC4")) +
   theme_minimal() +
   theme(legend.title = element_blank(),
         legend.position = "top",
-        plot.title = element_text(size = 16, face = "bold", hjust = 0.5)) +
+        text = element_text(size = 20),
+        plot.title = element_text(size = 20, face = "bold", hjust = 0.5)) +
   labs(title = "Efecto Allee en el Crecimiento Poblacional",
        x = "Tamaño Poblacional (N)", 
        y = "Tasa de Crecimiento per cápita (dN/dt)/N")
 ```
 
 ---
+class: small
 
-# 🌍 Importancia del Efecto Allee en Conservación
+# 🌍 Importancia Efecto Allee en Conservación
 
 .pull-left[
 ## .red[Consecuencias Críticas]
@@ -772,21 +899,21 @@ ggplot(allee_data, aes(x = population, y = growth_rate, color = model)) +
 .pull-right[
 ## .green[Ejemplos Reales]
 
-### **Paloma Migratoria**
-- Comportamiento gregario obligado
-- Extinción por debajo del umbral social
+- **Paloma Migratoria**
+  - Comportamiento gregario obligado
+  - Extinción por debajo del umbral social
 
-### **Rinoceronte de Java**
-- < 80 individuos actuales
-- Dificultad para encontrar pareja
+- **Rinoceronte de Java**
+  - < 80 individuos actuales
+  - Dificultad para encontrar pareja
 
-### **Plantas con Polinización Especializada**
-- Baja densidad → polinización insuficiente
-- **Fragmentación de hábitat crítica**
+- **Plantas con Polinización Especializada**
+  - Baja densidad → polinización insuficiente
+  - **Fragmentación de hábitat crítica**
 
 .box[
-### 🎯 **Implicación para Manejo**
-Restaurar poblaciones por **encima** del umbral de Allee
+🎯 **Implicación para el manejo**
+  - Restaurar poblaciones por **encima** del umbral de Allee
 ]
 ]
 
@@ -811,12 +938,45 @@ class: inverse, center, middle
 - No importa cuán abundantes sean otros recursos
 ]
 
---
+---
 
 .equation[
 **Factor Limitante** = min{R₁, R₂, R₃, ..., Rₙ}
 ]
 
-### 🌱 **Ejemplos:**
-- **
+### 🌱 **Ejemplos Específicos:**
 
+.pull-left.small[
+### **Plantas Acuáticas**
+- **Agua abundante:** ✅ 100%
+- **Luz solar:** ✅ 90%
+- **CO₂:** ✅ 85%
+- **Nitrógeno:** ⚠️ **30%** ← LIMITANTE
+- **Fósforo:** ✅ 70%
+
+**Resultado:** Crecimiento limitado al 30%
+]
+
+.pull-right.small[
+### **Cultivo de Café (RD)**
+- **Temperatura:** ✅ Óptima
+- **Precipitación:** ✅ Adecuada
+- **Suelo orgánico:** ✅ Rico
+- **Potasio:** ⚠️ **DEFICIENTE** ← LIMITANTE
+- **Mano de obra:** ✅ Disponible
+
+**Resultado:** Rendimiento bajo por falta de K
+]
+
+---
+
+### 🔍 **Caso Práctico: Bosque Nublado Sierra de Bahoruco**
+.box.compact[
+- **Humedad:** 95% (abundante)
+- **Temperatura:** Ideal para crecimiento
+- **Suelo profundo:** Disponible
+- **Radiación solar:** **LIMITADO por nubes** ← FACTOR MÍNIMO
+- **Nutrientes:** Moderados
+
+**Consecuencia:** La vegetación se adapta a **baja luminosidad**, determinando la estructura del bosque.
+]
