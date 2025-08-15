@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Ecología II</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Arlen Marmolejo" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Ecología II
+]
+.subtitle[
+## Día 01. Fundamentos de Ecología de Poblaciones
+]
+.author[
+### Arlen Marmolejo
+]
+.institute[
+### Universidad Autónoma de Santo Domingo (UASD)
+]
+.date[
+### Actualizado: 2025-08-15
+]
+
+---
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.title-slide {
+  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3');
+  background-size: cover;
+  background-position: center;
+}
+
+.title-slide .remark-slide-content {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.large { font-size: 130% }
+.medium { font-size: 110% }
+.small { font-size: 90% }
+.tiny { font-size: 70% }
+
+.green { color: #2E8B57; }
+.blue { color: #4169E1; }
+.red { color: #DC143C; }
+
+.highlight {
+  background-color: #ffff99;
+  padding: 2px 4px;
+}
+
+.box {
+  background-color: #f0f8ff;
+  border: 2px solid #4169E1;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.equation {
+  background-color: #f5f5f5;
+  border-left: 5px solid #2E8B57;
+  padding: 15px;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+}
+&lt;/style&gt;
+
+
+# .large[🌿 Fundamentos de Ecología de Poblaciones]
+
+## .medium[Historia, Características y Dinámica Poblacional]
+
+
+---
+
+# 📋 Agenda de la Conferencia
+
+.box[
+## **BLOQUE 1** - Historia y Desarrollo
+- Evolución de la disciplina
+- Pioneros y contribuciones clave
+- Hitos históricos fundamentales
+
+## **BLOQUE 2** - Características Poblacionales
+- Conceptos básicos: tamaño, densidad, distribución
+- Estructura etaria y demográfica
+- Patrones espaciales
+]
+
+---
+
+# 📋 Agenda de la Conferencia (cont.)
+
+.box[
+## **BLOQUE 3** - Crecimiento Poblacional
+- Modelos matemáticos fundamentales
+- Capacidad de carga y regulación
+- Efecto Allee
+
+## **BLOQUE 4** - Factores Reguladores
+- Leyes limitantes clásicas
+- Factores ambientales y distribución
+]
+
+---
+class: inverse, center, middle
+
+# 📚 BLOQUE 1
+# Historia y Desarrollo de la Ecología de Poblaciones
+
+---
+
+# 🕰️ Línea Temporal: Desarrollo Histórico
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/timeline-1.png" width="100%" /&gt;
+
+---
+
+class: small, medium
+
+# 🎯 Pioneros y Contribuciones Clave
+
+.pull-left[
+## .green[Thomas Malthus (1798)]
+- **"Ensayo sobre el Principio de Población"**
+- Crecimiento geométrico vs. aritmético
+- Base del crecimiento exponencial
+
+## .green[Alfred Lotka (1925)]
+- **"Elements of Physical Biology"**
+- Matemáticas en biología
+- Ecuaciones diferenciales poblacionales
+
+## .green[Vito Volterra (1926)]
+- **Modelo depredador-presa**
+- Oscilaciones poblacionales
+- Fundamentos de la dinámica comunitaria
+]
+
+.pull-right[
+## .green[Warder Allee (1931)]
+- **"Animal Aggregations"**
+- Efecto Allee (densidad-dependencia positiva)
+- Importancia en conservación
+
+## .green[Georgii Gause (1934)]
+- **"The Struggle for Existence"**
+- Principio de exclusión competitiva
+- Experimentos de laboratorio clásicos
+
+## .green[Robert MacArthur (1967)]
+- **Teoría r-K**
+- Estrategias de vida
+- Biogeografía de islas
+]
+
+---
+
+class: small
+
+# 📈 Evolución Conceptual de la Disciplina
+
+.box[
+### .blue[Fase 1: Descriptiva (1798-1920)]
+- Observaciones naturales
+- Descripciones cualitativas
+- Censos poblacionales básicos
+
+### .blue[Fase 2: Matemática (1920-1950)]
+- Modelos cuantitativos
+- Ecuaciones diferenciales
+- Teoría poblacional formal
+
+### .blue[Fase 3: Experimental (1950-1980)]
+- Validación empírica
+- Experimentos controlados
+- Ecología de campo
+
+### .blue[Fase 4: Integrativa (1980-presente)]
+- Enfoque multidisciplinario
+- Biología molecular + ecología
+- Modelado computacional
+- Aplicaciones en conservación
+]
+
+---
+class: inverse, center, middle
+
+# 🔬 BLOQUE 2
+# Características de las Poblaciones
+
+---
+
+# 📊 Definición y Conceptos Básicos
+
+.box[
+## .green[¿Qué es una Población?]
+
+**Definición:** Grupo de individuos de la **misma especie** que:
+- Ocupan un **área geográfica definida**
+- Interactúan entre sí (reproducción, competencia)
+- Comparten un **pool genético común**
+- Tienen potencial reproductivo conjunto
+]
+
+--
+
+## 🎯 Características Fundamentales
+
+.pull-left[
+### **Propiedades Estadísticas**
+- .highlight[**Tamaño (N)**]: Número total de individuos
+- .highlight[**Densidad (D)**]: Individuos por unidad de área
+- .highlight[**Biomasa**]: Peso total de la población
+]
+
+.pull-right[
+### **Propiedades Dinámicas**
+- .highlight[**Tasas vitales**]: Natalidad, mortalidad
+- .highlight[**Estructura**]: Edad, sexo, tamaño
+- .highlight[**Distribución espacial**]: Patrones geográficos
+]
+
+---
+
+# 📏 Tamaño y Densidad Poblacional
+
+## .blue[Tamaño Poblacional (N)]
+
+.equation[
+**N** = Número total de individuos en la población en un momento dado
+]
+
+--
+
+## .blue[Densidad Poblacional (D)]
+
+.pull-left[
+### **Densidad Cruda**
+.equation[
+D = N / A
+]
+Donde:
+- **N** = Tamaño poblacional  
+- **A** = Área total ocupada
+]
+
+.pull-right[
+### **Densidad Ecológica**
+.equation[
+D_eco = N / A_util
+]
+Donde:
+- **A_util** = Área de hábitat utilizable
+- Más relevante biológicamente
+]
+
+--
+
+.box[
+### 🔍 **Ejemplo Práctico**
+- **Población de venados:** 200 individuos en 1000 ha
+- **Densidad cruda:** 0.2 venados/ha
+- **Pero solo 300 ha son bosque apropiado**
+- **Densidad ecológica:** 0.67 venados/ha
+]
+
+---
+
+# 🗺️ Distribución Espacial
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/spatial_patterns-1.png" width="100%" /&gt;
+
+---
+
+# 🎯 Tipos de Distribución Espacial
+
+.pull-left[
+## .green[1. Distribución Aleatoria]
+- **Sin patrón aparente**
+- Ambiente homogéneo
+- Sin interacciones fuertes
+- **Ejemplo:** Plantas pioneras en campo abierto
+
+## .green[2. Distribución Agrupada]
+- **Grupos o manchones**
+- Recursos heterogéneos
+- Comportamiento social
+- **Ejemplo:** Peces en cardúmenes
+]
+
+.pull-right[
+## .green[3. Distribución Regular]
+- **Espaciado uniforme**
+- Competencia por recursos
+- Territorialidad
+- **Ejemplo:** Árboles en bosque maduro
+
+## .blue[🔍 Índices de Dispersión]
+.equation[
+**Índice de Morisita**
+I = n[(Σx²) - N] / [N(N-1)]
+]
+- I = 1: Aleatorio
+- I &gt; 1: Agrupado  
+- I &lt; 1: Regular
+]
+
+---
+
+# 👥 Estructura Etaria y Demográfica
+
+## .blue[Pirámides Poblacionales]
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/age_pyramids-1.png" width="100%" /&gt;
+
+---
+
+# 📈 Interpretación de Estructuras Etarias
+
+.pull-left[
+## .red[Pirámide Expansiva]
+- **Base ancha, ápice estrecho**
+- Alta natalidad, alta mortalidad
+- Población en crecimiento rápido
+- **Características:**
+  - Muchos juveniles
+  - Pocos adultos mayores
+  - r &gt; 0 (crecimiento positivo)
+
+## .blue[Pirámide Estable]  
+- **Forma relativamente uniforme**
+- Natalidad = Mortalidad
+- Población en equilibrio
+- **Características:**
+  - Distribución balanceada
+  - r ≈ 0 (crecimiento cero)
+]
+
+.pull-right[
+## .green[Pirámide Constrictiva]
+- **Base estrecha, ápice ancho**
+- Baja natalidad, baja mortalidad
+- Población en declive
+- **Características:**
+  - Pocos juveniles
+  - Muchos adultos mayores
+  - r &lt; 0 (crecimiento negativo)
+
+.box[
+### 🎯 **Implicaciones para Manejo**
+- **Expansiva:** Control poblacional
+- **Estable:** Monitoreo continuo  
+- **Constrictiva:** Programas de recuperación
+]
+]
+
+---
+class: inverse, center, middle
+
+# 📊 BLOQUE 3
+# Crecimiento Poblacional
+
+---
+
+# 🚀 Modelo de Crecimiento Exponencial
+
+## .blue[Ecuación Fundamental]
+
+.equation[
+**dN/dt = rN**
+
+Donde:
+- **N** = Tamaño poblacional
+- **t** = Tiempo
+- **r** = Tasa intrínseca de crecimiento
+- **dN/dt** = Cambio en el tamaño poblacional
+]
+
+--
+
+## .blue[Solución de la Ecuación]
+
+.equation[
+**N(t) = N₀e^(rt)**
+
+Donde:
+- **N₀** = Población inicial
+- **e** = Base del logaritmo natural (2.718...)
+]
+
+---
+
+# 📈 Visualización del Crecimiento Exponencial
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/exponential_growth-1.png" width="100%" /&gt;
+
+---
+
+# ⚖️ Modelo de Crecimiento Logístico
+
+## .blue[Limitaciones del Modelo Exponencial]
+
+.box[
+- **Recursos infinitos** (irrealista)
+- **Sin competencia** intraespecífica
+- **Ambiente constante**
+- **Crecimiento sin límites**
+]
+
+--
+
+## .blue[Ecuación Logística]
+
+.equation[
+**dN/dt = rN(1 - N/K)**
+
+Donde:
+- **K** = Capacidad de carga del ambiente
+- **(1 - N/K)** = Factor de resistencia ambiental
+]
+
+--
+
+## .blue[Solución de la Ecuación Logística]
+
+.equation[
+**N(t) = K / (1 + ((K-N₀)/N₀)e^(-rt))**
+]
+
+---
+
+# 📊 Comparación: Exponencial vs. Logístico
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/logistic_comparison-1.png" width="100%" /&gt;
+
+---
+
+# 🎯 Fases del Crecimiento Logístico
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/logistic_phases-1.png" width="100%" /&gt;
+
+---
+
+# ⚡ Efecto Allee
+
+## .blue[Definición]
+.box[
+**Relación positiva entre densidad poblacional y fitness individual**
+
+En poblaciones **muy pequeñas**, el crecimiento per cápita **disminuye** debido a:
+- Dificultad para encontrar pareja
+- Pérdida de beneficios cooperativos  
+- Depresión endogámica
+- Efectos estocásticos
+]
+
+---
+
+## .blue[Modelo Matemático con Efecto Allee]
+
+.equation[
+**dN/dt = rN(1 - N/K)(N/A - 1)**
+
+Donde:
+- **A** = Tamaño poblacional umbral mínimo
+- Si N &lt; A → dN/dt &lt; 0 (extinción)
+- Si A &lt; N &lt; K → dN/dt &gt; 0 (crecimiento)
+]
+
+---
+
+# 📉 Visualización del Efecto Allee
+
+&lt;img src="dia-01-fundamentos-ecologia-poblaciones_files/figure-html/allee_effect-1.png" width="100%" /&gt;
+
+---
+
+# 🌍 Importancia del Efecto Allee en Conservación
+
+.pull-left[
+## .red[Consecuencias Críticas]
+
+### **Vórtice de Extinción**
+- Poblaciones pequeñas → fitness reducido
+- Fitness reducido → población más pequeña
+- **Retroalimentación positiva hacia extinción**
+
+### **Umbrales de Viabilidad**
+- Población mínima viable (PMV)
+- Por debajo del umbral = extinción inevitable
+- **Fundamental para planes de recuperación**
+]
+
+.pull-right[
+## .green[Ejemplos Reales]
+
+### **Paloma Migratoria**
+- Comportamiento gregario obligado
+- Extinción por debajo del umbral social
+
+### **Rinoceronte de Java**
+- &lt; 80 individuos actuales
+- Dificultad para encontrar pareja
+
+### **Plantas con Polinización Especializada**
+- Baja densidad → polinización insuficiente
+- **Fragmentación de hábitat crítica**
+
+.box[
+### 🎯 **Implicación para Manejo**
+Restaurar poblaciones por **encima** del umbral de Allee
+]
+]
+
+---
+class: inverse, center, middle
+
+# ⚖️ BLOQUE 4
+# Factores que Regulan las Poblaciones
+
+---
+
+# 🔬 Leyes Limitantes Clásicas
+
+## .blue[1. Ley del Mínimo de Liebig (1840)]
+
+.box[
+**"El crecimiento está limitado por el factor menos disponible"**
+
+### Analogía del Barril:
+- Cada tabla = un recurso diferente
+- **Tabla más corta** determina la capacidad total
+- No importa cuán abundantes sean otros recursos
+]
+
+--
+
+.equation[
+**Factor Limitante** = min{R₁, R₂, R₃, ..., Rₙ}
+]
+
+### 🌱 **Ejemplos:**
+- **
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

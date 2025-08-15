@@ -16,7 +16,6 @@ header-includes:
   - \usepackage{float}
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -31,7 +30,7 @@ knitr::opts_chunk$set(
 
 # Descripción
 
-Esta asignatura trata sobre el análisis de modelos de los procesos ecológicos esenciales que sustentan la vida del planeta, la estructura de las poblaciones y comunidades con sus organismos como elementos bióticos del ecosistema para conocimiento de la diversidad y las relaciones organismos – naturaleza y orientado al entendimiento de dinámica de la tierra. El análisis de las fluctuaciones de la población, formas de sucesión y los tipos de distribución; de los conceptos fundamentales poblacionales, los potenciales biológicos del crecimiento, las formas y estrategias en la adaptabilidad de las mismas. El impacto a nivel global y los mecanismos humanos para el control y la estabilidad.
+Esta asignatura trata sobre el análisis de modelos de los procesos ecológicos esenciales que sustentan la vida del planeta, la estructura de las poblaciones y comunidades con sus organismos como elementos bióticos del ecosistema para conocimiento de la diversidad y las relaciones organismos – naturaleza y orientado al entendimiento dinámico de la tierra. El análisis de las fluctuaciones de la población, formas de sucesión y los tipos de distribución; de los conceptos fundamentales poblacionales, los potenciales biológicos del crecimiento, las formas y estrategias en la adaptabilidad de las mismas. El impacto a nivel global y los mecanismos humanos para el control y la estabilidad.
 
 Se espera un dominio de los conceptos de los niveles ecológicos de conjunto, particularmente del conocimiento de la diversidad biológica y los problemas ambientales generales y orientación a la búsqueda de respuestas y planteamiento de soluciones a la problemática ambiental general.
 
@@ -41,75 +40,80 @@ También, se espera dominio de modelos fundamentales y de herramientas que pueda
 
 El estudiante será capaz de:
 
-- RAE-1.  Diferenciar los niveles de conjunto en el marco de los niveles en la organización ecológica. 
+-   RAE-1. Diferenciar los niveles de conjunto en el marco de los niveles en la organización ecológica.
 
-- RAE-2. Entender las propiedades de las poblaciones y comunidades con el conocimiento de su estructura, el concepto de límites, densidad y frecuencia, y las Leyes ecológicas fundamentales, el Continuo, Discontinuo, del Mínimo y la Tolerancia. 
+-   RAE-2. Entender las propiedades de las poblaciones y comunidades con el conocimiento de su estructura, el concepto de límites, densidad y frecuencia, y las Leyes ecológicas fundamentales, el Continuo, Discontinuo, del Mínimo y la Tolerancia.
 
-- RAE-3. Analizar lo que significa para el desarrollo de una población los diferentes conceptos: potencial biótico, la resistencia ambiental, y la capacidad de carga; índices de fertilidad, natalidad, y mortalidad; densidad poblacional patrones de crecimiento, y estructura piramidal de desarrollo por edades de los miembros de una población 
+-   RAE-3. Analizar lo que significa para el desarrollo de una población los diferentes conceptos: potencial biótico, la resistencia ambiental, y la capacidad de carga; índices de fertilidad, natalidad, y mortalidad; densidad poblacional patrones de crecimiento, y estructura piramidal de desarrollo por edades de los miembros de una población
 
-- RAE-4. Conocer sobre los diferentes conceptos sobre modelos de dinámica de las poblaciones y comunidades, los conceptos demográficos principales, diferenciando los diferentes modelos de crecimiento, las curvas de crecimiento. 
+-   RAE-4. Conocer sobre los diferentes conceptos sobre modelos de dinámica de las poblaciones y comunidades, los conceptos demográficos principales, diferenciando los diferentes modelos de crecimiento, las curvas de crecimiento.
 
-- RAE-5. Discutirá acerca de los cálculos que se elaboran para las tablas de vida, así como la esperanza media de vida.
+-   RAE-5. Discutirá acerca de los cálculos que se elaboran para las tablas de vida, así como la esperanza media de vida.
 
-- RAE-6. Manejar los conceptos fundamentales de las relaciones internas que se dan entre poblaciones que integran la comunidad, como aislamiento, territorialidad, dispersión, colonización, y alelopatía; además, analizar los efectos de la depredación, la competencia, el mutualismo, el amensalismo, parasitismo y el comensalismo. 
+-   RAE-6. Manejar los conceptos fundamentales de las relaciones internas que se dan entre poblaciones que integran la comunidad, como aislamiento, territorialidad, dispersión, colonización, y alelopatía; además, analizar los efectos de la depredación, la competencia, el mutualismo, el amensalismo, parasitismo y el comensalismo.
 
-- RAE-7. Dominar los conceptos fundamentales de la comunidad, la diversidad biológica, los diferentes índices que miden este aspecto. El concepto de ecotono, ecocline, y gradiente ecológico. 
+-   RAE-7. Dominar los conceptos fundamentales de la comunidad, la diversidad biológica, los diferentes índices que miden este aspecto. El concepto de ecotono, ecocline, y gradiente ecológico.
 
-- RAE-8. Proponer actividades que ayuden a la introducción de modelos en busca de soluciones a problemas ambientales en su entorno.
-
-
+-   RAE-8. Proponer actividades que ayuden a la introducción de modelos en busca de soluciones a problemas ambientales en su entorno.
 
 # Unidad 1. Fundamentos de Ecología de Poblaciones
 
-- **Historia y desarrollo de la ecología de poblaciones y comunidades**: historia y evolución de la disciplina, hitos y contribuciones relevantes.
-- **Características de las poblaciones**: tamaño, densidad, distribución espacial, estructuras etarias, sexo y clases.
-- **Crecimiento poblacional**: curvas de crecimiento, modelos, factores que regulan el crecimiento; potencial biótico, resistencia ambiental y capacidad de carga; tasas de natalidad, mortalidad y supervivencia; estructura de edades y su influencia en el crecimiento poblacional; efecto Allee y su importancia en la biología de la conservación.
-- **Factores que regulan el tamaño y distribución de las poblaciones**: ley de los factores limitantes, ley del mínimo de Liebig, ley de tolerancia de Shelford; influencia de factores ambientales en la distribución espacial y temporal; teoría de límite, el contínuo, el discontinuo y gradiente ambiental.
+-   **Historia y desarrollo de la ecología de poblaciones y comunidades**: historia y evolución de la disciplina, hitos y contribuciones relevantes.
+-   **Características de las poblaciones**: tamaño, densidad, distribución espacial, estructuras etarias, sexo y clases.
+-   **Crecimiento poblacional**: curvas de crecimiento, modelos, factores que regulan el crecimiento; potencial biótico, resistencia ambiental y capacidad de carga; tasas de natalidad, mortalidad y supervivencia; estructura de edades y su influencia en el crecimiento poblacional; efecto Allee y su importancia en la biología de la conservación.
+-   **Factores que regulan el tamaño y distribución de las poblaciones**: ley de los factores limitantes, ley del mínimo de Liebig, ley de tolerancia de Shelford; influencia de factores ambientales en la distribución espacial y temporal; teoría de límite, el contínuo, el discontinuo y gradiente ambiental.
 
 # Unidad 2. Interacciones Biológicas y Dinámica Poblacional
 
-- **Estrategias de vida y competencia**: ciclos de vida y estrategias reproductivas *r* y K; competencia interespecífica e intraespecífica, exclusión competitiva y coexistencia.
-- **Relaciones ecológicas**: depredación (modelo Lotka-Volterra), mutualismo, comensalismo, amensalismo, parasitismo y enfermedades infecciosas.
-- **Redes tróficas y adaptaciones**: redes y cascadas tróficas, coevolución e interacciones depredador-presa, parásito-hospedador y mutualismo.
-- **Dinámica y sucesión**: migración, dispersión, fragmentación de poblaciones, propiedades generacionales, sucesión ecológica (primaria y secundaria), formas de sucesión y censo poblacional.
+-   **Estrategias de vida y competencia**: ciclos de vida y estrategias reproductivas *r* y K; competencia interespecífica e intraespecífica, exclusión competitiva y coexistencia.
+-   **Relaciones ecológicas**: depredación (modelo Lotka-Volterra), mutualismo, comensalismo, amensalismo, parasitismo y enfermedades infecciosas.
+-   **Redes tróficas y adaptaciones**: redes y cascadas tróficas, coevolución e interacciones depredador-presa, parásito-hospedador y mutualismo.
+-   **Dinámica y sucesión**: migración, dispersión, fragmentación de poblaciones, propiedades generacionales, sucesión ecológica (primaria y secundaria), formas de sucesión y censo poblacional.
 
 # Unidad 3. Estructura y Dinámica de Comunidades
 
-- **Concepto, propiedades y diversidad de comunidades**: concepto, propiedades, riqueza, equidad y roles de especies (dominantes, clave, raras, fundadoras, paraguas, invasoras, indicadoras, ingenieras).
-- **Patrones espaciales y funcionales**: zonas de transición (ecotono), patrones de distribución, redes tróficas y grupos funcionales.
-- **Procesos y estabilidad comunitaria**: sucesión ecológica (tipos y patrones), resiliencia, estabilidad y perturbaciones; factores que influyen en estructura y función; fragmentación del hábitat y efectos; impacto de especies invasoras.
-- **Teorías y modelos**: modelos de nicho, teoría de la neutralidad ecológica, modelos de sucesión ecológica, biogeografía de islas.
+-   **Concepto, propiedades y diversidad de comunidades**: concepto, propiedades, riqueza, equidad y roles de especies (dominantes, clave, raras, fundadoras, paraguas, invasoras, indicadoras, ingenieras).
+-   **Patrones espaciales y funcionales**: zonas de transición (ecotono), patrones de distribución, redes tróficas y grupos funcionales.
+-   **Procesos y estabilidad comunitaria**: sucesión ecológica (tipos y patrones), resiliencia, estabilidad y perturbaciones; factores que influyen en estructura y función; fragmentación del hábitat y efectos; impacto de especies invasoras.
+-   **Teorías y modelos**: modelos de nicho, teoría de la neutralidad ecológica, modelos de sucesión ecológica, biogeografía de islas.
 
 # Unidad 4. Ecología Espacial y Conservación
 
-- **Paisaje y metapoblaciones**: concepto de paisaje, relevancia en ecología, teoría de metapoblaciones, colonización, extinción y dispersión entre parches; estrategias de conservación basadas en metapoblaciones.
-- **Genética y amenazas**: genética de poblaciones, efectos de cuellos de botella y deriva genética; pérdida de hábitat, conectividad y fragmentación: causas y consecuencias.
-- **Conservación y biodiversidad**: inventarios de biodiversidad, medidas de conservación, diversidad marina y terrestre de la República Dominicana.
-- **Perspectivas y aplicaciones**: problemas ambientales actuales y soluciones; aplicaciones de la ecología de paisajes en conservación; importancia de la ecología de poblaciones en conservación y manejo ambiental.
-
-
-
+-   **Paisaje y metapoblaciones**: concepto de paisaje, relevancia en ecología, teoría de metapoblaciones, colonización, extinción y dispersión entre parches; estrategias de conservación basadas en metapoblaciones.
+-   **Genética y amenazas**: genética de poblaciones, efectos de cuellos de botella y deriva genética; pérdida de hábitat, conectividad y fragmentación: causas y consecuencias.
+-   **Conservación y biodiversidad**: inventarios de biodiversidad, medidas de conservación, diversidad marina y terrestre de la República Dominicana.
+-   **Perspectivas y aplicaciones**: problemas ambientales actuales y soluciones; aplicaciones de la ecología de paisajes en conservación; importancia de la ecología de poblaciones en conservación y manejo ambiental.
 
 # Bibliografía {.unnumbered}
 
 Referencias Bibliográficas.
 
 Referencias Básicas.
-Odum, Eugene P., Barret H, Garry W, y Aguilar Ortega, María Teresa. (2008). Fundamentos de Ecología. Madrid: CENGAGE Learning Latin America. 
+
+Odum, Eugene P., Barret H, Garry W, y Aguilar Ortega, María Teresa. (2008). Fundamentos de Ecología. Madrid: CENGAGE Learning Latin America.
+
 Smith, Thomas M., y Smith, Robert Leo. (2007). Ecología. Madrid: Pearson Educación.
-Sarmiento, Guillermo (1980). Los Ecosistemas y la Ecósfera.  Editorial Blume, S.A. Milanesat 21-23 08017 Barcelona.
+
+Sarmiento, Guillermo (1980). Los Ecosistemas y la Ecósfera. Editorial Blume, S.A. Milanesat 21-23 08017 Barcelona.
+
 Vázquez Torre Ana María Guadalupe (1993). Ecología y formación ambiental. 53500, México: McGraw-Hill/Interamericana Editores
 
 Referencias Complementarias.
-Boege Ek del Val, Karina. (2012). Ecología y Evolución de las Interacciones Bióticas. Argentina: Fondo de Cultura Económica. 
-Escolástico León, Consuelo., Cabildo Miranda, María del Pilar, Claramunt Vallespí, Rosa María, Claramunt Vallespín Teresa. (2013). Ecología I: Introducción Organismos y Poblaciones. UNED: Madrid. 
-Escolástico León, Consuelo., Cabildo Miranda, María del Pilar, Claramunt Vallespí, Rosa María, Claramunt Vallespín Teresa. (2013). Ecología II: Comunidades y Ecosistemas. UNED: Madrid. 
-Samo Lumbreras, Antonio José., Garmendia Salvador, Alfonso y Delgado, Juan Antonio. (2008). Introducción práctica a la Ecología. Pearson Prentice Hall: Madrid. 
-Tarbuck, Edward J., y Lutgens Frederick K. (2005). Ciencias de la Tierra. Madrid: Pearson Prentice Hall. 
-Yánez, Patricio. (2014). Ecología y Biodiversidad desde el neotrópico: UNIBE/UIDE: Quito, Ecuador. 
+
+Boege Ek del Val, Karina. (2012). Ecología y Evolución de las Interacciones Bióticas. Argentina: Fondo de Cultura Económica.
+
+Escolástico León, Consuelo., Cabildo Miranda, María del Pilar, Claramunt Vallespí, Rosa María, Claramunt Vallespín Teresa. (2013). Ecología I: Introducción Organismos y Poblaciones. UNED: Madrid.
+
+Escolástico León, Consuelo., Cabildo Miranda, María del Pilar, Claramunt Vallespí, Rosa María, Claramunt Vallespín Teresa. (2013). Ecología II: Comunidades y Ecosistemas. UNED: Madrid.
+
+Samo Lumbreras, Antonio José., Garmendia Salvador, Alfonso y Delgado, Juan Antonio. (2008). Introducción práctica a la Ecología. Pearson Prentice Hall: Madrid.
+
+Tarbuck, Edward J., y Lutgens Frederick K. (2005). Ciencias de la Tierra. Madrid: Pearson Prentice Hall.
+
+Yánez, Patricio. (2014). Ecología y Biodiversidad desde el neotrópico: UNIBE/UIDE: Quito, Ecuador.
+
 Magurran, A. E. (1988). Ecological diversity and its measurement. Princeton University Press, Princeton, New Jersey, 179 pp.
+
 Alcolado, P.M. (1984). Conceptos e índices relacionados con la diversidad. Avicennia, 1998, 8/9: 7-21.
+
 Alcolado, P.M. (1984). Utilidad de algunos Índices ecológicos estructurales en el estudio de comunidades marinas de Cuba. Cien. Bioi., 11: 61-77.
-
-
-
