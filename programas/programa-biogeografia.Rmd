@@ -8,7 +8,7 @@ output:
     # reference_docx: "plantillas/apa-student-paper-template-universidad-arizona.docx"
     reference_docx: "plantilla-programas.dotx"
     number_sections: false
-date: "2025-01-31"
+date: "Revisado en agosto de 2025"
 csl: "apa-es.csl"
 bibliography: bibliografia.bib
 always_allow_html: true
@@ -46,6 +46,16 @@ Ahora sí, hablemos de biogeografía. Es la ciencia que intenta documentar y ent
 
 Matriculaste biogeografía, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de ciencia. La ciencia, incluida la biogeografía, atraviesa una crisis de reproducibilidad que afecta su capacidad para generar conocimiento nuevo y justo. Millones invierten tiempo en investigación, pero la falta de transparencia en métodos y fuentes dificulta la reproducibilidad y replicabilidad de las investigaciones. Aumentar la reproducibilidad requiere abrir nuestros métodos y publicar protocolos. En biogeografía, como en muchas otras disciplinas, la enseñanza debe ser creativa, crítica y que despierte la curiosidad, enfocándose en fundamentos que puedan reproducirse. Al estudiarla, en principio, deberías contribuir a un conocimiento abierto, justificando tus métodos y herramientas, facilitando al mismo tiempo la reproducibilidad. La biogeografía busca entender la distribución espacial y temporal de la diversidad biológica, desde genes hasta ecosistemas, en relación con variables como el área, el aislamiento y la latitud. Aunque se superpone con la ecología, son campos distintos pero interconectados. Los creadores de la teoría de la biogeografía insular incluso argumentaron que no veían "ninguna distinción real entre biogeografía y ecología" (MacArthur & Wilson, 1967). Ambas disciplinas, pese a sus enfoques diferentes, colaboran en entender la complejidad de la vida en la Tierra.
 
+# Competencias de la asignatura
+
+-	Creatividad y curiosidad, al plantear tus propios problemas de investigación, formular preguntas y responderlas empleando soluciones propias y mejorando o adaptando las existentes.
+
+-	Criticismo, al cuestionar el desarrollo de esta disciplina, sus enfoques y sus paradigmas actuales.
+
+-	Comunicación, al redactar de forma abierta, tus resultados de investigación y proponer tus interpretaciones.
+
+-	Ciudadanía, apertura/transparencia, sentido de justicia y de igualdad, al contribuir con el conocimiento científico y al posibilitar la reproducibilidad de tus resultados.
+
 # Resultados de aprendizaje esperados
 
 Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
@@ -55,6 +65,22 @@ RAE1.	Formulas preguntas de investigación en biogeografía que puedes dejar pla
 RAE2.	Aplicas métodos y técnicas usados en biogeografía para analizar la biodiversidad y su distribución espacial, con énfasis en ecología numérica, utilizando datos de terreno y basándote en protocolos reproducibles.
 
 RAE3.	Comprendes los principios geográficos y ecológicos de la biogeografía, así como los procesos biogeográficos y la historia de la biota en la Tierra.
+
+# Organización del curso
+
+
+```{r, warning=F, message=F, echo=F}
+library(magick)
+
+# Leer el PDF
+pdf_img <- image_read_pdf("../esquema-comun-materias/esquema-comun-materias.pdf",
+                          density = 300)  # density mejora resolución
+
+# Guardar como JPG
+image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", format = "jpg")
+```
+
+![](../presentaciones/esquema-comun-materias.jpg){width=90%}
 
 # Unidad 1. Fundamentos y contexto de la biogeografía
 
@@ -93,6 +119,161 @@ RAE3.	Comprendes los principios geográficos y ecológicos de la biogeografía, 
 -   **Biogeografía insular**: islas en los estudios biogeográficos, importancia, patrones insulares, origen y justificación de la teoría del equilibrio, desarrollo más allá de la teoría clásica.
 
 -   **Biogeografía de La Española**: origen geológico y configuración actual, diversidad de hábitats y especies endémicas, influencia de barreras físicas internas y relaciones biogeográficas con otras islas y el continente.
+
+---
+
+## Estrategias y actividades formativas
+
+- **E1.** Estudio de casos de aplicación de la biogeografía.
+
+- **E2.** Clase expositiva.  
+
+- **E3.** Aprendizaje basado en problemas (ABP).  
+
+- **E4.** Aprendizaje por descubrimiento e indagación.  
+
+- **E5.** Salida de campo (si aplica), con colecta de datos propios.  
+
+- **E6.** Tutorías regulares. **Lugar:** aula FC-203. **Días:** miércoles a viernes. **Horario:** 9 am a 1 pm (también disponibilidad por las tardes).  
+
+---
+
+
+## Evaluación de los aprendizajes
+
+### Criterios
+
+- Uso de técnicas y métodos reproducibles.
+
+- Identificación y resolución de problemas de investigación en biogeografía, incluyendo colecta, procesamiento y análisis de datos de campo. 
+
+- Aprovechamiento de recursos informáticos, tales como aplicaciones, programación, tutor de inteligencia artificial supervisado, para el análisis y síntesis de resultados.
+
+- Síntesis de resultados de investigación en una pieza de investigación tipo manuscrito.
+
+### Técnicas e instrumentos de evaluación
+
+<br>
+
+```{r}
+library(flextable)
+
+# Datos
+evaluacion <- data.frame(
+  No = c(1, 2, 3, 4, 5),
+  Tecnicas = c(
+    "Proyecto: redacción de manuscrito científico de biogeografía",
+    "Formulación y resolución de problemas",
+    "Ejercicios, prácticas/problemas de clase usando recursos básicos, analógicos",
+    "Ejercicios, prácticas/problemas de clase usando recursos informáticos (aplicaciones, programación, tutor IA supervisado)",
+    "Exámenes y exposiciones"
+  ),
+  Instrumentos = c(
+    "Rúbricas, fichas de autoevaluación",
+    "Rúbricas, fichas de autoevaluación",
+    "Hoja de verificación de ejercicios y prácticas",
+    "Hoja de verificación de ejercicios y prácticas",
+    "Examen calificado/hoja de evaluación de presentación"
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Flextable
+flextable(evaluacion) |>
+  set_header_labels(
+    No = "No.",
+    Tecnicas = "Técnicas",
+    Instrumentos = "Instrumentos de Evaluación"
+  ) |>
+  width(j = 1, width = 0.5) |>   # columna Técnicas
+  width(j = 2, width = 3) |>   # columna Técnicas
+  width(j = 3, width = 3) |>   # columna Instrumentos
+  fontsize(size = 10, part = "all") |>
+  align(align = "center", part = "header")
+
+```
+
+---
+
+## Distribución de puntaje
+
+<br>
+
+```{r}
+# Datos
+distribucion <- data.frame(
+  Item = c(
+    "Asistencia",
+    "Prácticas de aula",
+    "Prácticas de desarrollo",
+    "Proyecto",
+    "Exámenes y exposiciones"
+  ),
+  Porcentaje = c(
+    "(max. 5%)",
+    "(max. 20%)",
+    "(min. 20, max. 30%)",
+    "(min. 20%, max. 30%)",
+    "(min. 20%, max. 30%)"
+  ),
+  stringsAsFactors = FALSE
+)
+
+ft <- flextable(distribucion) |>
+  set_header_labels(
+    Item = "Ítem",
+    Porcentaje = "Porcentaje de la nota final"
+  ) |>
+  width(j = 1, width = 3.2) |>
+  width(j = 2, width = 2.2) |>
+  fontsize(size = 10, part = "all") |>
+  align(align = "center", part = "header") |>
+  align(j = 2, align = "right", part = "body") |>
+  valign(valign = "top", part = "body") |>
+  padding(padding = 2, part = "all") |>
+  set_table_properties(layout = "fixed")
+ft
+```
+
+---
+
+## Recursos didácticos
+
+- Mapas.
+
+- Libros de texto y artículos científicos.
+
+- Ejercicios resueltos.
+
+- Vídeos en línea (clases y tutorías).
+
+- Servidor de foros.
+
+---
+
+## Recursos tecnológicos
+
+- Servidor de programación.
+
+- Proyector en el aula.
+
+- Computadora personal. Si no dispones de una, provisionalmente usa tu celular, aunque esta solución tiene limitaciones. La PC es necesaria para:
+
+  - elaboración y consulta de mapas,
+  
+  - experimentación con simulaciones,
+  
+  - redacción científica,
+  
+  - análisis de datos mediante programación,
+  
+  - uso de tutor de IA de forma supervisada,
+  
+  - elaboración de presentaciones de diapositivas.
+
+- Bases de datos y fuentes cartográficas digitales (imágenes satelitales, mapas web y locales).  
+
+- Servicios en la nube de escala planetaria (**Google Earth Engine, Microsoft Planetary Computer**, entre otros).  
 
 # Bibliografía
 
