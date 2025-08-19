@@ -1,0 +1,406 @@
+---
+title: "Programa de Geomorfología"
+output:
+  # pdf_document: default
+  # word_document:
+  bookdown::word_document2:
+    fig_caption: yes
+    # reference_docx: "plantillas/apa-student-paper-template-universidad-arizona.docx"
+    reference_docx: "plantilla-programas.dotx"
+    number_sections: false
+date: "Revisado en agosto de 2025"
+csl: "apa-es.csl"
+bibliography: bibliografia.bib
+always_allow_html: true
+header-includes:
+  - \usepackage{float}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  out.width="100%",
+  fig.pos = 'H')
+```
+
+<!-- # Programa de la asignatura: Geomorfología -->
+
+```{r children, child=c("basicos.Rmd")}
+```
+
+# Descripción
+
+## Versión larga
+
+Matriculaste geomorfología, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de ciencia.  Contrario a como se la ha concebido tradicionalmente, la ciencia es un proceso creativo y crítico, que despierta la curiosidad y la motivación e, idealmente, es una producción humana justa. Pero la ciencia está inmersa en una crisis, una de reproducibilidad que diezma su capacidad intrínseca para crear nuevo conocimiento, y que está convirtiéndola en una herramienta injusta.
+Ahora sí, hablemos de geomorfología, pasando por una cita, primero en su idioma original, luego traducida:
+
+> - *Earth's landscapes are sculpted by a suite of geomorphic processes that vary with position on the Earth and with time due to changes in the climate. Landscapes contain signatures of the principal active processes that we would like to learn to read [@anderson2010geomorphology].*
+
+> - *Los paisajes de la Tierra son esculpidos [modelados] por un conjunto de procesos geomorfológicos que cambian según la posición en el planeta y en el tiempo debido a cambios en el clima. Los paisajes contienen "firmas" [registros] del principal proceso activo, el cual "nos [te] interesa [para aprobar o para lo que veas]" aprender a leer [@anderson2010geomorphology].*
+
+Guarda ésto: "...el principal proceso activo...," y quédate también con esta otra cita:
+
+> La Geomorfología, como otras ramas de la ciencia, necesita pasar de la simple descripción a la cuantificación y para ello tiene que utilizar métodos de otras áreas científicas, fundamentalmente de la Física [@gutierrez_elorza_geomorfologi_2008].
+
+Tricart (1956) aseguraba que la Geomorfología debía apoyarse en el estudio de los procesos y también en la morfogénesis antrópica. No porque lo haya dicho él, sino porque la historia reciente le ha dado la razón: la geomorfología de procesos se ha convertido en la rama dominante desde mediados del siglo XX hasta la actualidad. Esta rama se preocupa más por el proceso que por la forma, lo cual la separa de la evolución de los grandes conjuntos de relieve [@gutierrez_elorza_geomorfologi_2008].
+
+Dos grupos de procesos geomorfológicos convergen en la superficie del planeta [@anderson2010geomorphology]:
+
+-	Las rocas de la superficie son movidas por procesos geofísicos profundos.
+
+-	La atmósfera es movida por una distribución desigual de la radiación solar.
+
+Aunque seguiré un guión de geomorfología de procesos, no olvidaré aproximaciones geomorfológicas tradicionales que, de otra manera, quedarían excluidas del programa (e.g. geomorfología litológica y evolutiva).
+
+La geomorfología de procesos no sería posible sin el avance de los últimos siglos en matemáticas. Igualmente, sin la irrupción de la tecnología y el desarrollo de la programación en la segunda mitad del siglo XX, tampoco sería posible estudiar procesos a escalas grandes. Estas herramientas han permitido que la geomorfología dé respuestas cada vez más precisas a problemas de ciencias de la Tierra, como los riesgos de desastres.
+
+## Versión corta
+
+Matriculaste geomorfología, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de ciencia.  La ciencia, incluida la geomorfología, atraviesa una crisis de reproducibilidad que afecta su capacidad para generar conocimiento nuevo y justo. Millones invierten tiempo en investigación, pero la falta de transparencia en métodos y fuentes dificulta la reproducibilidad y replicabilidad de las investigaciones. Aumentar la reproducibilidad requiere abrir nuestros métodos y publicar protocolos.
+
+Pasemos ahora a geomorfología. Esta rama de la geografía física, o de la geología, estudia los paisajes terrestres, modelados por procesos que varían según posición y cambios climáticos. Estos paisajes contienen registros del principal proceso activo, el cual debemos aprender a leer [@anderson2010geomorphology]. La geomorfología debe ir más allá de la mera descripción, por lo que debe apoyarse en técnicas cuantitativas, usando conocimientos de la física, las matemáticas y, en concreto, de la estadística [@gutierrez_elorza_geomorfologi_2008].
+
+@tricart1956geomorphologie subrayó la importancia del estudio de procesos y la morfogénesis antrópica para comprender mejor el modelado. La geomorfología de procesos, centrada en el proceso más que en la forma, ha dominado desde mediados del siglo XX. Esta estudia cómo las rocas superficiales, que originalmente fueron movilizadas por procesos geofísicos profundos, posteriormente son modeladas por una atmósfera donde la radiación solar es bastante desigual (Anderson & Anderson, 2010).
+
+La geomorfología de procesos ha abierto nuevas aplicaciones vitales para la humanidad, siendo actualmente una disciplina clave en el abordaje de problemas humanos que ocurren en la superficie terrestre, como son los riesgos de desastres. A pesar de enfocarme en geomorfología de procesos, no dejaré de lado enfoques tradicionales y, al mismo tiempo, incluiré matemáticas y tecnología, en consonancia con los avances ocurridos en el último siglo dentro de esta disciplina.
+
+# Competencias de la asignatura
+
+-	Creatividad y curiosidad, al plantear tus propios problemas de investigación, formular preguntas y responderlas empleando soluciones propias y mejorando o adaptando las existentes.
+
+-	Criticismo, al cuestionar el desarrollo de esta disciplina, sus enfoques y sus paradigmas actuales.
+
+-	Comunicación, al redactar de forma abierta, tus resultados de investigación y proponer tus interpretaciones.
+
+-	Ciudadanía, apertura/transparencia, sentido de justicia y de igualdad, al contribuir con el conocimiento científico y al posibilitar la reproducibilidad de tus resultados.
+
+# Resultados de aprendizaje esperados
+
+Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
+
+- RAE1. Formulas preguntas de investigación en geomorfología, las cuales podrías intentar responder a lo largo del semestre .
+
+- RAE2. Aplicas métodos y técnicas usados en geomorfología para analizar el relieve y las formas, así como su distribución espacial, haciendo énfasis en métodos numéricos, utilizando modelos y, a ser posible, datos de terreno, y basándote en protocolos reproducibles.
+
+- RAE3. Comprendes los principios geográficos de la geomorfología, así como los procesos geomorfológicos y la historia geológica del planeta.
+
+
+---
+
+# Unidad 1 (Semana 1). Fundamentos, bases geológicas y tiempo en geomorfología
+
+- **Definición de geomorfología**, disciplinas auxiliares, **epistemología** y métodos.
+
+- **Preguntas en geomorfología**, temas comunes e interdisciplinarios.
+
+- Repaso de **composición del interior de la Tierra**, **rocas** (incl. rocas comunes en RD), **placas** y **límites de placa** (reflejo de la tectónica de placas en el Caribe, **deformaciones**), **fallas, pliegues, diaclasas**. **Bases de geomorfología estructural**.
+
+- **Técnicas de datación**: relativas y absolutas.
+
+- **Revistas científicas** y **manuales** habituales en geomorfología.
+
+- **Aplicaciones** (panorama general).
+
+---
+
+# Unidad 2 (Semana 2). Geomorfometría y modelado del paisaje
+
+- **Parámetros** de la superficie terrestre, **modelos digitales de elevación (MDE)**, **geoestadística**.
+
+- **Paquetes de software** utilizados en geomorfometría.
+
+- **Mapeo y modelado del paisaje**; **aplicaciones**: sistemas fluviales, movimientos en masa, suelo, **agricultura de precisión**, entre otras.
+
+---
+
+# Unidad 3 (Semana 3). Intemperización, denudación y procesos de laderas
+
+- **Intemperización** como parte de la erosión.
+
+- **Perfil de meteorización** y **zona crítica**.
+
+- **Denudación**.
+
+- **Procesos que fracturan la roca**.
+
+- **Alteración química** de la roca.
+
+- **Ciclo de carbono a largo plazo** y efectos de la alteración química.
+
+- **Geomorfología climática**: medios áridos, semiáridos y dominio tropical.
+
+- **Geomorfología kárstica**. **Karst** y **riesgo asociado**.
+
+- **Laderas**, balance de masa y otros.
+
+- Procesos elementales: **rainsplash**, **solifluxión**, procesos **biogeomorfológicos**, y otros.
+
+- **Movimientos de masa** (procesos gravitacionales/de laderas): **principios físicos**, **tipologías** (caída, deslizamiento, flujo, reptación), **debris flow**, **modelos de laderas/morfometría**.
+
+---
+
+# Unidad 4 (Semana 4). Sistemas fluviales, litorales y eólicos
+
+- Conceptos básicos de **hidrología** e **hidráulica fluvial**; **procesos fluviales**.
+
+- **Formas y depósitos fluviales** (aluvionamientos, terrazas, diques, barras, etc.), **abanicos**.
+
+- **Aguas marinas litorales**; productos característicos de la **dinámica litoral**.
+
+- Fundamentos: **oleajes, mareas, corrientes**.
+
+- **Zonas y subzonas** del litoral, elementos y **productos morfológicos** (**costas arenosas**, **costas rocosas**).
+
+- **Procesos eólicos**: **definición**, **agentes**, **tipos de transporte** (saltación, suspensión, reptación), **formas eólicas** (dunas, ventifactos, yardangs).
+
+---
+
+## Estrategias y actividades formativas
+
+- **E1.** Estudio de casos de aplicación de la geomorfología.  
+
+- **E2.** Clase expositiva.  
+
+- **E3.** Aprendizaje basado en problemas (ABP).  
+
+- **E4.** Aprendizaje por descubrimiento e indagación.  
+
+- **E5.** Salida de campo (si aplica), con colecta de datos propios.  
+
+- **E6.** Tutorías regulares. **Lugar:** aula FC-203. **Días:** miércoles a viernes. **Horario:** 9 am a 1 pm (también disponibilidad por las tardes).  
+
+---
+
+
+## Evaluación de los aprendizajes
+
+### Criterios
+
+- Uso de técnicas y métodos reproducibles.
+
+- Identificación y resolución de problemas de investigación en geomorfología, incluyendo colecta, procesamiento y análisis de datos de campo. 
+
+- Aprovechamiento de recursos informáticos, tales como aplicaciones, programación, tutor de inteligencia artificial supervisado, para el análisis y síntesis de resultados.
+
+- Síntesis de resultados de investigación en una pieza de investigación tipo manuscrito.
+
+### Técnicas e Instrumentos de evaluación
+
+<br>
+
+```{r}
+library(flextable)
+
+# Datos
+evaluacion <- data.frame(
+  No = c(1, 2, 3, 4),
+  Tecnicas = c(
+    "Redacción de manuscrito científico de geomorfología",
+    "Formulación y resolución de problemas",
+    "Ejercicios, prácticas/problemas de clase usando recursos básicos, analógicos",
+    "Ejercicios, prácticas/problemas de clase usando recursos informáticos (aplicaciones, programación, tutor IA supervisado)"
+  ),
+  Instrumentos = c(
+    "Rúbricas, fichas de autoevaluación",
+    "Rúbricas, fichas de autoevaluación",
+    "Hoja de verificación de ejercicios y prácticas",
+    "Hoja de verificación de ejercicios y prácticas"
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Flextable
+flextable(evaluacion) |>
+  set_header_labels(
+    No = "No.",
+    Tecnicas = "Técnicas",
+    Instrumentos = "Instrumentos de Evaluación"
+  ) |>
+  width(j = 1, width = 0.5) |>   # columna Técnicas
+  width(j = 2, width = 3) |>   # columna Técnicas
+  width(j = 3, width = 3) |>   # columna Instrumentos
+  fontsize(size = 10, part = "all") |>
+  align(align = "center", part = "header")
+
+```
+
+---
+
+## Distribución de puntaje
+
+<br>
+
+```{r}
+# Datos
+distribucion <- data.frame(
+  Item = c(
+    "Asistencia",
+    "Prácticas de aula",
+    "Prácticas de desarrollo",
+    "Proyecto",
+    "Exámenes y exposiciones"
+  ),
+  Porcentaje = c(
+    "(max. 5%)",
+    "(max. 20%)",
+    "(min. 20, max. 30%)",
+    "(min. 20%, max. 30%)",
+    "(min. 20%, max. 30%)"
+  ),
+  stringsAsFactors = FALSE
+)
+
+ft <- flextable(distribucion) |>
+  set_header_labels(
+    Item = "Ítem",
+    Porcentaje = "Porcentaje de la nota final"
+  ) |>
+  width(j = 1, width = 3.2) |>
+  width(j = 2, width = 2.2) |>
+  fontsize(size = 10, part = "all") |>
+  align(align = "center", part = "header") |>
+  align(j = 2, align = "right", part = "body") |>
+  valign(valign = "top", part = "body") |>
+  padding(padding = 2, part = "all") |>
+  set_table_properties(layout = "fixed")
+ft
+```
+
+---
+
+## Recursos didácticos
+
+- Mapas, especialmente geológicos y geomorfológicos.
+
+- Libros de texto y artículos científicos.
+
+- Ejercicios resueltos.
+
+- Vídeos en línea (clases y tutorías).
+
+- Servidor de foros.
+
+---
+
+## Recursos tecnológicos
+
+- Servidor de programación.
+
+- Proyector en el aula.
+
+- Computadora personal. Si no dispones de una, provisionalmente usa tu celular, aunque esta solución tiene limitaciones. La PC es necesaria para:
+
+  - elaboración y consulta de mapas,
+  
+  - experimentación con simulaciones,
+  
+  - redacción científica,
+  
+  - análisis de datos mediante programación,
+  
+  - uso de tutor de IA de forma supervisada,
+  
+  - elaboración de presentaciones de diapositivas.
+
+- Bases de datos y fuentes cartográficas digitales (imágenes satelitales, mapas web y locales).  
+
+- Servicios en la nube de escala planetaria (**Google Earth Engine, Microsoft Planetary Computer**, entre otros).  
+
+
+# Bibliografía
+
+Anderson, R. S., & Anderson, S. P. (2010). Geomorphology: The mechanics and chemistry of landscapes. Cambridge University Press.
+
+Cámara Artigas, R. (1997): "República Dominicana: dinámica del medio físico en la región Caribe (geografía física, sabanas y litoral): Aportación al conocimiento de la tropicalidad insular". Tesis Doctoral de la Universidad de Sevilla.
+
+De Pedraza Gilsanz, J. (1996): "Geomorfología: principios, métodos y aplicaciones", Editorial Rueda, Madrid
+
+Dirección General de Minería; Instituto Geográfico Universitario; Bundensanstalt für Geowissenschaften und Rohstoffe (1991): "Mapa Geológico de la República Dominicana escala 1:250,000", BGR, Hannover
+
+Gutiérrez Elorza, M. (2008). Geomorfologı́a. Pearson/Prentice Hall.
+
+Hengl, T., Reuter, H. I.(Eds.). (2009). Geomorphometry: Concepts, software, applications (1st ed). Elsevier.
+
+Pérez-Estaún, A., Hernaiz Huerta, P., Lopera, E., Joubert, M., Escuder Viruete, J., Díaz de Neira, A., ... Ayala, C. (2010). Geología de la República Dominicana: de la construcción de arco-isla a la colisión arco-continente. Boletín Geológico y Minero, 118(2), 157-174.
+
+Servicio Geológico Nacional. (2000-2010). Mapa Geológico de República Dominicana, escala 1:50,000. Santo Domingo. Disponible en: https://sgn.gob.do/index.php/geologia-y-tematicos/info-geologia
+
+Servicio Geológico Nacional. (2000-2010). Mapa Geomorfológico de República Dominicana, escala 1:100,000. Santo Domingo. Disponible en: https://sgn.gob.do/index.php/geologia-y-tematicos/info-geomorfologia
+
+Tricart, J. (1972): "Memoires et documents: cartographie géomorphologique", Centre National de la Recherche Scientifique, Paris
+
+# Bibliografía complementaria
+
+American Geological Institute (1974): "Glossary of Geology", American Geological Institute, Washington, D.C.
+
+Cámara Artigas, R. (1995): Formaciones Gresificadas Costeras: Indicadores de Cambios Geomorfológicos en la Interfase Marino-Continental. D. Num. 1. D.
+
+__________________(1997): "Formaciones Gresificadas Costeras: Indicadores de Cambios Geomorfológicos en la Interfase Marino-Continental". En Cuaternario del Entorno Litoral y Continental del Mar de Alborán. Librería Andaluza S.A. Vol. 1. pp. 19-21
+
+__________________(2000): "Environmental indicators of the Holocene Transgressive Maximun (HTM) in the Caribbean Area (Dominican Republic)". Actas de la Reunión de la Comisión de Holoceno (INQUA), Librería Andaluza, Sevilla.
+
+Cámara Artigas, R.; Álvarez García, G.; Molina, J.; Díaz del Olmo, F. (2000): "Un Karst Intertropical en la República Dominicana. Avance de las Exploraciones en el Parque Nacional los Haitises". En XXXV Aniversario de la Sociedad Espeleológica Geos (1962-1997). Grupo Espeleológico Geos. Sevilla. pp. 267-276
+
+Cámara Artigas, R.; Molina Rodríguez, J.; Álvarez García, G. (1994): "Cavidades del Litoral. Parque Nacional los Haitises. Republica Dominicana". AECI-DNP. Santo Domingo
+
+Cámara Artigas, R; Díaz del Olmo, F. (1997): "Manglares y Modificaciones en Líneas de Costas Tropicales (Bahía de Samaná, Republica Dominicana)". Geogaceta. Vol. 21. pp. 55-58
+
+Díaz del Olmo, F.; Cámara Artigas, R (1993): "Niveaux Marins, Chronologie Isotopique U/Th Et Karstification en Republique Dominicaine". Karstologia. Vol. 2. Num. 22. pp. 52-54
+
+Chuvieco Salinero, C. (1996): "Fundamentos de teledetección espacial", Rialp, Madrid
+
+Cucurullo, O. (1949): "La Hoya de Enriquillo", En Pagán Perdomo, D. (1993): Obras Escogidas, Santo Domingo
+
+Derruau, M. (1991): "Geomorfología", Ariel Geografía, Barcelona
+
+Díaz del Olmo, F.; Cámara Artigas, R. (2003): "Karst Tropical de Colinas, Tipología y Evolución en el Plio-Cuaternario en República Dominicana". En Actas de la XI Reunión Nacional de Cuaternario. Oviedo. pp. 123-128
+
+Diaz del Olmo, F.; Camara Artigas, R. (2004): "METODOLOGÍA PARA LA EVALUACION Y DIAGNOSTICO DE UNIDADES AMBIENTALES". Grupo de Investigacion Grupo de Investigación Geomorfología y Cuaternario. Grupo de Trabajo medios tropicales y Cooperación al desarrollo. Inedito.
+
+Díaz del Olmo, F.; Cámara Artigas, R.; Martínez Batlle, J.R. (2003): "Hatos Caribeños y Dehesas Andaluzas. Paisaje y Estructura Parcelaria". En Cuba y Andalucía Entre las Dos
+Orillas. Sevilla. Consejo Superior de Investigaciones Científicas y Junta de Andalucía. Vol. 1. pp. 303-333
+
+Díaz del Olmo, F.; Cámara Artigas, R.; Martínez Batlle, J.R.; Morón Monge, M.: "Plan de desarrollo sostenible del sur de la Provincia de Veraguas (Panamá)". Informe inédito para el Proyecto Araucaria-Coiba. Panamá
+
+Díaz del Olmo, F; Cámara Artigas, R.; Álvarez García, G.; Molina, J. (1995): "Un Karst Intertropical en la República Dominicana". Subterránea. Num. 3. pp. 24-31
+
+Draper, G.; Yanni, G. (1987): "Diccionario de términos geológicos inglés/español-español/inglés", Miami
+
+Foucault, A.; Raoult, J.-F. (1985): "Diccionario de Geología", Masson, Barcelona
+Gutiérrez Elorza, M.  (2001): "Geomorfología climática", Omega, Barcelona
+Instituto Cartográfico Militar (1989): "Serie E733 de mapas topográficos escala 1:50,000", Instituto Cartográfico Militar, Santo Domingo
+
+King, P. B. & Schumm, S. A. (1980): "The Physical Geography (geomorphology) of William Morris Davis", Geoabstract
+
+Krumbein, W.C.; Sloss, L.L. (1969): "Estratigrafía y Sedimentación", Eudeba, México, D.F.
+
+Llinás, R. (1972): "Geología del área Polo-Duvergé, Cuenca de Enriquillo". Publicación del Colegio Dominicano de Ingenieros, Arquitectos y Agrimensores
+
+Llinás, R. (1980) (editor): "Guía de campo de la novena conferencia geológica del Caribe", Amigo del Hogar, Santo Domingo
+
+Llinás, R. (1980) (editor): "Memorias de la novena conferencia geológica del Caribe", Amigo del Hogar, Santo Domingo
+
+Mann, P.; Draper, G.; Lewis, J.F. (ed) (1991): "Geologic and Tectonic Development of the North America Caribbean Plate Boundary in Hispaniola", Special Paper 262 The Geological Society of America
+
+Mascle, A. (1985) (editor): "Memorias del Simposio Geodinámica del Caribe", Editions Technip, Paris
+
+Penck, W. (1972): "Morphological analysis of landforms", Hafner Press, New York
+
+Pettijohn, F.J. (1976): "Rocas sedimentarias", Eudeba, Buenos Aires
+
+Programa de Cooperación Científico-Técnica con Iberoamérica de la Agencia Española de Cooperación Internacional; Grupo de Investigación Cuaternario y Geomorfología de la Universidad de Sevilla; Subsecretaría de Áreas Protegidas y Biodiversidad de la Secretaría de Estado de Medio Ambiente y Recursos Naturales (SEMARENA): Estudio Ecodinámico del Lago Enriquillo: Informe preliminar enero-octubre 2001.Inédito, 2001.
+
+Strahler, A. N.; Strahler, A.H. (1997): "Geografía física. (3ra ed.)", Omega, Barcelona
+
+Tarbuck, E. J.; Lutgens, F. K. (2000): "Ciencias de la Tierra: una introducción a la Geología Física", Prentice Hall-Pearson Educación, S.A., Madrid
+
+Thornbury, W.D. (1960): "Principios de geomorfología", Kapelusz, Buenos Aires
+
+Tricart, J. (1956). La géomorphologie et la pensée marxiste. La Pensée.
+
+Vand den Berghe, B. (1983): "Evolution sedimentaire et structurale depuis le paleocene du secteur 'Massif de la Selle (Haití)-Bahoruco' (Republique Dominicaine)-Nord de la Ride de Beata" dans l'orogene Nord-Caraïbe (Hispaniola-Grandes Antilles), Memorias de Ciencias de la Tierra, Universidad Pierre y Marie Curie, Paris
+
+# Referencias citadas

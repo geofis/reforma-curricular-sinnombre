@@ -1,5 +1,5 @@
 ---
-title: "Programa de Biogeografía"
+title: "Básicos de la asignatura"
 output:
   # pdf_document: default
   # word_document:
