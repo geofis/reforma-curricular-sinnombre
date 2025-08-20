@@ -325,13 +325,14 @@ Donde:
 # 🎯 Tipos de Distribución Espacial
 
 .pull-left[
-## .green[1. Distribución Aleatoria]
+.green[#### Distribución Aleatoria]
+ 
 - **Sin patrón aparente**
 - Ambiente homogéneo
 - Sin interacciones fuertes
 - **Ejemplo:** Plantas pioneras en campo abierto
 
-## .green[2. Distribución Agrupada]
+.green[#### Distribución Agrupada]
 - **Grupos o manchones**
 - Recursos heterogéneos
 - Comportamiento social
@@ -339,16 +340,14 @@ Donde:
 ]
 
 .pull-right[
-## .green[3. Distribución Regular]
+.green[#### Distribución Regular]
 - **Espaciado uniforme**
 - Competencia por recursos
 - Territorialidad
 - Ejemplo: Árboles en bosque maduro
 
-## .blue[4. Índices de Dispersión]
+.blue[#### Índices de Dispersión <br> Índice de Morisita]
 .equation[
-**Índice de Morisita**
-<br>
 $$
 I = n \, \frac{\left( \sum x^2 \right) - N}{N \, (N - 1)}
 $$
@@ -929,7 +928,7 @@ class: inverse, center, middle
 
 ## .blue[1. Ley del Mínimo de Liebig (1840)]
 
-.box[
+.pull-left[
 **"El crecimiento está limitado por el factor menos disponible"**
 
 ### Analogía del Barril:
@@ -937,6 +936,8 @@ class: inverse, center, middle
 - **Tabla más corta** determina la capacidad total
 - No importa cuán abundantes sean otros recursos
 ]
+
+![](barril-liebig.png)
 
 ---
 
@@ -980,3 +981,55 @@ class: inverse, center, middle
 
 **Consecuencia:** La vegetación se adapta a **baja luminosidad**, determinando la estructura del bosque.
 ]
+
+---
+
+
+
+## .blue[2. Ley de la Tolerancia de Shelford (1913)]
+**"La supervivencia y crecimiento dependen de un rango de tolerancia"**
+
+#### Concepto clave:
+- Cada especie tiene **mínimo**, **óptimo** y **máximo** para cada factor ambiental
+- Tanto la **deficiencia** como el **exceso** pueden limitar
+- El óptimo varía según etapa de vida y condiciones
+
+![](shelford.jpg)
+
+---
+
+.equation[
+**Rendimiento** ∝ f(Rango de tolerancia)
+]
+
+### 🌱 **Ejemplos Específicos:**
+
+.pull-left.small[
+### **Manglares (RD)**
+- **Salinidad baja:** ❌ Limita crecimiento
+- **Salinidad óptima:** ✅ Máximo desarrollo
+- **Salinidad alta:** ⚠️ Estrés osmótico
+
+**Resultado:** Distribución restringida a zonas costeras intermedias
+]
+
+.pull-right.small[
+### **Pino Criollo (Sierra de Bahoruco)**
+- **Suelo no óptimo para el pino (suelo rico para otras plantas distintas de pino):** ⚠️ Crecimiento lento, mucha competencia
+- **Suelo óptimo para el pino (suelo pobre para otras plantas):** ✅ Desarrollo máximo
+
+**Resultado**: En áreas de suelo pobre para otras plantas, el pino aprovecha ese nicho con menor competencia.
+]
+
+---
+
+### 🔍 **Caso Práctico: Arrecifes Coralinos**
+.box.compact[
+- **Temperatura:** Óptima entre 23–29 °C
+- **Luz:** Necesaria para simbiosis con zooxantelas
+- **pH:** Afectado por acidificación oceánica
+- **Tolerancia estrecha:** Vulnerables a cambios leves
+
+**Consecuencia:** Blanqueamiento masivo con aumentos de temperatura fuera del rango.
+]
+

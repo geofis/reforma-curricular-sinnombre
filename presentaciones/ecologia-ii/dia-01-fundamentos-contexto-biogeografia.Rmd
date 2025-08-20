@@ -1,0 +1,272 @@
+---
+title: "Biogeografía"
+subtitle: "Unidad 1. Fundamentos y Contexto"
+author: "José Martinez, el tali"
+institute: "Universidad Autónoma de Santo Domingo (UASD)"
+date: "Actualizado: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    mathjax: "default"
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width = 12, 
+  fig.height = 8, 
+  fig.retina = 3,
+  out.width = "100%",
+  cache = TRUE,
+  echo = FALSE,
+  message = FALSE, 
+  warning = FALSE
+)
+library(ggplot2)
+library(dplyr)
+library(knitr)
+library(ggrepel)
+```
+
+
+```{css, echo=FALSE}
+.title-slide {
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.title-slide .remark-slide-content {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.large { font-size: 130% }
+.medium { font-size: 110% }
+.small { font-size: 90% }
+.tiny { font-size: 70% }
+
+.green { color: #2E8B57; }
+.blue { color: #4169E1; }
+.red { color: #DC143C; }
+
+.highlight {
+  background-color: #ffff99;
+  padding: 2px 4px;
+}
+
+.box {
+  background-color: #f0f8ff;
+  border: 2px solid #4169E1;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.equation {
+  background-color: #f5f5f5;
+  border-left: 5px solid #2E8B57;
+  padding: 15px;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+}
+```
+
+
+---
+
+# 🌍 Fundamentos de la Biogeografía
+
+## .medium[Definiciones, Historia y Alcances]
+
+---
+
+# 📋 Agenda de la Conferencia
+
+.box[
+
+## **BLOQUE 1** – Definiciones y Alcance
+
+* ¿Qué estudia la biogeografía?
+* Preguntas típicas y aplicaciones
+* Interdisciplinariedad
+
+## **BLOQUE 2** – Epistemología e Historia
+
+* Raíces en ciencias naturales
+* Viajes y exploración
+* Conexión con evolución y ecología
+  ]
+
+---
+
+# 📋 Agenda (cont.)
+
+.box[
+
+## **BLOQUE 3** – Fuentes de Información
+
+* Revistas especializadas
+* Manuales y libros de referencia
+* Recursos digitales
+
+## **BLOQUE 4** – La "Plantilla" Geográfica
+
+* Noción de espacio geográfico
+* Elementos cartográficos
+* Relevancia para el análisis biogeográfico
+  ]
+
+---
+
+class: inverse, center, middle
+
+# 🧭 BLOQUE 1
+
+# Definiciones y Alcance
+
+---
+
+# 🌱 ¿Qué es la Biogeografía?
+
+.box[
+**Definición:** Ciencia que estudia la **distribución de los seres vivos en el espacio y en el tiempo**, considerando factores históricos, ecológicos y geológicos.
+
+* Combina biología, geografía, geología, climatología
+* Preguntas centrales:
+
+  * ¿Dónde viven las especies?
+  * ¿Por qué allí y no en otros lugares?
+  * ¿Cómo cambian las distribuciones a lo largo del tiempo?
+    ]
+
+---
+
+# 🔗 Aplicaciones e Interdisciplinariedad
+
+.pull-left[
+
+### **Aplicaciones**
+
+* Conservación de especies
+* Planificación territorial
+* Manejo de invasoras
+* Cambio climático y rangos de distribución
+  ]
+
+.pull-right[
+
+### **Interdisciplinariedad**
+
+* Ecología (nichos, comunidades)
+* Evolución (especiación, extinción)
+* Geología (tectónica de placas)
+* Geografía (espacio y paisaje)
+  ]
+
+---
+
+class: inverse, center, middle
+
+# 📚 BLOQUE 2
+
+# Epistemología e Historia
+
+---
+
+# 🕰️ Línea Temporal: Biogeografía
+
+```{r, fig.height=6}
+timeline_data <- data.frame(
+  Year = c(1735, 1798, 1859, 1876, 1967, 2000),
+  Event = c(
+    "Linnaeus\nSistema Naturae",
+    "Malthus\nEnsayo sobre Población",
+    "Darwin\nOrigen de las Especies",
+    "Wallace\nRegiones zoogeográficas",
+    "MacArthur & Wilson\nTeoría de Biogeografía de Islas",
+    "Biogeografía de la Conservación\nSiglo XXI"
+  )
+)
+
+ggplot(timeline_data, aes(x = Year, y = 1)) +
+  geom_point(size = 4, color = "#2E8B57") +
+  geom_text_repel(aes(label = Event), vjust = -1, size = 3.5, fontface = "bold") +
+  geom_line(color = "#2E8B57", size = 1) +
+  theme_minimal() +
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_text(size = 14),
+        plot.title = element_text(size = 16, face = "bold")) +
+  labs(title = "Hitos Fundamentales en la Historia de la Biogeografía",
+       x = "Año")
+```
+
+---
+
+class: inverse, center, middle
+
+# 📖 BLOQUE 3
+
+# Fuentes de Información
+
+---
+
+# 📑 Revistas y Manuales
+
+.pull-left[
+
+### Revistas clave
+
+* *Journal of Biogeography*
+* *Global Ecology and Biogeography*
+* *Ecography*
+  ]
+
+.pull-right[
+
+### Manuales y libros
+
+* Lomolino et al. *Biogeography*
+* Brown & Lomolino *Fundamentals of Biogeography*
+* Cox & Moore *Biogeography: An Ecological and Evolutionary Approach*
+  ]
+
+---
+
+class: inverse, center, middle
+
+# 🗺️ BLOQUE 4
+
+# La "Plantilla" Geográfica
+
+---
+
+# 🗺️ Noción de Plantilla Geográfica
+
+.box[
+
+* Espacio geográfico como escenario
+* Factores físicos: clima, relieve, suelos
+* Factores bióticos: interacciones entre especies
+* Herramientas cartográficas:
+
+  * Mapas de distribución
+  * SIG (Sistemas de Información Geográfica)
+  * Modelos de nicho ecológico
+    ]
+
+---
+
+# 🎯 Reflexión Final
+
+.box[
+La biogeografía no solo describe dónde viven las especies, sino que ofrece **explicaciones históricas y ecológicas** que nos ayudan a enfrentar los retos de la biodiversidad en el siglo XXI.
+]
+
