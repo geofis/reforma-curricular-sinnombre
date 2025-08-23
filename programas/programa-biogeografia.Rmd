@@ -90,9 +90,11 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 
 -   **Fuentes de información**: revistas científicas y manuales habituales en biogeografía.
 
--   **La "plantilla" geográfica**: definiciones, elementos comunes, importancia para el análisis biogeográfico, nociones básicas de cartografía.
+-   **Breve introducción a la ecología numérica**: *análisis exploratorio de datos* (AED o EDA, resúmenes estadísticos sobre la comunidad y las variables ambientales, mapas, paneles de correlación); *medición de asociación*, modos de análisis Q y R, paradoja de Orlóci; *análisis de agrupamiento (cluster analysis)*, agrupamiento jerárquico, interpretación y comparación de resultados, grupos (clústers), especies indicadoras, especies con preferencia por hábitats; *análisis de ordenación*, ordenación simple (no restringida) y ordenación canónica (restringida); *análisis de diversidad*, diversidad alpha, diversidad beta; *ecología espacial*, análisis espacial de datos ecológicos, autocorrelación, modelos de distribución de especies.
 
-# Unidad 2. Factores físicos y ambientales
+# Unidad 2. La "plantilla" geográfica, factores físicos y ambientales
+
+- **Introducción**: definiciones, elementos comunes, importancia para el análisis biogeográfico, nociones básicas de cartografía.
 
 -   **Clima**: balance energético, radiación electromagnética, fundamentos astronómicos, temperatura, circulación general atmosférica, humedad y precipitación, biomas determinados por el clima, variación del clima.
 
