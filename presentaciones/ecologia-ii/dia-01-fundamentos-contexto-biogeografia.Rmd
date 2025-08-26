@@ -1,6 +1,6 @@
 ---
 title: "Biogeografía"
-subtitle: "Unidad 1. Fundamentos y Contexto"
+subtitle: "Unidad 1. Fundamentos, contexto de la biogeografía y repaso de ecología numérica"
 author: "José Martinez, el tali"
 institute: "Universidad Autónoma de Santo Domingo (UASD)"
 date: "Actualizado: `r Sys.Date()`"
