@@ -82,7 +82,7 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 
 ![](../presentaciones/esquema-comun-materias.jpg){width=90%}
 
-# Unidad 1. Fundamentos y contexto de la biogeografía
+# Unidad 1. Fundamentos, contexto de la biogeografía y repaso de ecología numérica
 
 -   **Definiciones y alcance**: aplicaciones, preguntas en biogeografía, temas comunes e interdisciplinarios.
 
@@ -90,7 +90,7 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 
 -   **Fuentes de información**: revistas científicas y manuales habituales en biogeografía.
 
--   **Breve introducción a la ecología numérica**: *análisis exploratorio de datos* (AED o EDA, resúmenes estadísticos sobre la comunidad y las variables ambientales, mapas, paneles de correlación); *medición de asociación*, modos de análisis Q y R, paradoja de Orlóci; *análisis de agrupamiento (cluster analysis)*, agrupamiento jerárquico, interpretación y comparación de resultados, grupos (clústers), especies indicadoras, especies con preferencia por hábitats; *análisis de ordenación*, ordenación simple (no restringida) y ordenación canónica (restringida); *análisis de diversidad*, diversidad alpha, diversidad beta; *ecología espacial*, análisis espacial de datos ecológicos, autocorrelación, modelos de distribución de especies.
+-   **Repaso de ecología numérica**: *análisis exploratorio de datos* (AED o EDA, resúmenes estadísticos sobre la comunidad y las variables ambientales, mapas, paneles de correlación); *medición de asociación*, modos de análisis Q y R, paradoja de Orlóci; *análisis de agrupamiento (cluster analysis)*, agrupamiento jerárquico, interpretación y comparación de resultados, grupos (clústers), especies indicadoras, especies con preferencia por hábitats; *análisis de ordenación*, ordenación simple (no restringida) y ordenación canónica (restringida); *análisis de diversidad*, diversidad alpha, diversidad beta; *ecología espacial*, análisis espacial de datos ecológicos, autocorrelación, modelos de distribución de especies.
 
 # Unidad 2. La "plantilla" geográfica, factores físicos y ambientales
 
