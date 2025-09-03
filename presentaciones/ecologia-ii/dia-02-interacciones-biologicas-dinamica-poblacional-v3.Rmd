@@ -1,7 +1,7 @@
 ---
 title: "Ecología II"
-subtitle: "Unidad 2. Interacciones biológicas y dinámica poblacional <br> Basada en Smith & Smith y Odum–Barrett"
-author: "Arlen Marmolejo"
+subtitle: "Unidad 2. Interacciones biológicas y dinámica poblacional"
+author: "Basada en Smith & Smith y Odum–Barrett <br> Arlen Marmolejo"
 institute: "Universidad Autónoma de Santo Domingo (UASD)"
 date: "2025-09-03"
 output:
@@ -14,7 +14,7 @@ output:
       countIncrementalSlides: false
 ---
 
-<!-- class: center, middle, inverse -->
+class: center, middle, inverse
 
 # Unidad 2  
 ## Interacciones biológicas y dinámica poblacional
@@ -28,23 +28,17 @@ class: animated, fadeIn
 ---
 
 ```{css, echo=FALSE}
-<!-- .title-slide { -->
-<!--   background-image: url('fondo.jpg'); -->
-<!--   background-size: cover; -->
-<!--   background-position: center; -->
-<!-- } -->
-
-<!-- .title-slide .remark-slide-content { -->
-<!--   background: rgba(0, 0, 0, 0.7); -->
-<!--   color: white; -->
-<!-- } -->
 .title-slide {
   background-image: url('fondo.jpg');
   background-size: cover;
   background-position: center;
 }
+.title-slide .remark-slide-content {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
 .remark-slide-content {
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.4;
 }
 
@@ -80,25 +74,6 @@ class: animated, fadeIn
 ```
 
 
-
-<!-- Minimal look & feel (sin xaringanExtra) -->
-<!-- <style> -->
-<!-- .title-slide { -->
-<!--   background-image: url('fondo.jpg'); -->
-<!--   background-size: cover; -->
-<!--   background-position: center; -->
-<!-- } -->
-<!-- .remark-slide-content { -->
-<!--   font-size: 21px; -->
-<!--   line-height: 1.4; -->
-<!-- } -->
-<!-- .small { font-size: 80%; } -->
-<!-- .tiny { font-size: 70%; } -->
-<!-- .kpi { font-size: 140%; font-weight: 700; } -->
-<!-- .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; } -->
-<!-- .note { color:#555; font-style: italic; } -->
-<!-- blockquote { border-left: 4px solid #999; padding-left: 0.8rem; color:#444; } -->
-<!-- </style> -->
 
 ## Objetivos de aprendizaje
 
