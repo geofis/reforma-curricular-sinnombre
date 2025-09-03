@@ -1,7 +1,8 @@
 ---
-title: "Unidad 2. Interacciones biológicas y dinámica poblacional"
-subtitle: "Basada en Smith & Smith y Odum–Barrett"
+title: "Ecología II"
+subtitle: "Unidad 2. Interacciones biológicas y dinámica poblacional <br> Basada en Smith & Smith y Odum–Barrett"
 author: "Arlen Marmolejo"
+institute: "Universidad Autónoma de Santo Domingo (UASD)"
 date: "2025-09-03"
 output:
   xaringan::moon_reader:
@@ -13,7 +14,7 @@ output:
       countIncrementalSlides: false
 ---
 
-class: center, middle, inverse
+<!-- class: center, middle, inverse -->
 
 # Unidad 2  
 ## Interacciones biológicas y dinámica poblacional
