@@ -26,8 +26,17 @@ class: animated, fadeIn
 
 ---
 
-<!-- Minimal look & feel (sin xaringanExtra) -->
-<style>
+```{css, echo=FALSE}
+<!-- .title-slide { -->
+<!--   background-image: url('fondo.jpg'); -->
+<!--   background-size: cover; -->
+<!--   background-position: center; -->
+<!-- } -->
+
+<!-- .title-slide .remark-slide-content { -->
+<!--   background: rgba(0, 0, 0, 0.7); -->
+<!--   color: white; -->
+<!-- } -->
 .title-slide {
   background-image: url('fondo.jpg');
   background-size: cover;
@@ -37,13 +46,58 @@ class: animated, fadeIn
   font-size: 21px;
   line-height: 1.4;
 }
-.small { font-size: 80%; }
-.tiny { font-size: 70%; }
-.kpi { font-size: 140%; font-weight: 700; }
-.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; }
-.note { color:#555; font-style: italic; }
-blockquote { border-left: 4px solid #999; padding-left: 0.8rem; color:#444; }
-</style>
+
+.large { font-size: 130% }
+.medium { font-size: 110% }
+.small { font-size: 90% }
+.tiny { font-size: 70% }
+
+.green { color: #2E8B57; }
+.blue { color: #4169E1; }
+.red { color: #DC143C; }
+
+.highlight {
+  background-color: #ffff99;
+  padding: 2px 4px;
+}
+
+.box {
+  background-color: #f0f8ff;
+  border: 2px solid #4169E1;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.equation {
+  background-color: #f5f5f5;
+  border-left: 5px solid #2E8B57;
+  padding: 15px;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+}
+```
+
+
+
+<!-- Minimal look & feel (sin xaringanExtra) -->
+<!-- <style> -->
+<!-- .title-slide { -->
+<!--   background-image: url('fondo.jpg'); -->
+<!--   background-size: cover; -->
+<!--   background-position: center; -->
+<!-- } -->
+<!-- .remark-slide-content { -->
+<!--   font-size: 21px; -->
+<!--   line-height: 1.4; -->
+<!-- } -->
+<!-- .small { font-size: 80%; } -->
+<!-- .tiny { font-size: 70%; } -->
+<!-- .kpi { font-size: 140%; font-weight: 700; } -->
+<!-- .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; } -->
+<!-- .note { color:#555; font-style: italic; } -->
+<!-- blockquote { border-left: 4px solid #999; padding-left: 0.8rem; color:#444; } -->
+<!-- </style> -->
 
 ## Objetivos de aprendizaje
 
