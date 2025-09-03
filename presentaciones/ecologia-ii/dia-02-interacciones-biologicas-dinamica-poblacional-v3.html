@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Unidad 2. Interacciones biológicas y dinámica poblacional</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Arlen Marmolejo" />
+    <meta name="date" content="2025-09-03" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Unidad 2. Interacciones biológicas y dinámica poblacional
+]
+.subtitle[
+## Basada en Smith &amp; Smith y Odum–Barrett
+]
+.author[
+### Arlen Marmolejo
+]
+.date[
+### 2025-09-03
+]
+
+---
+
+
+class: center, middle, inverse
+
+# Unidad 2  
+## Interacciones biológicas y dinámica poblacional
+&lt;span class="subtitle"&gt;Basada en &lt;em&gt;Smith &amp;amp; Smith&lt;/em&gt; y &lt;em&gt;Odum–Barrett&lt;/em&gt;&lt;/span&gt;
+
+---
+
+layout: true
+class: animated, fadeIn
+
+---
+
+&lt;!-- Minimal look &amp; feel (sin xaringanExtra) --&gt;
+&lt;style&gt;
+.title-slide {
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.remark-slide-content {
+  font-size: 20px;
+  line-height: 1.4;
+  &lt;!-- font-family: "Inter", "Helvetica Neue", Arial, sans-serif; --&gt;
+}
+.small { font-size: 80%; }
+.tiny { font-size: 70%; }
+.kpi { font-size: 140%; font-weight: 700; }
+.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; }
+.note { color:#555; font-style: italic; }
+blockquote { border-left: 4px solid #999; padding-left: 0.8rem; color:#444; }
+&lt;/style&gt;
+
+## Objetivos de aprendizaje
+
+- Definir **estrategias de vida** (*r/K*) y rasgos de historia de vida.
+- Distinguir **competencia intra/interespecífica**, **exclusión competitiva** y **coexistencia**.
+- Reconocer **relaciones ecológicas** (depredación, mutualismo, etc.) y su modelado.
+- Interpretar **modelos de crecimiento** y **metapoblaciones**.
+- Explicar **redes/cascadas tróficas**, **especies clave** y **coevolución**.
+- Describir **sucesión ecológica** y **fragmentación**.
+- Conocer **métodos de censo** (recuentos, CMR, tablas de vida).
+
+---
+
+## Mapa de la unidad
+
+1. Estrategias de vida (*r/K*) e historias de vida  
+2. Competencia y coexistencia (LV)  
+3. Depredación, parasitismo y enfermedades (LV + extensiones)  
+4. Redes tróficas, cascadas, especies clave  
+5. Dinámica de poblaciones y metapoblaciones  
+6. Migración, dispersión y fragmentación  
+7. Sucesión ecológica  
+8. Censo poblacional y tablas de vida
+
+---
+
+class: inverse, center, middle
+# 1) Estrategias de vida e historias de vida
+
+---
+
+### Rasgos y trade-offs
+
+- Madurez sexual **temprana vs. tardía**
+- Fecundidad **alta vs. baja**
+- **Semélparas** vs. **iteróparas**
+- **Inversión parental** por cría
+- **Supervivencia** vs. **reproducción**
+
+&gt; Enfoque moderno: **continuos** de historia de vida (no dicotomías rígidas).
+
+---
+
+### r/K (heurística clásica)
+
+- **r-estrategas**: fecundidad alta, inversión baja, ambientes variables.
+- **K-estrategas**: fecundidad baja, inversión alta, ambientes estables.
+- **Discusión**: ejemplos locales (malezas vs. árboles longevos; roedores vs. primates).
+
+---
+
+class: inverse, center, middle
+# 2) Competencia y coexistencia
+
+---
+
+### Conceptos clave
+
+- **Intra** vs. **interespecífica** (−, −)
+- **Explotación** vs. **interferencia**
+- **Exclusión competitiva** (Gause)
+- **Partición de nicho** y segregación de recursos
+
+---
+
+### LV Competencia: ecuaciones
+
+`$$\frac{{dN_1}}{{dt}} = r_1 N_1\left(1 - \frac{{N_1 + \alpha_{{12}} N_2}}{{K_1}}\right)$$`
+`$$\frac{{dN_2}}{{dt}} = r_2 N_2\left(1 - \frac{{N_2 + \alpha_{{21}} N_1}}{{K_2}}\right)$$`
+
+- Casos: exclusión 1, exclusión 2, coexistencia estable, coexistencia inestable.
+- Coexistencia si **intra &gt; inter**.
+
+---
+
+### Isoclinas (ilustración)
+
+![](isoclinas_lv.svg)
+
+Diagrama cualitativo: ajustar `\(\alpha\)` cambia pendientes y estabilidad.
+
+---
+
+### Mini-demo (R): isoclinas y fase (competencia)
+
+.small[
+```r
+# eval=FALSE  # activa para correr la demo
+params &lt;- list(r1=0.5, r2=0.4, K1=600, K2=500, a12=0.5, a21=0.6)
+isoclinas &lt;- function(p) {
+  with(p, {
+    n2 &lt;- seq(0, K2, length.out=200)
+    n1_iso &lt;- pmax(0, K1 - a12*n2)
+    n1 &lt;- seq(0, K1, length.out=200)
+    n2_iso &lt;- pmax(0, K2 - a21*n1)
+    plot(n1, n1*0, type='n', xlim=c(0,K1), ylim=c(0,K2),
+         xlab='N1', ylab='N2')
+    lines(n1, n2_iso, col=2, lwd=2)
+    lines(n1_iso, n2, col=4, lwd=2)
+    legend('topright', c('Isoclina N2','Isoclina N1'), col=c(2,4), lwd=2, bty='n')
+  })
+}
+isoclinas(params)
+```
+]
+
+---
+
+class: inverse, center, middle
+# 3) Depredación, parasitismo y enfermedad
+
+---
+
+### LV Depredador–presa
+
+$$
+\frac{dN}{dt}= rN - aNP, \quad
+\frac{dP}{dt}= baNP - mP
+$$
+
+- Ciclos presa–depredador.
+- Modificaciones: **respuesta funcional** (I–III), **refugios**, **saturación**.
+
+---
+
+### Mini-demo (R): trayectoria LV
+
+.small[
+```r
+# eval=FALSE
+library(deSolve)
+lv &lt;- function(t, y, p) {
+  N &lt;- y[1]; P &lt;- y[2]
+  with(as.list(p), {
+    dN &lt;- r*N - a*N*P
+    dP &lt;- b*a*N*P - m*P
+    list(c(dN, dP))
+  })
+}
+p &lt;- c(r=0.7, a=0.01, b=0.1, m=0.4)
+y0 &lt;- c(N=40, P=9)
+tt &lt;- seq(0, 200, by=0.5)
+out &lt;- as.data.frame(ode(y=y0, times=tt, func=lv, parms=p))
+plot(out$N, out$P, type='l', xlab='N', ylab='P')
+```
+]
+
+---
+
+class: inverse, center, middle
+# 4) Redes tróficas, cascadas y especies clave
+
+---
+
+### Red trófica (esquema)
+
+![](red_trofica_simple.svg)
+
+.note[Remoción del depredador tope → **cascada** sobre herbívoros y productores.]
+
+---
+
+### Mini-demo (R): cadena simple con choque
+
+.small[
+```r
+# eval=FALSE
+t &lt;- 1:200
+P &lt;- numeric(200); H &lt;- P; A &lt;- P
+P[1] &lt;- 100; H[1] &lt;- 40; A[1] &lt;- 10
+for (i in 2:200) {
+  P[i] &lt;- max(0, P[i-1] + 0.4*P[i-1]*(1 - P[i-1]/200) - 0.02*H[i-1])
+  H[i] &lt;- max(0, H[i-1] + 0.1*H[i-1]*P[i-1]/(50+P[i-1]) - 0.05*A[i-1])
+  A[i] &lt;- max(0, A[i-1] + 0.08*A[i-1]*H[i-1]/(40+H[i-1]) - 0.06*A[i-1])
+  if (i==100) A[i] &lt;- A[i]*0.1  # remoción de depredador
+}
+matplot(t, cbind(P,H,A), type='l', lwd=2, lty=1, xlab='t', ylab='Biomasa')
+legend('topright', c('Productores','Herbívoros','Depredador'), col=1:3, lwd=2, bty='n')
+```
+]
+
+---
+
+class: inverse, center, middle
+# 5) Dinámica de poblaciones y metapoblaciones
+
+---
+
+### Crecimiento básico
+
+**Geométrico**: `\(N_{t+1}=\lambda N_t\)`  
+**Exponencial**: `\(dN/dt=rN\Rightarrow N(t)=N_0e^{rt}\)`  
+**Logístico**: `\(dN/dt=rN(1-N/K)\)`
+
+---
+
+### Mini-demo (R): logístico y sensibilidad a r y K
+
+.small[
+```r
+# eval=FALSE
+logistic &lt;- function(N0=10, r=0.6, K=200, tmax=50){
+  N &lt;- numeric(tmax); N[1] &lt;- N0
+  for (t in 2:tmax) N[t] &lt;- N[t-1] + r*N[t-1]*(1 - N[t-1]/K)
+  N
+}
+t &lt;- 1:60
+plot(t, logistic(r=0.4), type='l', lwd=2, ylim=c(0,210), xlab='t', ylab='N')
+lines(t, logistic(r=0.8), lwd=2, col=2)
+lines(t, logistic(r=0.6, K=150), lwd=2, col=4)
+legend('bottomright', c('r=0.4, K=200','r=0.8, K=200','r=0.6, K=150'),
+       col=c(1,2,4), lwd=2, bty='n')
+```
+]
+
+---
+
+### Metapoblaciones (Levins)
+
+$$
+\frac{dp}{dt}=c\,p(1-p)-e\,p,\qquad p^*=1-\frac{e}{c}\ (c&gt;e)
+$$
+
+.small[
+```r
+# eval=FALSE
+levins &lt;- function(p0=0.3, c=0.4, e=0.2, tmax=100){
+  p &lt;- numeric(tmax); p[1] &lt;- p0
+  for (t in 2:tmax) p[t] &lt;- p[t-1] + c*p[t-1]*(1-p[t-1]) - e*p[t-1]
+  p
+}
+t &lt;- 1:150; p &lt;- levins()
+plot(t, p, type='l', lwd=2, ylim=c(0,1), xlab='t', ylab='p (parches ocupados)')
+abline(h=1-0.2/0.4, lty=2, col=2)
+```
+]
+
+---
+
+class: inverse, center, middle
+# 6) Migración, dispersión y fragmentación
+
+---
+
+### Perspectiva de paisaje
+
+- **Dispersión**: natal vs. reproductiva; **corredores** y **barreras**.
+- **Fragmentación**: pérdida de hábitat, **efecto borde**, aislamiento.
+- **Conectividad** estructural vs. funcional.
+- **Fuente–sumidero** y rescate.
+
+---
+
+class: inverse, center, middle
+# 7) Sucesión ecológica
+
+---
+
+### Conceptos y modelos
+
+- **Primaria** vs. **secundaria**.
+- **Facilitación**, **inhibición**, **tolerancia**.
+- **Clímax** (histórico) vs. **mosaico sucesional**.
+
+---
+
+class: inverse, center, middle
+# 8) Censo poblacional
+
+---
+
+### Métodos y demografía
+
+- **Recuentos**: transectos, puntos, parcelas.
+- **CMR** (Lincoln–Petersen): `\(\hat N = \frac{(M+1)(C+1)}{(R+1)} - 1\)`.
+- **Tablas de vida**: `\(l_x, m_x\)`, `\(R_0, T, r\)`.
+- **Matrices** Leslie/Lefkovitch (visión general).
+- Sesgos: detectabilidad, cierre poblacional.
+
+---
+
+## Preguntas de repaso (rápidas)
+
+- ¿Qué condiciones favorecen **coexistencia** en LV competencia?
+- ¿Cómo altera una **respuesta funcional tipo III** los ciclos presa–depredador?
+- ¿Qué implica **p*** en Levins y cómo se modifica con **c** y **e**?
+- Da un ejemplo de **cascada trófica** en un ecosistema tropical.
+- ¿Qué **supuestos** requiere Lincoln–Petersen?
+
+---
+
+## Lecturas base
+
+- **Smith &amp; Smith. Ecología (6ª ed.)** — poblaciones, interacciones, comunidades.
+- **Odum &amp; Barrett. Fundamentos de ecología (5ª ed.)** — de población a biosfera.
+
+&gt; Síntesis reordenada de ambos textos con fines docentes.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
