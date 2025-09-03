@@ -36,7 +36,6 @@ class: animated, fadeIn
 .remark-slide-content {
   font-size: 20px;
   line-height: 1.4;
-  <!-- font-family: "Inter", "Helvetica Neue", Arial, sans-serif; -->
 }
 .small { font-size: 80%; }
 .tiny { font-size: 70%; }
