@@ -1,0 +1,255 @@
+---
+title: "Unidad 2. Interacciones biológicas y dinámica poblacional"
+subtitle: "Basada en Smith & Smith y Odum–Barrett"
+author: "Arlen Marmolejo"
+date: "2025-09-03"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    mathjax: "default"
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: center, middle, inverse
+
+# Unidad 2  
+## Interacciones biológicas y dinámica poblacional
+
+<span class="subtitle">Basada en <em>Smith &amp; Smith</em> y <em>Odum–Barrett</em></span>
+
+---
+
+layout: true
+class: animated, fadeIn
+
+---
+
+## Objetivos de aprendizaje
+
+- Definir **estrategias de vida** (*r/K*) y rasgos de historia de vida.  
+- Distinguir **competencia intra/interespecífica**, **exclusión competitiva** y **coexistencia**.  
+- Reconocer **relaciones ecológicas** (depredación, mutualismo, etc.) y su modelado básico.  
+- Interpretar **modelos de crecimiento** (geométrico, exponencial, logístico) y **metapoblaciones**.  
+- Explicar **redes y cascadas tróficas**, **especies clave** y **coevolución**.  
+- Describir **sucesión ecológica** (primaria/secundaria) y procesos de **fragmentación**.  
+- Conocer métodos de **censo poblacional** (recuentos, CMR, tablas de vida).
+
+---
+
+## Mapa de la unidad
+
+1. Estrategias de vida (*r/K*) e historias de vida  
+2. Competencia y coexistencia (LV)  
+3. Depredación, parasitismo y enfermedades (LV + extensiones)  
+4. Redes tróficas, cascadas, especies clave  
+5. Dinámica de poblaciones y metapoblaciones  
+6. Migración, dispersión y fragmentación  
+7. Sucesión ecológica  
+8. Censo poblacional y tablas de vida
+
+---
+
+class: inverse, center, middle
+# 1) Estrategias de vida e historias de vida
+
+---
+
+### Rasgos clave y trade-offs
+
+- Madurez sexual **temprana vs. tardía**  
+- Fecundidad **alta vs. baja**  
+- **Semélparas** vs. **iteróparas**  
+- **Inversión parental** por cría  
+- Supervivencia vs. reproducción (trade-off)
+
+> Enfoque moderno: **continuos** de historia de vida, no dicotomías estrictas (*r/K* como heurística).
+
+---
+
+### r/K (idealización clásica)
+
+- **r-estrategas**: alta fecundidad, baja inversión, ambientes variables, colonizadores.  
+- **K-estrategas**: baja fecundidad, alta inversión, ambientes estables, competidores.
+
+**Ejemplos** (a discutir en clase): malezas vs. árboles longevos; roedores vs. primates.
+
+---
+
+class: inverse, center, middle
+# 2) Competencia y coexistencia
+
+---
+
+### Conceptos básicos
+
+- **Intra** vs. **interespecífica** (−, −)  
+- **Explotación** vs. **interferencia**  
+- **Principio de exclusión** (Gause)  
+- **Partición de nicho** y segregación de recursos
+
+---
+
+### Modelo de competencia de Lotka–Volterra
+
+$$
+\frac{dN_1}{dt} = r_1N_1\left(1 - \frac{N_1 + \alpha_{12}N_2}{K_1}\right),\qquad
+\frac{dN_2}{dt} = r_2N_2\left(1 - \frac{N_2 + \alpha_{21}N_1}{K_2}\right)
+$$
+
+- Casos: exclusión 1, exclusión 2, coexistencia estable, coexistencia inestable.  
+- Coexistencia si **competencia intra > inter**.
+
+---
+
+### Actividad rápida: isoclinas
+
+.DosColumnas[
+.col[
+**Datos**  
+- \(K_1=500\), \(K_2=400\)  
+- \(\alpha_{12}=0.4\), \(\alpha_{21}=0.6\)
+]
+.col[
+**Tarea**  
+1) Dibujar isoclinas.  
+2) Decidir el resultado.  
+3) ¿Cómo cambia si \(\alpha_{12}\to0.8\)?
+]
+]
+
+---
+
+class: inverse, center, middle
+# 3) Depredación, parasitismo y enfermedad
+
+---
+
+### Modelo depredador–presa (LV)
+
+$$
+\frac{dN}{dt}= rN - aNP, \qquad
+\frac{dP}{dt}= baNP - mP
+$$
+
+- Predice **ciclos** presa–depredador.  
+- Modificaciones: **respuesta funcional** (Tipo I–III), **refugios**, **saturación**.
+
+---
+
+### Parasitismo y enfermedades
+
+- Efectos en **supervivencia** y **fecundidad**; periodos **latentes**.  
+- Epidemias: umbrales de transmisión, \(R_0\).  
+- Coevolución hospedador–parásito.
+
+---
+
+class: inverse, center, middle
+# 4) Redes tróficas, cascadas y especies clave
+
+---
+
+### Redes tróficas
+
+- **Niveles tróficos**, **conectancia**, **modularidad**.  
+- **Especies clave**: efecto desproporcionado al abundancia.  
+- **Cascadas tróficas**: efectos top–down y bottom–up.
+
+**Mini‑tarea**: predecir el efecto de remover un depredador tope.
+
+---
+
+class: inverse, center, middle
+# 5) Dinámica de poblaciones y metapoblaciones
+
+---
+
+### Crecimiento poblacional
+
+**Geométrico** (discreto): \(N_{t+1}=\lambda N_t\)  
+**Exponencial** (continuo): \(dN/dt=rN\Rightarrow N(t)=N_0e^{rt}\)  
+**Logístico**: \(dN/dt=rN(1-N/K)\)
+
+> Discutir: dependencia de la densidad, estocasticidad demográfica y ambiental.
+
+---
+
+### Metapoblaciones (Levins)
+
+$$
+\frac{dp}{dt}=c\,p(1-p)-e\,p,\qquad p^*=1-\frac{e}{c}\ (c>e)
+$$
+
+- **p**: fracción de parches ocupados.  
+- **c** colonización; **e** extinción.  
+- Efectos de tamaño, aislamiento y **rescate**.
+
+---
+
+class: inverse, center, middle
+# 6) Migración, dispersión y fragmentación
+
+---
+
+### Perspectiva de paisaje
+
+- **Dispersión** (natal vs. reproductiva), **corredores**, **barreras**.  
+- **Fragmentación**: pérdida de hábitat, **efecto borde**, aislamiento.  
+- **Conectividad** estructural vs. funcional.  
+- **Fuente–sumidero**.
+
+---
+
+class: inverse, center, middle
+# 7) Sucesión ecológica
+
+---
+
+### Conceptos y modelos
+
+- **Primaria** (sin suelo) vs. **secundaria** (con suelo remanente).  
+- **Modelos**: facilitación, inhibición, tolerancia.  
+- Clímax (histórico) vs. **mosaico sucesional**.
+
+---
+
+class: inverse, center, middle
+# 8) Censo poblacional
+
+---
+
+### Métodos y demografía
+
+- **Recuentos**: transectos, puntos, parcelas.  
+- **CMR** (Lincoln–Petersen):  
+\(\hat N = \frac{(M+1)(C+1)}{(R+1)} - 1\).  
+- **Tablas de vida**: \(l_x, m_x\), \(R_0, T, r\).  
+- **Matrices Leslie/Lefkovitch** (visión general).  
+- Sesgos: detectabilidad, cierre poblacional.
+
+---
+
+class: center, middle
+## 🧩 Prácticas / Evaluables rápidas
+
+1) **Isoclinas (LV)**: dado \((K_1,K_2,\alpha_{12},\alpha_{21})\), decidir resultado.  
+2) **Cascada trófica**: predictivo cualitativo.  
+3) **Metapoblación**: con \(c=0.4\), \(e=0.2\) → \(p^*\) y manejo.  
+4) **CMR**: resolver \(\hat N\) con datos simples.
+
+---
+
+## Lecturas base
+
+- **Smith & Smith. Ecología (6ª ed.)** — capítulos de poblaciones, interacciones, comunidades.
+- **Odum & Barrett. Fundamentos de ecología (5ª ed.)** — organización de poblaciones a biosfera.
+
+> Estas diapositivas sintetizan y reorganizan contenidos de ambos textos con fines docentes.
+
+---
+
+class: center, middle, inverse
+# ¡Gracias!

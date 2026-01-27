@@ -1,0 +1,276 @@
+---
+title: "Ecología II"
+subtitle: "Unidad 2. Interacciones Biológicas y Dinámica Poblacional"
+author: "Arlen Marmolejo"
+institute: "Universidad Autónoma de Santo Domingo (UASD)"
+date: "Actualizado: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    mathjax: "default"
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: center, middle, inverse
+
+# Unidad 2  
+## Interacciones biológicas y dinámica poblacional
+
+### Basada en *Smith & Smith* y *Odum–Barrett*
+
+
+---
+
+## Objetivos de aprendizaje
+
+- Definir **estrategias de vida** (*r/K*) y su relación con la historia de vida.
+- Diferenciar **competencia intra/interespecífica** y explicar **exclusión competitiva** vs **coexistencia**.
+- Reconocer y ejemplificar **relaciones ecológicas**: depredación, herbivoría, parasitismo, comensalismo, amensalismo, mutualismo, enfermedades.
+- Interpretar **modelos simples**: crecimiento (geométrico/exponencial/logístico), **Lotka–Volterra** (competencia y depredación), **metapoblaciones** (Levins).
+- Describir **redes y cascadas tróficas**, **especies clave** y **coevolución**.
+- Explicar **sucesión ecológica** (primaria/secundaria) y **dinámica de poblaciones** en paisajes fragmentados (migración, dispersión, fragmentación).
+- Conocer métodos básicos de **censo poblacional**.
+
+
+---
+
+## Mapa de la unidad
+
+1. Estrategias de vida (*r/K*) e historias de vida  
+2. Competencia: mecanismos, resultados y coexistencia  
+3. Depredación, herbivoría, parasitismo y enfermedad  
+4. Redes tróficas, cascadas y coevolución  
+5. Dinámica poblacional: crecimiento y metapoblaciones  
+6. Migración, dispersión y fragmentación  
+7. Sucesión ecológica  
+8. Censo poblacional (métodos)
+
+
+---
+
+class: inverse
+
+# 1) Estrategias de vida (*r/K*) e historias de vida
+
+---
+
+### Trade‑offs y rasgos de historia de vida
+
+- **Trade‑off** reproducción vs. supervivencia.
+- Madurez sexual temprana vs. tardía.
+- Número de crías vs. inversión parental.
+- Semélparas vs. iteróparas.
+
+**Estrategias clásicas** (idealizadas):
+- **r‑estrategas**: alta fecundidad, baja inversión, ambientes impredecibles.
+- **K‑estrategas**: baja fecundidad, alta inversión, ambientes estables/cercanos a **K**.
+
+.notes[Enfatizar que hoy se prefiere el marco de historias de vida y espectros continuos, no dicotomías estrictas.]
+
+
+---
+
+class: inverse
+
+# 2) Competencia: mecanismos, resultados y coexistencia
+
+---
+
+### Conceptos clave
+
+- **Competencia intra/interespecífica** (−, −).
+- **Por explotación** vs **por interferencia**.
+- **Principio de exclusión competitiva** (Gause).
+- **Partición de nicho** y **reparto de recursos**.
+
+**Resultados típicos** (modelos LV):
+1. Exclusión de la especie 1  
+2. Exclusión de la especie 2  
+3. Coexistencia estable  
+4. Coexistencia inestable (dependiente de condiciones iniciales)
+
+
+---
+
+### Competencia: modelo de Lotka–Volterra
+
+$$\frac{dN_1}{dt} = r_1 N_1 \Big(1 - \frac{N_1 + \alpha_{12} N_2}{K_1}\Big)$$
+$$\frac{dN_2}{dt} = r_2 N_2 \Big(1 - \frac{N_2 + \alpha_{21} N_1}{K_2}\Big)$$
+
+- **Coexistencia** si las isoclinas se cruzan con **intraspecífica** > **interespecífica**.
+- **Gradientes ambientales** y **heterogeneidad** favorecen coexistencia.
+
+.notes[Mostrar esquemas de isoclinas y casos de estabilidad.]
+
+
+---
+
+class: inverse
+
+# 3) Depredación, herbivoría, parasitismo y enfermedad
+
+---
+
+### Depredación (y herbivoría) — modelo depredador‑presa
+
+\[
+\frac{dN}{dt} = rN - aNP,\qquad
+\frac{dP}{dt} = baNP - mP
+\]
+
+- Predice **ciclos** de presa y depredador.  
+- Incorporar **respuesta funcional** (Tipo I–III) y **refugios** cambia la dinámica.
+
+**Otras interacciones**:
+- **Parasitismo** y **enfermedad**: cambios en natalidad/supervivencia, latencia.  
+- **Comensalismo** (0,+) y **amensalismo** (0,−).  
+- **Mutualismo** (+,+): obligado vs facultativo; estabilidad depende de saturación y costos.
+
+
+---
+
+class: inverse
+
+# 4) Redes tróficas, cascadas y coevolución
+
+---
+
+### Redes tróficas y especies clave
+
+- **Red trófica**: conjunto de interacciones de consumo.  
+- **Conectancia** y **modularidad**.  
+- **Especies clave**: impacto desproporcionado (p. ej., depredador tope).  
+- **Cascadas tróficas**: efectos en múltiples niveles al alterar el tope o la base.
+
+### Coevolución
+
+- **Brazo evolutivo** depredador–presa; parásito–hospedador.  
+- **Mutualismos**: especialización vs generalismo; **trampas evolutivas**.
+
+
+---
+
+class: inverse
+
+# 5) Dinámica poblacional: crecimiento y metapoblaciones
+
+---
+
+### Crecimiento poblacional básico
+
+**Geométrico** (tiempo discreto):  
+\[ N_{t+1} = \lambda N_t,\quad \lambda = e^{r} \]
+
+**Exponencial** (tiempo continuo):  
+\[ \frac{dN}{dt} = rN \Rightarrow N(t) = N_0 e^{rt} \]
+
+**Logístico** (capacidad de carga **K**):  
+\[ \frac{dN}{dt} = rN\Big(1 - \frac{N}{K}\Big) \]
+
+- **Dependencia de la densidad**: retroalimentación negativa.  
+- **Estocasticidad** demográfica y ambiental en poblaciones pequeñas.
+
+
+---
+
+### Metapoblaciones (modelo de Levins)
+
+\[ \frac{dp}{dt} = c\,p(1-p) - e\,p \]
+
+- **p**: fracción de parches ocupados; **c** colonización; **e** extinción.  
+- Equilibrio: \(p^* = 1 - e/c\) si \(c>e\).  
+- Efecto del **tamaño** y **aislamiento** del parche; **rescate**.
+
+.notes[Conectar con fragmentación del hábitat y diseño de reservas.]
+
+
+---
+
+class: inverse
+
+# 6) Migración, dispersión y fragmentación
+
+---
+
+### Enfoque de paisaje
+
+- **Dispersión**: natal vs. reproductiva; **corredores** y **barreras**.
+- **Fragmentación**: pérdida de hábitat, **efecto borde**, aislamiento.  
+- **Conectividad funcional** vs estructural.
+- **Dinámica fuente–sumidero**.
+
+
+---
+
+class: inverse
+
+# 7) Sucesión ecológica
+
+---
+
+### Conceptos y formas
+
+- **Primaria**: sobre sustrato sin suelo (glaciares, coladas).  
+- **Secundaria**: tras disturbio con suelo remanente (fuegos, desmontes).  
+- **Modelos**: facilitación, inhibición, tolerancia.  
+- **Clímax** (concepto histórico) vs. **mosaicos successional** en el paisaje.
+
+
+---
+
+class: inverse
+
+# 8) Censo poblacional (métodos)
+
+---
+
+### Estimar abundancia y demografía
+
+- **Recuento directo** (transectos, parcelas, puntos).  
+- **Captura‑marcado‑recaptura (CMR)**: estimador Lincoln–Petersen  
+  \[ \hat N = \frac{(M+1)(C+1)}{(R+1)} - 1 \]
+- **Tablas de vida**: \(l_x, m_x\), **R₀**, **T**, **r**.  
+- **Análisis de matriz Leslie/Lefkovitch** (visión general).  
+- Sesgos: detectabilidad, heterogeneidad, cierre poblacional.
+
+
+---
+
+class: center, middle
+
+## Actividades rápidas (en clase)
+
+1. **Isoclinas**: Dada una pareja \((K_1, K_2, \alpha_{12}, \alpha_{21})\), decidir el resultado de LV.  
+2. **Cascada**: Predecir efectos de remover un depredador tope en una red simple.  
+3. **Metapoblación**: Con \(c=0.4\) y \(e=0.2\), calcular \(p^*\) y discutir manejo de parches.
+
+
+---
+
+class: inverse
+
+# Cierre
+
+- Las **interacciones** moldean nichos, coexistencia y estructura de comunidades.  
+- La **dinámica poblacional** enlaza rasgos de historia de vida con el ambiente.  
+- La **sucesión** y la **fragmentación** operan a escalas de paisaje.
+
+
+---
+
+## Bibliografía básica
+
+- Smith, T. M. & Smith, R. L. *Ecología* (6ª ed.).  
+- Odum, E. P. & Barrett, G. W. *Fundamentos de ecología* (5ª ed.).
+
+> Estas diapositivas sintetizan y reorganizan contenidos de ambos textos para uso docente.
+
+
+---
+
+class: center, middle, inverse
+
+# ¡Gracias!

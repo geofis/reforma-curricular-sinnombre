@@ -1,206 +1,193 @@
 ---
-title: "Guía de proyecto"
-author: "La Doñita, El Tali"
-output: github_document
+title: "Guía de proyectos"
+subtitle: "Borrador consolidado para usar en la asignatura"
+author: ["La Doñita", "El Tali"]
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+  pdf_document:
+    toc: true
+    number_sections: true
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Propósito y alcance
 
-<!-- # POOL DE LLUVIA DE IDEAS -->
+Esta guía describe cómo planificar, ejecutar y comunicar un **proyecto de investigación** a realizar durante el periodo lectivo. Está redactada de forma **genérica** para que funcione en distintas materias y cohortes.
 
-<!-- - El proyecto conjunto: -->
+- **Duración sugerida:** 9–12 semanas (se incluye cronograma de 12 semanas más abajo).
+- **Formato del equipo:** individual o parejas (registrar **roles y responsabilidades** por persona).
+- **Resultado esperado:** un **manuscrito científico (IMRaD)** y un **paquete reproducible** (datos + scripts + material de apoyo).
 
-<!--   - Biodiversidad y distribución  -->
-<!--   - Con entregas por parejas (para valoración independiente, si se caen personas o en el grupo, se valora a quienes queden, dar opción para no trabajar en grupos de 2, sino individualmente), y roles el proyecto conjunto. -->
-<!--   - Cada grupo terminaría sus análisis con un documento de manuscrito. -->
-<!--   - Si dos o más grupos se quieren reunir para manuscrito conjunto, perfecto, pero si falla, se vuelve a la idea de manuscritos por grupos. -->
+# Principios y requisitos
 
-<!-- ## Ideas para la guía de proyecto -->
+1. **Viabilidad:** el proyecto debe poder completarse con los recursos disponibles y en el tiempo previsto.
+2. **Reproducibilidad:** todo análisis debe poder repetirse a partir de scripts y datos versionados.
+3. **Seguridad y ética:** plan de campo, permisos si aplican, consentimiento informado para datos sensibles y protocolos de bienestar animal/ambiental. La colecta debe ser **realizable en horarios seguros** y con logística adecuada.
+4. **Trabajo justo en equipo:** roles claros, registro de contribuciones y mecanismos de resolución de conflictos.
+5. **Contexto estacional (si aplica):** considerar cambios de **precipitación**, **fotoperiodo**, **temperatura**, **fenología** y **presencia de migratorias** durante el periodo de trabajo.
 
-<!-- - ¿Qué se espera del proyecto? -->
+# Entregables
 
-<!--   - Que los estudiantes aprendan a trabajar en equipo, a organizarse, a planificar, a realizar una colecta de datos de campo, a analizar e interpretar los datos, y a redactar un manuscrito científico. -->
-<!--   - Que los estudiantes aprendan a utilizar herramientas tecnológicas para la colecta y análisis de datos. -->
-<!--   - Que los estudiantes desarrollen habilidades de comunicación científica. -->
+- **Manuscrito** (Overleaf o RMarkdown → PDF/HTML) en formato IMRaD.
+- **Repositorio** (GitHub/GitLab): scripts en R y/o Python; README con instrucciones para reproducir.
+- **Datos**: carpeta estructurada con diccionario de variables; depósito en Zenodo/Dryad cuando corresponda.
+- **Material complementario (opcional):** mapas (estáticos o interactivos), infografías, póster, breve video/podcast.
 
+# Tecnologías sugeridas
 
-<!-- - Básicos -->
+- **Registro y georreferenciación:** iNaturalist, ODK/ODK Collect.
+- **SIG y análisis espacial:** QGIS; R (sf, terra, tidyverse).
+- **Análisis ecológico/estadístico:** R (vegan, spdep, etc.).
+- **Sensores y prototipos:** microcontroladores (Arduino/ESP32/Raspberry Pi) para variables ambientales.
+- **Captura remota:** cámaras trampa; drones para fotogrametría/mapeo donde esté permitido.
+- **Bioacústica (si procede):** grabadoras; análisis en Audacity o Raven Pro; apps de apoyo como Merlin (aves).
 
-<!--   - En el campus de la UASD o en el Malecón -->
-<!--   - El proyecto debe ser realizable -->
-<!--   - Desde mediados de septiembre hasta mediados-finales de noviembre (9 a 10 semanas) -->
-<!--   - ¿Qué se hará en el tiempo de proyecto? -->
-<!--     - Colecta de datos de campo -->
-<!--     - Análisis -->
-<!--     - Interpretación -->
-<!--     - Redacción del manuscrito (IMRaD) -->
-<!--   - La colecta de datos de campo debe ser realizable en el horario laboral del área de estudio (si aplica), siempre considerando las medidas de seguridad (poder llegar a casa a una hora "decente") -->
+# Cronograma sugerido (12 semanas)
 
-<!-- - ¿Qué cambios ambientales ocurren en el período de trabajo? -->
+| Semana | Hito principal | Productos mínimos |
+|---:|---|---|
+| 1 | Definición del tema, pregunta y objetivos | Ficha de proyecto + plan de trabajo |
+| 2 | Diseño metodológico y piloto | Protocolos y formularios (ODK), lista de variables |
+| 3 | Trabajo de campo / recopilación de datos | Bitácora de campo, respaldo de datos |
+| 4 | Trabajo de campo / control de calidad | Registro de esfuerzo, plan de contingencia |
+| 5 | Estructura de base de datos | Carpeta de datos + diccionario |
+| 6 | Análisis exploratorio (EDA) | Script EDA, gráficos preliminares |
+| 7 | Modelado / análisis inferencial | Script de modelos, validación preliminar |
+| 8 | Resultados preliminares | Figuras/tablas principales |
+| 9 | Discusión y limitaciones | Borrador de discusión + bibliografía clave |
+| 10 | Redacción IMRaD (borrador completo) | Versión en Overleaf/Rmd |
+| 11 | Revisión por pares y edición | Cambios editoriales, checklist de calidad |
+| 12 | Cierre y divulgación | Versión final + depósito de datos + **ExpoBioCampus** |
 
-<!--   - Precipitación (de menor a mayor) -->
-<!--   - Reducción del fotoperiodo (de mayor a menor) -->
-<!--   - En cuanto a la biodiversidad, se suman las aves migratorias; algunas especies de insectos aumentan o disminuyen en su población -->
-<!--   - La caducifolia aparece en algunos casos -->
-<!--   - Aunque en menor medida, la temperatura cambia de mayor a menor -->
-<!--   - La variabilidad diaria de ka temperatura, la luminosidad, o incluso el ruido, podría influir sobre determinadas especies -->
+# Evaluación (rúbrica)
 
-<!-- - Temas y grupos biológicos -->
+- **Planteamiento y viabilidad (15%)**: claridad de pregunta/objetivos, encaje metodológico.
+- **Calidad de datos y bitácora (15%)**: protocolos, integridad, metadatos.
+- **Análisis y reproducibilidad (30%)**: scripts limpios, resultados verificables.
+- **Interpretación y discusión (20%)**: coherencia con literatura, limitaciones.
+- **Comunicación (20%)**: redacción IMRaD, figuras/tablas, presentación final.
 
-<!--   - Relación/asociación entre especies -->
-<!--   - Relación/asociación especie-hábitat -->
-<!--   - Distribución real y potencial de una especie -->
-<!--   - Composición/agrupamiento en la comunidad -->
-<!--   - Análisis de la diversidad de una comunidad -->
-<!--   - Tecnología aplicada a la ecología -->
-<!--     - Hardware: cámaras trampa, sensores ambientales, rastreadores de fauna, proyectos DIY en general -->
-<!--     - Aplicaciones, software (ODK, R, Python, IA, etc.) -->
-<!--   - Estudios comparativos entre localidades, usando el mismo grupo biológico y la misma metodología -->
+> Nota: además de los porcentajes, cada subproyecto se valora por **originalidad**, **rigor científico** y **uso pertinente de tecnología**.
 
-<!-- - Proyecto sombrilla -->
+# Temas (elegir uno)
 
+A continuación se listan líneas de trabajo con **objetivo**, **metodología posible**, **datos** y **productos** orientativos. Adáptelos a su realidad y recursos.
 
+## Interacciones entre especies (competencia, mutualismo, depredación)
 
+- **Objetivo:** detectar y caracterizar interacciones en microhábitats.
+- **Metodología posible:** transectos/cuadrantes; observaciones focales; redes planta–polinizador.
+- **Datos:** matrices de presencia/ausencia o abundancia; variables ambientales básicas (luz, humedad, cobertura).
+- **Productos:** índices de interacción, gráficos de redes, síntesis de hallazgos.
 
+## Relación especie–hábitat
 
-# Guía de proyectos
+- **Objetivo:** evaluar asociaciones entre especies y tipos de hábitat.
+- **Metodología posible:** muestreos estratificados por hábitat (p. ej., áreas ajardinadas, herbazales, cobertura arbórea, superficies pavimentadas).
+- **Datos:** listas de especies por unidad de muestreo + covariables ambientales.
+- **Productos:** modelos de preferencia de hábitat y mapas temáticos.
 
-## Base común
+## Distribución real y potencial de una especie (SDM)
 
-### Objetivo
+- **Objetivo:** describir la distribución observada y modelar la idoneidad potencial.
+- **Metodología posible:** muestreo dirigido / oportunista; modelado con variables ambientales; partición entrenamiento/validación.
+- **Datos:** registros georreferenciados + capas ambientales.
+- **Productos:** mapas de idoneidad, métricas de desempeño y guía de interpretación.
 
-### Entregables
+## Comunidades: composición, agrupamiento y diversidad
 
-- Manuscrito en Overleaf
-- Scripts reproducibles (GitHub)
-- Base de datos de especies y hábitats (e.g. Dryad, Zenodo)
-- Opcional: mapas (interactivos o no), infografías, videos, presentaciones
+- **Objetivo:** comparar riqueza, diversidad y estructura en comunidades locales.
+- **Metodología posible:** inventarios por parcela/transecto; estimadores de diversidad (Shannon, Simpson), análisis de agrupamiento y redes tróficas en microhábitats (estanques, huertos, etc.).
+- **Datos:** matrices comunidad × sitio; metadatos de esfuerzo.
+- **Productos:** tablas/figuras de diversidad, dendrogramas, síntesis de patrones.
 
-### Tecnología
+## Tecnología aplicada a la ecología
 
-- Apps como iNaturalist para registro y georreferenciación, ODK, QGIS
-- Sensores de bajo costo (basados en placas Arduino o Raspberry Pi) para mediciones ambientales
-- Drones para fotogrametría de áreas inaccesibles
-- Software R para análisis estadístico.  
+- **Objetivo:** diseñar/validar herramientas para registrar procesos o mejorar el muestreo.
+- **Metodología posible:** desarrollo y prueba de prototipos (estación meteorológica low‑cost, rastreador, data logger, etc.).
+- **Datos:** especificaciones y pruebas de funcionamiento in situ.
+- **Productos:** prototipo + manual de replicación + repositorio.
 
+## Estudios comparativos entre hábitats/localidades
 
-### Evaluación
+- **Objetivo:** comparar el mismo grupo biológico con la misma metodología en distintos sitios.
+- **Metodología posible:** diseño BACI o muestreo pareado; control de covariables ambientales.
+- **Datos:** matrices comparables entre sitios; registros de esfuerzo.
+- **Productos:** análisis comparativos y recomendaciones de manejo/divulgación.
 
-### Cronograma
+# Subproyectos de ejemplo
 
-### Recursos tecnológicos y analógicos disponibles
+## "Bio‑Sonidos del campus"
 
-## Temas, para elegir uno
+- **Objetivo:** caracterizar diversidad acústica a lo largo del día.
+- **Metodología:** grabaciones por franjas (madrugada/día/noche), puntos fijos; identificación por vocalizaciones.
+- **Tecnología:** grabadoras; análisis en Audacity/Raven Pro.
+- **Entregable:** sonogramas comparativos y cápsula de audio educativa.
 
-### Tema: Relación/asociación entre especies (competencia, mutualismo, depredación).
+## "Tecnología para conservar"
 
-**Metodología:**. Muestreo en hábitat variados (áreas con herbáceas, con cobertura arbórea, construidas) para identificar posibles interacciones (ej: insectos-polínizadores, aves-semillas).
+- **Objetivo:** construir y validar un prototipo funcional orientado a conservación o monitoreo.
+- **Metodología:** diseño, fabricación (p. ej., impresión 3D), pruebas en campo/lab.
+- **Tecnología:** IoT (sensores en línea), microcontroladores.
+- **Entregable:** prototipo funcional y documentación de replicación.
 
-### Tema: Relación/asociación especie-hábitat
+# Proyecto sombrilla (opcional): "BioCampus — Redes de vida universitarias"
 
-**Metodología:**. Muestreo en hábitat variados (áreas con herbáceas, con cobertura arbórea, construidas) para identificar posibles interacciones (ej: insectos-polínizadores, aves-semillas).
+Un proyecto marco que integra subproyectos temáticos coordinados por distintos equipos.
 
-### Tema: Distribución real y potencial de una especie
+- **Objetivo general:** analizar la biodiversidad y sus relaciones ecológicas en el entorno universitario como microecosistema.
+- **Integración:** protocolo común de metadatos y carpeta compartida; tablero/mapa interactivo con resultados por equipo. Todos los subproductos alimentan una **plataforma digital única**.
+- **Cierre:** feria final **ExpoBioCampus** para socializar hallazgos.
 
-**Metodología:**  
+# Ventajas del diseño
 
-- Muestreos en el campus usando metodología específica para el grupo elegido
-- Modelado de distribución (SDM)
+- ✔️ **Escalable:** adaptable a distintas sedes y contextos.
+- ✔️ **Interdisciplinario:** integra biología, geografía, ingeniería y TIC.
+- ✔️ **Impacto visible:** productos tangibles para divulgación científica.
+- ✔️ **Aprendizaje activo:** estudiantes como investigadores protagonistas.
 
-### Tema: Composición/agrupamiento en la comunidad
+# Recursos disponibles (tecnológicos y analógicos)
 
-**Metodología:**
+- **Apps:** iNaturalist, Merlin (aves), ODK Collect.
+- **Hardware:** sensores ambientales, cámaras trampa, microcontroladores; drones donde la normativa lo permita.
+- **Software:** QGIS, R, Audacity, suites ofimáticas.
+- **Analógico:** bitácoras de campo, brújula/clinómetro, cintas métricas, pluviómetro, termohigrómetro, etiquetas, chaleco reflectivo.
+- **Infraestructura:** repositorios colaborativos (GitHub/GitLab), gestores de referencias y plantillas Overleaf/Rmd.
 
-- Análisis de redes tróficas en microhábitats (ej: estanque, huerto).  
-- Índices de diversidad (Shannon, Simpson).  
+# Anexos
 
+## A. Lista de verificación (antes de empezar)
 
+- [ ] Pregunta y objetivos claros
+- [ ] Diseño y protocolo de muestreo
+- [ ] Formulario de campo (ODK o equivalente)
+- [ ] Plan de seguridad y permisos
+- [ ] Carpeta de proyecto (datos/scripts) creada
 
+## B. Estructura de carpetas sugerida
 
-### Tema: Análisis de la diversidad de una comunidad
+```
+proyecto/
+├─ datos/
+│  ├─ brutos/
+│  └─ procesados/
+├─ scripts/
+├─ docs/        # borradores IMRaD, figuras/tablas
+├─ metadata/    # diccionario de variables, README
+└─ outputs/     # mapas, infografías, podcast
+```
 
+## C. Plantillas
 
-
-### Tema: Tecnología aplicada a la ecología
-
-- Hardware: cámaras trampa, sensores ambientales, rastreadores de fauna, proyectos DIY en general
-- Aplicaciones, software (ODK, R, Python, IA, etc.)
-
-### Tema: Estudios comparativos entre hábitats y/o localidades
-
-**Metodología:**. Comparar hábitats (ej: ajardinamientos, áreas con herbáceas o con coberturas, áreas pavimentada), usando el mismo grupo biológico y la misma técnica analítica
-- Registrar especies clave (plantas, aves, insectos) y variables ambientales (humedad, luz, suelo).  
-
-
-
-
-
-
-
-
-
-
-
-### 5. Subproyecto: "Bio-Sonidos del Campus"  
-**Tema:** Análisis de biodiversidad.  
-**Metodología:**  
-- Grabaciones acústicas en distintos horarios (madrugada, día, noche).  
-- Identificación de especies por vocalizaciones (aves, insectos, anfibios).  
-**Tecnología:** Audiómetros y análisis con Raven Pro.  
-**Entregable:** Sonogramas comparativos + podcast educativo sobre ritmos circadianos.
-
-### 6. Subproyecto: "Tecnología para Conservar"  
-**Tema:** Tecnología aplicada.  
-**Metodología:**  
-- Diseño de prototipo funcional (ej: comedero automático para aves, estación meteorológica low-cost).  
-- Pruebas in situ.  
-**Tecnología:** Impresión 3D, IoT (sensores en línea).  
-**Entregable:** Prototipo físico + manual de replicabilidad.
-
----
-
-## RECURSOS Y CRONOGRAMA:
-
-**Duración:** 12 semanas (1 semestre).  
-**Recursos:**  
-- App móviles (iNaturalist, Merlin Bird ID).  
-- Sensores Arduino, cámaras trampa.  
-- Software libre: QGIS, R, Audacity.  
-**Integración:** Todos los subproductos alimentan una plataforma digital única (mapa interactivo con datos acumulados).
-
-
-
-
-
-
-
-
-
-## Proyecto sombrilla: BioCampus - Redes de Vida Universitaria
-
-- Un proyecto sombrilla es un proyecto que abarca varios subproyectos, cada uno de los cuales puede ser realizado por un grupo diferente de estudiantes
-- Cada subproyecto debe tener un objetivo claro y específico, y debe estar relacionado con el tema general del proyecto sombrilla
-- Los subproyectos deben ser lo suficientemente amplios como para permitir la exploración de diferentes aspectos del tema, pero lo suficientemente específicos como para que los estudiantes puedan realizar un trabajo significativo en el tiempo disponible.
-
-
-**Objetivo General:**  
-Analizar la biodiversidad del campus como microecosistema, integrando relaciones ecológicas, distribución espacial, tecnología y dinámicas comunitarias.
-
-## EVALUACIÓN:
-
-- Rúbrica por subproyecto (originalidad, rigor científico, uso de tecnología).  
-- Feria final: "ExpoBioCampus" para socializar hallazgos con la comunidad universitaria.
-
----
-
-## VENTAJAS DEL DISEÑO:
-
-- ✔️ Escalable: Ajustable a cualquier campus.  
-- ✔️ Interdisciplinario: Combina biología, geografía, ingeniería y TIC.  
-- ✔️ Impacto visible: Productos tangibles para divulgación científica.  
-- ✔️ Aprendizaje activo: Estudiantes como investigadores protagonistas.
-
-¿Necesitas ajustar temas, profundizar en alguna metodología o agregar un componente específico? ¡Estoy aquí para refinarlo! 🌱🔬
+- Portada y estructura IMRaD.
+- Diccionario de variables (CSV/ODS).
+- Protocolo de campo y bitácora.
+- Lista de roles y contribuciones por integrante.
