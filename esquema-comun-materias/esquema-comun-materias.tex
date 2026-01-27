@@ -1,48 +1,69 @@
 \documentclass[border=1cm]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % TeX Live 2019: deja esto explícito
+\usepackage{lmodern}
+
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows, positioning}
 
 % Estilos
-\tikzstyle{startstop} = [
-    rectangle, rounded corners, minimum width=3.7cm, minimum height=1.5cm, 
-    text centered, align=center, draw=black, fill=red!30
-]
-\tikzstyle{process} = [
-    rectangle, minimum width=3.7cm, minimum height=1.5cm, 
-    text centered, align=center, draw=black, fill=orange!30
-]
-\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzset{
+  startstop/.style={
+    rectangle, rounded corners,
+    minimum width=3.7cm, minimum height=1.5cm,
+    text centered, align=center,
+    draw=black, fill=red!30
+  },
+  process/.style={
+    rectangle,
+    minimum width=3.7cm, minimum height=1.5cm,
+    text centered, align=center,
+    draw=black, fill=orange!30
+  },
+  milestone/.style={
+    rectangle,
+    minimum width=3.7cm, minimum height=1.5cm,
+    text centered, align=center,
+    draw=black, fill=blue!15
+  },
+  arrow/.style={thick,->,>=stealth}
+}
 
 \begin{document}
 \begin{tikzpicture}[
-    node distance=1.5cm and 2.4cm,
-    font=\small
+  node distance=1.5cm and 2.4cm,
+  font=\small
 ]
 
-% Fila 1 (izquierda a derecha)
-\node (n0)  [startstop]                                   {Recepción \\ de invitados/as};
-\node (n1)  [process, right=of n0]                        {Unidad 1 \\ Lista de posibles proyectos};
-\node (n2)  [process, right=of n1]                        {Unidad 2};
-\node (n3)  [process, right=of n2]                        {Unidad 3};
+% Fila 1 (izquierda a derecha): D0, D1, D2, D3
+\node (n0)  [startstop] {Recepción\\de invitados/as\\(D0)};
+\node (n1)  [process, right=of n0] {Día 1\\Unidad 1 (Práctica)\\Problema + preguntas\\Plan + datos};
+\node (n2)  [milestone, right=of n1] {Día 2\\Unidad 1 (Práctica)\\Taller\\{\bfseries + 1 h: elegir Proyecto}\\{\bfseries de Desarrollo}};
+\node (n3)  [process, right=of n2] {Día 3\\Unidad 1 (Práctica)\\Análisis preliminar\\+ redacción};
 
-% Fila 2 (derecha a izquierda)
-\node (n4)  [process, below=of n3]                        {Unidad 4 \\ Deben haberse \\ elegido proyectos};
-\node (n5)  [process, left=of n4]                         {Intro \\ Preguntas \\ de investigación};
-\node (n6)  [process, left=of n5]                         {Intro \\ Antecedentes \\ Estado de la cuestión \\ Marco conceptual};
-\node (n7)  [process, left=of n6]                         {Materiales y métodos \\ Diseño del estudio \\ y colecta de datos};
+% Fila 2 (derecha a izquierda): D4, D5, D6, D7
+\node (n4)  [process, below=of n3] {Día 4\\Unidad 1\\Presentación + defensa\\{\bfseries Evaluación en aula}};
+\node (n5)  [process, left=of n4] {Día 5\\Unidad 2 (Práctica)\\Problema + preguntas\\Plan + datos};
+\node (n6)  [milestone, left=of n5] {Día 6\\Unidad 2 (Práctica)\\Taller\\{\bfseries Proyecto: diseño}\\{\bfseries + protocolo}};
+\node (n7)  [process, left=of n6] {Día 7\\Unidad 2 (Práctica)\\Análisis preliminar\\+ redacción};
 
-% Fila 3 (izquierda a derecha)
-\node (n8)  [process, below=of n7]                        {Materiales y métodos \\ Diseño del estudio \\ y colecta de datos};
-\node (n9)  [process, right=of n8]                        {Materiales y métodos \\ Diseño del estudio \\ y colecta de datos};
-\node (n10) [process, right=of n9]                        {Materiales y métodos \\ Selección de técnicas \\ e instrumentos \\ (hardware y software) \\ de colecta};
-\node (n11) [process, right=of n10]                       {Resultados \\ Análisis};
+% Fila 3 (izquierda a derecha): D8, D9, D10, D11
+\node (n8)  [process, below=of n7] {Día 8\\Unidad 2\\Presentación + defensa\\{\bfseries Evaluación en aula}};
+\node (n9)  [milestone, right=of n8] {Día 9\\{\bfseries Proyecto: trabajo}\\{\bfseries de campo} (inicio)};
+\node (n10) [milestone, right=of n9] {Día 10\\{\bfseries Proyecto: trabajo}\\{\bfseries de campo} (cierre)};
+\node (n11) [process, right=of n10] {Día 11\\Unidad 3 (Práctica)\\Problema + preguntas\\Plan + datos};
 
-% Fila 4 (derecha a izquierda)
-\node (n12) [process, below=of n11]                       {Resultados \\ Análisis};
-\node (n13) [process, left=of n12]                        {Discusión};
-\node (n14) [process, left=of n13]                        {Integración \\ de documentos final};
-\node (n15) [startstop, left=of n14]                      {Presentación \\ Examen \\ Despedida \\
-(cero celebradera)};
+% Fila 4 (derecha a izquierda): D12, D13, D14, D15
+\node (n12) [process, below=of n11] {Día 12\\Unidad 3 (Práctica)\\Análisis + redacción\\+ slides};
+\node (n13) [milestone, left=of n12] {Día 13\\{\bfseries Proyecto: análisis}\\+ manuscrito (avance)};
+\node (n14) [process, left=of n13] {Día 14\\Unidad 3\\Presentación + defensa\\{\bfseries Evaluación en aula}};
+\node (n15) [process, left=of n14] {Día 15\\Unidad 4 (Práctica)\\Problema + preguntas\\Plan + datos};
+
+% Fila 5 (izquierda a derecha): D16, D17, cierre
+\node (n16) [process, below=of n15] {Día 16\\Unidad 4 (Práctica)\\Análisis + redacción\\+ slides};
+\node (n17) [milestone, right=of n16] {Día 17\\{\bfseries Proyecto: entrega}\\+ {\bfseries defensa final}\\{\bfseries Evaluación en aula}};
+\node (n18) [startstop, right=of n17] {Cierre\\Examen (si aplica)\\Despedida\\(cero celebradera)};
 
 % Flechas (zigzag)
 \draw [arrow] (n0) -- (n1);
@@ -60,6 +81,9 @@
 \draw [arrow] (n12) -- (n13);
 \draw [arrow] (n13) -- (n14);
 \draw [arrow] (n14) -- (n15);
+\draw [arrow] (n15) -- (n16);
+\draw [arrow] (n16) -- (n17);
+\draw [arrow] (n17) -- (n18);
 
 \end{tikzpicture}
 \end{document}
