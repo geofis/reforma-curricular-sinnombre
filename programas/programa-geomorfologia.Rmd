@@ -1,14 +1,15 @@
 ---
 title: "Programa de Geomorfología"
 output:
-  # pdf_document: default
-  # word_document:
-  bookdown::word_document2:
+  # bookdown::word_document2:
+  #   fig_caption: yes
+  #   reference_docx: "plantilla-programas.dotx"
+  #   number_sections: false
+  bookdown::pdf_document2:
     fig_caption: yes
-    # reference_docx: "plantillas/apa-student-paper-template-universidad-arizona.docx"
-    reference_docx: "plantilla-programas.dotx"
+    latex_engine: xelatex
     number_sections: false
-date: "Revisado en agosto de 2025"
+date: "Revisado en enero de 2026"
 csl: "apa-es.csl"
 bibliography: bibliografia.bib
 always_allow_html: true
@@ -27,14 +28,17 @@ knitr::opts_chunk$set(
 
 <!-- # Programa de la asignatura: Geomorfología -->
 
-```{r children, child=c("basicos.Rmd")}
+```{r children, child=c("basicos-geomorfologia.Rmd")}
 ```
 
 # Descripción
 
-## Versión larga
+Matriculaste geomorfología, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de dos aspectos que a ti como estudiante, y a mí como profesor, nos atañen "aunque no lo sepamos": 1) la crisis existencial de la academia (lo he titulado así, valen otros títulos) y 2) reproducibilidad en las ciencias.
 
-Matriculaste geomorfología, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de ciencia.  Contrario a como se la ha concebido tradicionalmente, la ciencia es un proceso creativo y crítico, que despierta la curiosidad y la motivación e, idealmente, es una producción humana justa. Pero la ciencia está inmersa en una crisis, una de reproducibilidad que diezma su capacidad intrínseca para crear nuevo conocimiento, y que está convirtiéndola en una herramienta injusta.
+Sobre lo primero, la crisis existencial de la academia, hay muchas opiniones, algunas de las cuales son muy críticas, aunque yo me considero "moderado". En general, se acepta que la academia está en crisis, una crisis que afecta a dos aspectos importantes: la "empleabilidad" de sus egresados y la producción científica. La baja empleabilidad tiene múltiples causas, pero una de las más importantes es que el grado ya ha dejado de ser una garantía de estabilidad, lo cual también ha conducido a una serie de problemas que son conocidos por todos: precariedad laboral, dificultad para acceder al primer empleo, entre otros. Algunos culpan a la cuestionable calidad de la docencia (especialmente en la enseñanza preuniversitaria), y otros a la implementación de enfoques contemporáneos de enseñanza-aprendizaje, como el aprendizaje basado en competencias. Por otro lado, respecto de la producción científica en la academia, desde hace años se "vive" (o sobrevive) bajo el modelo *publish or perish*, el cual ha tenido consecuencias nefastas sobre qué conocimiento se produce en la universidad. Los académicos se ven bajo la presión de publicar, es decir, básicamente, publicar por publicar, y esto lleva a una feroz competencia por fondos, una banalización de la producción científico (e.g. *papers* irrelevantes), y a una falta de tiempo para la reflexión y el pensamiento crítico. Todo esto afecta a la calidad de la investigación, pero también a la formación de sus estudiantes. Súmale a todo lo anterior, la irrupción de la "inteligencia artificial generativa" (IA en lo adelante). La IA no vino a quitarte tu trabajo como muchos aseguran, sino más bien vino a visibilizar todos los problemas y déficits que ya de por sí tenía nuestro sistema docente. Uno de los principales problemas que, a mi entender, visibilizó la IA, fue la escasa capacidad que tenemos los docentes de hacer de tutores en el aprendizaje. Otro déficits que la IA visibilizó fue el hecho de que, tanto docentes como estudiantes, no podemos prescindir del aprendizaje basado en conocimiento, pues publicaciones recientes están demostrando que quienes más provecho le están sacando a la IA son quienes tienen un conocimiento sólido de la materia que están estudiando. Pero la IA no sólo visibilizó problemas y déficits, también expuso un aspecto relevante de la enseñanza y el aprendizaje: la capacidad de crear es esencial en la docencia universitaria, y la IA no puede (por ahora) sustituir la creatividad humana, pero puede ayudarla enormemente. En ciencias, necesitamos creatividad para muchas tareas, desde formular preguntas hasta resolver problemas. En definitiva, la IA vino a recordarnos que la docencia universitaria, además de ser crítica, creativa y motivadora, debe apoyarse en las herramientas más modernas en cada momento.
+
+Sobre lo segundo, la reproducibilidad en la ciencia, este es un tema más antiguo, pero aún vigente. Imagina la reproducibilidad como un "sello" de garantía que debería tener todo nuevo descubrimiento que certifica algo como esto: "si yo lo produje, tú también deberías poder producirlo". Contrario a como se la ha concebido tradicionalmente, la ciencia es un proceso creativo y crítico, que despierta la curiosidad y la motivación e, idealmente, es una producción humana justa. Pero la ciencia está inmersa, desde hace décadas, en una crisis de reproducibilidad que diezma su capacidad intrínseca para crear nuevo conocimiento, y que está convirtiéndola en una herramienta injusta. Diariamente, en todo el mundo millones de personas dedican ingentes cantidades de horas a la investigación. Aun así, difícilmente un equipo de investigadores ni tan siquiera intenta reproducir los estudios de otros, y mucho menos se consiguen replicar protocolos usando nuevos datos. Se atribuye este déficit a que, al publicar resultados científicos, no se aportan ni las fuentes, ni los métodos empleados. Aunque el panorama está cambiando, la única forma de aumentar la reproducibilidad, pasa por compartir las fuentes y utilizar métodos reproducibles. En definitiva, para hacer ciencia, necesitamos abrir nuestros métodos y publicar nuestros protocolos.
+
 Ahora sí, hablemos de geomorfología, pasando por una cita, primero en su idioma original, luego traducida:
 
 > - *Earth's landscapes are sculpted by a suite of geomorphic processes that vary with position on the Earth and with time due to changes in the climate. Landscapes contain signatures of the principal active processes that we would like to learn to read [@anderson2010geomorphology].*
@@ -57,16 +61,6 @@ Aunque seguiré un guión de geomorfología de procesos, no olvidaré aproximaci
 
 La geomorfología de procesos no sería posible sin el avance de los últimos siglos en matemáticas. Igualmente, sin la irrupción de la tecnología y el desarrollo de la programación en la segunda mitad del siglo XX, tampoco sería posible estudiar procesos a escalas grandes. Estas herramientas han permitido que la geomorfología dé respuestas cada vez más precisas a problemas de ciencias de la Tierra, como los riesgos de desastres.
 
-## Versión corta
-
-Matriculaste geomorfología, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de ciencia.  La ciencia, incluida la geomorfología, atraviesa una crisis de reproducibilidad que afecta su capacidad para generar conocimiento nuevo y justo. Millones invierten tiempo en investigación, pero la falta de transparencia en métodos y fuentes dificulta la reproducibilidad y replicabilidad de las investigaciones. Aumentar la reproducibilidad requiere abrir nuestros métodos y publicar protocolos.
-
-Pasemos ahora a geomorfología. Esta rama de la geografía física, o de la geología, estudia los paisajes terrestres, modelados por procesos que varían según posición y cambios climáticos. Estos paisajes contienen registros del principal proceso activo, el cual debemos aprender a leer [@anderson2010geomorphology]. La geomorfología debe ir más allá de la mera descripción, por lo que debe apoyarse en técnicas cuantitativas, usando conocimientos de la física, las matemáticas y, en concreto, de la estadística [@gutierrez_elorza_geomorfologi_2008].
-
-@tricart1956geomorphologie subrayó la importancia del estudio de procesos y la morfogénesis antrópica para comprender mejor el modelado. La geomorfología de procesos, centrada en el proceso más que en la forma, ha dominado desde mediados del siglo XX. Esta estudia cómo las rocas superficiales, que originalmente fueron movilizadas por procesos geofísicos profundos, posteriormente son modeladas por una atmósfera donde la radiación solar es bastante desigual (Anderson & Anderson, 2010).
-
-La geomorfología de procesos ha abierto nuevas aplicaciones vitales para la humanidad, siendo actualmente una disciplina clave en el abordaje de problemas humanos que ocurren en la superficie terrestre, como son los riesgos de desastres. A pesar de enfocarme en geomorfología de procesos, no dejaré de lado enfoques tradicionales y, al mismo tiempo, incluiré matemáticas y tecnología, en consonancia con los avances ocurridos en el último siglo dentro de esta disciplina.
-
 # Competencias de la asignatura
 
 -	Creatividad y curiosidad, al plantear tus propios problemas de investigación, formular preguntas y responderlas empleando soluciones propias y mejorando o adaptando las existentes.
@@ -87,16 +81,33 @@ Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
 
 - RAE3. Comprendes los principios geográficos de la geomorfología, así como los procesos geomorfológicos y la historia geológica del planeta.
 
-
 ---
 
-# Unidad 1 (Semana 1). Fundamentos, bases geológicas y tiempo en geomorfología
+# Organización del curso
+
+
+```{r, warning=F, message=F, echo=F}
+library(magick)
+
+# Leer el PDF
+pdf_img <- image_read_pdf("../esquema-comun-materias/esquema-comun-materias.pdf",
+                          density = 300)  # density mejora resolución
+
+# Guardar como JPG
+image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", format = "jpg")
+```
+
+![](../presentaciones/esquema-comun-materias.jpg){width=90%}
+
+## Unidad 1. Fundamentos, bases geológicas y tiempo en geomorfología
 
 - **Definición de geomorfología**, disciplinas auxiliares, **epistemología** y métodos.
 
 - **Preguntas en geomorfología**, temas comunes e interdisciplinarios.
 
 - Repaso de **composición del interior de la Tierra**, **rocas** (incl. rocas comunes en RD), **placas** y **límites de placa** (reflejo de la tectónica de placas en el Caribe, **deformaciones**), **fallas, pliegues, diaclasas**. **Bases de geomorfología estructural**.
+
+- **Modelos evolutivos del relieve**: ciclo de Davis, peniplanicies, escalera de piedemontes (Piedmontreppen, Walther Penck) modelos dinámicos (e.g. Hack, Chorley y Kennedy, Strahler, etc.), modelos contemporáneos (e.g. Whipple y Tucker, Chen-Darbon-Morel).
 
 - **Técnicas de datación**: relativas y absolutas.
 
@@ -106,7 +117,7 @@ Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
 
 ---
 
-# Unidad 2 (Semana 2). Geomorfometría y modelado del paisaje
+## Unidad 2. Geomorfometría, modelado del paisaje y sus aplicaciones, posicionamiento aplicado a geomorfología
 
 - **Parámetros** de la superficie terrestre, **modelos digitales de elevación (MDE)**, **geoestadística**.
 
@@ -114,9 +125,13 @@ Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
 
 - **Mapeo y modelado del paisaje**; **aplicaciones**: sistemas fluviales, movimientos en masa, suelo, **agricultura de precisión**, entre otras.
 
+- **Tecnología de posicionamiento aplicada a geomorfología**: colecta de observaciones brutas, ocupaciones estáticas, medición del relieve, aplicaciones en el estudio de procesos geomorfológicos.
+
+- **Algún día será: mesa de corrientes (flujo fluvial, cursos fluviales, *stream table*)**: principios físicos, diseño experimental, aplicaciones en geomorfología.
+
 ---
 
-# Unidad 3 (Semana 3). Intemperización, denudación y procesos de laderas
+## Unidad 3. Intemperización, denudación, procesos de laderas, geomorfología climática, geomorfología kárstica
 
 - **Intemperización** como parte de la erosión.
 
@@ -130,19 +145,19 @@ Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
 
 - **Ciclo de carbono a largo plazo** y efectos de la alteración química.
 
-- **Geomorfología climática**: medios áridos, semiáridos y dominio tropical.
-
-- **Geomorfología kárstica**. **Karst** y **riesgo asociado**.
-
 - **Laderas**, balance de masa y otros.
 
 - Procesos elementales: **rainsplash**, **solifluxión**, procesos **biogeomorfológicos**, y otros.
 
 - **Movimientos de masa** (procesos gravitacionales/de laderas): **principios físicos**, **tipologías** (caída, deslizamiento, flujo, reptación), **debris flow**, **modelos de laderas/morfometría**.
 
+- **Geomorfología climática**: medios áridos, semiáridos y dominio tropical.
+
+- **Geomorfología kárstica**. **Karst** y **riesgo asociado**.
+
 ---
 
-# Unidad 4 (Semana 4). Sistemas fluviales, litorales y eólicos
+## Unidad 4. Sistemas fluviales, litorales y eólicos
 
 - Conceptos básicos de **hidrología** e **hidráulica fluvial**; **procesos fluviales**.
 
@@ -160,155 +175,159 @@ Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
 
 ## Estrategias y actividades formativas
 
-- **E1.** Estudio de casos de aplicación de la geomorfología.  
+* **E1. Curso organizado por prácticas integradoras (taller + defensa)**  
+  La asignatura se estructura en **4 prácticas de unidad** y **1 proyecto de desarrollo**.  
+  Cada práctica constituye un **ciclo completo de trabajo académico**, que puede ocupar **varios días de clase**, e incluye obligatoriamente:
 
-- **E2.** Clase expositiva.  
+  1. planteamiento del problema y formulación de preguntas,
+  2. recorrido guiado por el contenido teórico de la unidad (evidenciado en el manuscrito),
+  3. desarrollo del análisis reproducible,
+  4. elaboración de un **manuscrito científico reproducible**,
+  5. elaboración de una **presentación de diapositivas**,
+  6. **presentación oral** (17 minutos) y espacio para preguntas (3 minutos), y
+  7. **evaluación en aula con calificación inmediata**.
 
-- **E3.** Aprendizaje basado en problemas (ABP).  
+  Las prácticas de unidad deberán realizarse **de forma individual, y deberá demostrar dominio completo del trabajo durante la defensa oral**.
 
-- **E4.** Aprendizaje por descubrimiento e indagación.  
+* **E2. Ciclo estándar de desarrollo de cada práctica (trabajo en casa + taller en aula)**  
+  Cada práctica se desarrolla siguiendo un ciclo estándar de trabajo progresivo, que combina estudio autónomo en casa y trabajo dirigido en aula.  
+  La regla general es: **cada persona avanza en casa los apartados del día correspondiente**, y utiliza el tiempo de aula para **traer problemas concretos**, resolver dudas, validar decisiones y preparar la defensa. En particular, **el Día 2 asume que el Día 1 ya está resuelto**, y así sucesivamente.
 
-- **E5.** Salida de campo (si aplica), con colecta de datos propios.  
+  * **Día 1. Planteamiento y diseño**
+    * En casa (previo a la clase): lectura inicial del contenido teórico de la unidad y exploración preliminar del problema con apoyo del tutor de IA; identificación de dudas concretas.
+    * En aula: presentación del problema, formulación de preguntas de investigación, discusión de supuestos, definición de datos y planificación del análisis.
 
-- **E6.** Tutorías regulares. **Lugar:** aula FC-203. **Días:** miércoles a viernes. **Horario:** 9 am a 1 pm (también disponibilidad por las tardes).  
+  * **Día 2. Desarrollo metodológico y análisis preliminar**
+    * En casa: resolución completa de las tareas del día 1 y avance preliminar del análisis (lectura teórica, preparación de datos, primeros resultados).
+    * En aula: resolución de dudas conceptuales y metodológicas, verificación de reproducibilidad, revisión de resultados preliminares y ajustes del diseño.
+
+  * **Día 3. Resultados y redacción**
+    * En casa: consolidación del análisis, redacción de métodos y resultados, elaboración preliminar de figuras y tablas, avance del manuscrito y de las diapositivas.
+    * En aula: revisión técnica rápida, discusión de interpretación, control de calidad y preparación de la defensa.
+
+  * **Día 4. Presentación, defensa y evaluación**
+    * Presentación oral (**17 minutos + 3 minutos de preguntas**).
+    * Defensa pública del trabajo.
+    * **Evaluación en aula** y comunicación inmediata de la calificación.
+
+  Este esquema es flexible y puede ajustarse según la complejidad de cada práctica, pero en todos los casos se exige que **cada estudiante avance los apartados correspondientes en casa** y utilice el tiempo de aula principalmente para **resolver problemas, recibir retroalimentación y defender su trabajo**.  
+  La transmisión extensiva de contenidos teóricos se realiza principalmente mediante estudio autónomo apoyado por el tutor de IA y los materiales del curso, y el profesor se enfoca en refuerzo conceptual, control de calidad y resolución de dudas.
+
+* **E3. Aula como espacio de trabajo académico (estudio dirigido + laboratorio)**  
+  La clase presencial se concibe principalmente como un espacio de:
+
+  * trabajo guiado sobre manuscritos, código y resultados,
+  * resolución de dudas conceptuales y metodológicas,
+  * control de reproducibilidad y calidad,
+  * presentaciones y defensas orales.
+
+* **E4. Tutoría con IA generativa como apoyo al estudio (supervisada y trazable)**  
+  La inteligencia artificial generativa se emplea como **tutor de apoyo** para el estudio del contenido teórico, la depuración de código, la redacción técnica y la estructuración de los manuscritos.  
+  Todo uso de IA debe ser **verificable y documentado** (fuentes, decisiones, supuestos, código reproducible). La evaluación se basa en el **razonamiento y la validación**, no en las respuestas generadas.
+
+* **E5. Intervenciones docentes de alto valor (microclases y tutoría especializada)**  
+  El profesor interviene mediante:
+
+  * microclases puntuales (al inicio de una práctica o cuando sea necesario),
+  * tutoría metodológica y conceptual,
+  * revisión de diseños, resultados y limitaciones,
+  * conducción de las sesiones de defensa y evaluación.
+
+* **E6. Revisión por pares y mejora iterativa**  
+  Antes de la defensa final, los trabajos podrán recibir revisión breve por pares y/o por el profesor, centrada en coherencia teórica, calidad metodológica, reproducibilidad e interpretación, promoviendo la re-escritura y mejora progresiva.
 
 ---
-
 
 ## Evaluación de los aprendizajes
 
 ### Criterios
 
-- Uso de técnicas y métodos reproducibles.
+* **Recorrido efectivo por la teoría**: el manuscrito evidencia comprensión del contenido de la unidad (conceptos usados correctamente, supuestos, interpretación).
+* **Problema y preguntas**: preguntas explícitas, bien formuladas y respondidas.
+* **Métodos y reproducibilidad**: datos/fuentes citadas, protocolo claro, código ejecutable de inicio a fin.
+* **Calidad de resultados e interpretación**: resultados correctos, interpretados y conectados con la teoría.
+* **Aporte, limitaciones y conclusiones**: aporte explícito (aunque sea pequeño), limitaciones reales y conclusiones defendibles.
+* **Comunicación escrita y oral**: manuscrito claro; presentación en **17 min + 3 min** con defensa adecuada.
+* **Uso responsable de IA**: se valora la verificación y la trazabilidad; se penaliza inventar, no citar o no poder explicar.
 
-- Identificación y resolución de problemas de investigación en geomorfología, incluyendo colecta, procesamiento y análisis de datos de campo. 
+### Técnicas e instrumentos de evaluación
 
-- Aprovechamiento de recursos informáticos, tales como aplicaciones, programación, tutor de inteligencia artificial supervisado, para el análisis y síntesis de resultados.
-
-- Síntesis de resultados de investigación en una pieza de investigación tipo manuscrito.
-
-### Técnicas e Instrumentos de evaluación
-
-<br>
+> **Importante:** la **evaluación ocurre en el aula** como parte de cada práctica. Tras la presentación y preguntas, se asigna la nota.
 
 ```{r}
 library(flextable)
-
-# Datos
 evaluacion <- data.frame(
-  No = c(1, 2, 3, 4),
+  No = 1:6,
   Tecnicas = c(
-    "Redacción de manuscrito científico de geomorfología",
-    "Formulación y resolución de problemas",
-    "Ejercicios, prácticas/problemas de clase usando recursos básicos, analógicos",
-    "Ejercicios, prácticas/problemas de clase usando recursos informáticos (aplicaciones, programación, tutor IA supervisado)"
+    "Prácticas de unidad (4): manuscrito reproducible",
+    "Prácticas de unidad (4): presentación y defensa",
+    "Proyecto de desarrollo: manuscrito reproducible (con datos de campo)",
+    "Proyecto de desarrollo: presentación y defensa",
+    "Revisión por pares + bitácora de decisiones (incluye IA supervisada)",
+    "Controles breves en aula (lectura/interpretación) cuando aplique"
   ),
   Instrumentos = c(
-    "Rúbricas, fichas de autoevaluación",
-    "Rúbricas, fichas de autoevaluación",
-    "Hoja de verificación de ejercicios y prácticas",
-    "Hoja de verificación de ejercicios y prácticas"
+    "Rúbrica de manuscrito + checklist de reproducibilidad (repo)",
+    "Rúbrica de defensa oral + hoja de evaluación (nota inmediata)",
+    "Rúbrica de manuscrito + checklist de datos/metadatos + reproducibilidad",
+    "Rúbrica de defensa oral + hoja de evaluación (nota inmediata)",
+    "Guía de revisión + plantilla de bitácora (fuentes, decisiones, IA)",
+    "Preguntas cortas / ejercicios de interpretación"
   ),
   stringsAsFactors = FALSE
 )
-
-# Flextable
 flextable(evaluacion) |>
-  set_header_labels(
-    No = "No.",
-    Tecnicas = "Técnicas",
-    Instrumentos = "Instrumentos de Evaluación"
-  ) |>
-  width(j = 1, width = 0.5) |>   # columna Técnicas
-  width(j = 2, width = 3) |>   # columna Técnicas
-  width(j = 3, width = 3) |>   # columna Instrumentos
+  set_header_labels(No = "No.", Tecnicas = "Técnicas", Instrumentos = "Instrumentos de evaluación") |>
+  width(j = 1, width = 0.3) |>
+  width(j = 2, width = 2.6) |>
+  width(j = 3, width = 2.6) |>
   fontsize(size = 10, part = "all") |>
-  align(align = "center", part = "header")
-
+  align(align = "center", part = "header") |>
+  align(j = 1, align = "center", part = "body")
 ```
+
+### Modalidad de calificación en aula
+
+* **Calificación única del profesor**
+  La nota se asigna por el profesor con base en rúbrica y checklist (manuscrito + defensa). Se comunica **al finalizar la sesión**. Estoy abierto a la autoevaluación también, pero siempre que, usando un promedio ponderado, se asigne a tu autoevaluación un peso bajo.
 
 ---
 
 ## Distribución de puntaje
 
-<br>
-
-```{r}
-# Datos
-distribucion <- data.frame(
-  Item = c(
-    "Asistencia",
-    "Prácticas de aula",
-    "Prácticas de desarrollo",
-    "Proyecto",
-    "Exámenes y exposiciones"
-  ),
-  Porcentaje = c(
-    "(max. 5%)",
-    "(max. 20%)",
-    "(min. 20, max. 30%)",
-    "(min. 20%, max. 30%)",
-    "(min. 20%, max. 30%)"
-  ),
-  stringsAsFactors = FALSE
-)
-
-ft <- flextable(distribucion) |>
-  set_header_labels(
-    Item = "Ítem",
-    Porcentaje = "Porcentaje de la nota final"
-  ) |>
-  width(j = 1, width = 3.2) |>
-  width(j = 2, width = 2.2) |>
-  fontsize(size = 10, part = "all") |>
-  align(align = "center", part = "header") |>
-  align(j = 2, align = "right", part = "body") |>
-  valign(valign = "top", part = "body") |>
-  padding(padding = 2, part = "all") |>
-  set_table_properties(layout = "fixed")
-ft
-```
+> Cada práctica (unidad y proyecto) **incluye** su(s) día(s) de desarrollo, su **presentación** y su **evaluación en aula**. La calificación se asigna el mismo día de la defensa.
 
 ---
 
 ## Recursos didácticos
 
-- Mapas, especialmente geológicos y geomorfológicos.
-
-- Libros de texto y artículos científicos.
-
-- Ejercicios resueltos.
-
-- Vídeos en línea (clases y tutorías).
-
-- Servidor de foros.
+* **Guías de recorrido teórico por unidad** (lista de conceptos/lecturas que deben reflejarse en el manuscrito).
+* **Plantilla RMarkdown por práctica** (manuscrito reproducible) y **plantilla Xaringan** (defensa).
+* **Rúbricas** (manuscrito y defensa) + **checklist de reproducibilidad**.
+* **Bitácora de decisiones** (incluye: fuentes consultadas, supuestos, decisiones metodológicas, uso de IA y verificación).
+* **IA generativa como tutor supervisado** (para estudio, depuración, redacción técnica y apoyo estadístico).
 
 ---
 
 ## Recursos tecnológicos
 
-- Servidor de programación.
+* Servidor **RStudio** (entorno oficial de ejecución y entrega reproducible).
+* **GitHub Classroom** (repositorio plantilla por práctica, control de versiones, entregas). **La entrega solo será válida si es subida a GitHub**. Es probable que cualquier IA te asista en ese proceso, pero yo también podré ayudarte, pero desde ya te doy un consejo: no dejes para el último día el *Commit*>*Push*, hazlo regularmente para que evitar sorpresas de último minuto.
+* **IA generativa** (tutor supervisado) accesible por el estudiante. El tutor se puede usar fuera y dentro del aula, pero el producto se valida en aula.
+* Bases de datos y fuentes cartográficas digitales (imágenes satelitales, mapas web y locales).  
+* Servicios en la nube de escala planetaria (**Google Earth Engine, Microsoft Planetary Computer**, entre otros).  
+* Herramientas RMarkdown / Xaringan para generación de productos.
+* Proyector / conectividad para defensas y verificación rápida del repositorio.
+* PC personal (recomendado). Si no dispones de una PC, en el aula hay habilitadas seis PC que funcionan bajo Linux (habrá más a lo largo del curso), y están preparadas para apoyarte en cualquiera de las tareas que desarollarás en el curso. Provisionalmente usa tu celular, aunque esta solución tiene limitaciones. La PC es necesaria para:
+  - Elaboración y consulta de mapas,
+  - Experimentación con simulaciones,
+  - Redacción científica,
+  - Análisis de datos mediante programación,
+  - Uso de tutor de IA de forma supervisada,
+  - Elaboración de presentaciones de diapositivas.
+> **NOTA**: Las PC disponibles en el aula no realizan copias de seguridad, ni ofrecen garantías de respaldo de lo que en ellas se guarde. Recomendación: todo lo que hagas en ellas, guárdalo en tu cuenta en la nube (e.g. GitHub, Google Drive, Dropbox, OneDrive o similar).
 
-- Proyector en el aula.
-
-- Computadora personal. Si no dispones de una, provisionalmente usa tu celular, aunque esta solución tiene limitaciones. La PC es necesaria para:
-
-  - elaboración y consulta de mapas,
-  
-  - experimentación con simulaciones,
-  
-  - redacción científica,
-  
-  - análisis de datos mediante programación,
-  
-  - uso de tutor de IA de forma supervisada,
-  
-  - elaboración de presentaciones de diapositivas.
-
-- Bases de datos y fuentes cartográficas digitales (imágenes satelitales, mapas web y locales).  
-
-- Servicios en la nube de escala planetaria (**Google Earth Engine, Microsoft Planetary Computer**, entre otros).  
-
+---
 
 # Bibliografía
 

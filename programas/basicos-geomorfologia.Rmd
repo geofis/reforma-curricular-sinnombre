@@ -1,0 +1,91 @@
+---
+title: "Básicos de la asignatura Geomorfología"
+output:
+  # pdf_document: default
+  # word_document:
+  bookdown::word_document2:
+    fig_caption: yes
+    # reference_docx: "plantillas/apa-student-paper-template-universidad-arizona.docx"
+    reference_docx: "plantilla-programas.dotx"
+    number_sections: false
+date: "2025-01-31"
+csl: "apa-es.csl"
+bibliography: bibliografia.bib
+always_allow_html: true
+header-includes:
+  - \usepackage{float}
+---
+
+
+# Básicos
+
+## Recursos de aprendizaje
+
+- Conferencia
+
+- Guía de preguntas sobre el contenido y debate
+
+- Formulación de preguntas de investigación e hipótesis
+
+- Debate
+
+- Memorización
+
+- Lectura de artículos científicos / estudios de caso
+
+- Línea de tiempo
+
+- Resolución de problemas
+
+- Proyecto y prácticas (de aula, de desarrollo). Las prácticas de aula que incluyan ejercicios, en los que se vean en la necesidad de resolver problemas, repasando la base teórica
+
+- Recursos tecnológicos (PCs en aula, servidores, IA, programación, formularios ODK)
+
+<!-- ## Ideas comunes -->
+
+<!-- - Contenido dinámico -->
+
+<!-- - Investigación y itinerarios de autoaprendizaje -->
+
+<!-- - Herramientas para garantizar el autoaprendizaje en el futuro -->
+
+<!-- - Hay que enseñar cómo aprender de forma autodidacta, pero sin perder rigor, más apretar que abarcar, estudiar el libro -->
+
+<!-- - Memorizar (qué memorizar: lo básico) -->
+
+<!-- - Técnicas que elegir. -->
+
+<!-- ## Modalidad -->
+
+<!-- - Todo modular -->
+
+<!-- - El examen no desaparece, aunque con poco valor. -->
+
+
+## Objetivo
+
+- Objetivo: Resolver problemas científicos y prácticos mediante investigación, autoaprendizaje, técnicas numéricas y uso de tecnologías aplicadas.
+
+## Salidas aplicadas/sector privado/industria, además de investigación
+
+- **Consultoría ambiental**: estudios de impacto ambiental, diagnósticos del medio físico, evaluación de alteraciones del relieve por infraestructuras, minería, urbanización y obras hidráulicas.
+
+- **Gestión y reducción del riesgo de desastres**: análisis de amenazas geomorfológicas (inundaciones, deslizamientos, erosión costera, colapsos kársticos), elaboración de mapas de susceptibilidad y apoyo a la planificación territorial.
+
+- **Ordenamiento territorial y planificación del uso del suelo**: aportes técnicos para zonificación, delimitación de áreas aptas y no aptas para distintos usos, y evaluación de la sostenibilidad física del territorio.
+
+- **Ingeniería y obras civiles (apoyo técnico)**: interpretación del relieve y de los procesos superficiales para el diseño y la evaluación de carreteras, presas, puentes, taludes, encauzamientos y otras infraestructuras.
+
+- **Modelización geomorfológica y ambiental**: simulación de procesos erosivos, evolución del paisaje, dinámica fluvial o costera, y escenarios de cambio ambiental, integrando datos topográficos, climáticos y geológicos.
+
+- **Sistemas de información geográfica y análisis espacial aplicado**: producción y análisis de modelos digitales del terreno, cartografía temática del relieve y derivación de variables geomorfológicas para estudios ambientales y territoriales.
+
+- **Sector agua y cuencas hidrográficas**: estudios de dinámica fluvial, sedimentación, estabilidad de cauces, delimitación de zonas inundables y apoyo a la gestión integrada de cuencas.
+
+- **Gestión y conservación de ecosistemas**: comprensión del papel del relieve y los procesos geomorfológicos en la distribución de hábitats, conectividad ecológica y funcionamiento de paisajes naturales y seminaturales.
+
+- **Cambio climático y adaptación**: evaluación de la respuesta del relieve y de los sistemas fluviales y costeros a cambios en precipitación, nivel del mar y eventos extremos.
+
+- **ONGD y cooperación internacional**: proyectos de desarrollo territorial, resiliencia comunitaria, gestión ambiental y reducción de vulnerabilidades físicas del territorio.
+
+- **Sector público y técnico-administrativo**: apoyo a instituciones responsables de cartografía, gestión ambiental, recursos naturales, planificación territorial y protección civil.
