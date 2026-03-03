@@ -123,7 +123,7 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 ## Estrategias y actividades formativas
 
 * **E1. Curso organizado por prácticas integradoras (taller + defensa)**  
-  La asignatura se estructura en **4 prácticas de unidad** y **1 proyecto de desarrollo**.  
+  La asignatura se estructura en **4 prácticas de unidad** y **1 proyecto de investigación/desarrollo**.  
   Cada práctica constituye un **ciclo completo de trabajo académico**, que puede ocupar **varios días de clase**, e incluye obligatoriamente:
 
   1. planteamiento del problema y formulación de preguntas,
@@ -208,8 +208,8 @@ evaluacion <- data.frame(
   Tecnicas = c(
     "Prácticas de unidad (4): manuscrito reproducible",
     "Prácticas de unidad (4): presentación y defensa",
-    "Proyecto de desarrollo: manuscrito reproducible (con datos de campo)",
-    "Proyecto de desarrollo: presentación y defensa",
+    "Proyecto de investigación/desarrollo: manuscrito reproducible (con datos de campo)",
+    "Proyecto de investigación/desarrollo: presentación y defensa",
     "Revisión por pares + bitácora de decisiones (incluye IA supervisada)",
     "Controles breves en aula (lectura/interpretación) cuando aplique"
   ),
