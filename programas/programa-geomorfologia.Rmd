@@ -9,7 +9,7 @@ output:
     fig_caption: yes
     latex_engine: xelatex
     number_sections: false
-date: "Revisado en enero de 2026"
+date: "Revisado en agosto de 2026"
 csl: "apa-es.csl"
 bibliography: bibliografia.bib
 always_allow_html: true
@@ -33,11 +33,21 @@ knitr::opts_chunk$set(
 
 # Descripción
 
-Matriculaste geomorfología, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de dos aspectos que a ti como estudiante, y a mí como profesor, nos atañen "aunque no lo sepamos": 1) la crisis existencial de la academia (lo he titulado así, valen otros títulos) y 2) reproducibilidad en las ciencias.
+Matriculaste geomorfología, bienvenida, bienvenido. Antes de profundizar en su contenido, hablemos de dos aspectos que a ti como estudiante, y a mí como profesor, nos atañen "aunque no lo sepamos": 1) la crisis existencial de la academia (lo he titulado así, valen otros títulos) y 2) reproducibilidad en la ciencia.
 
-Sobre lo primero, la crisis existencial de la academia, hay muchas opiniones, algunas de las cuales son muy críticas, aunque yo me considero "moderado". En general, se acepta que la academia está en crisis, una crisis que afecta a dos aspectos importantes: la "empleabilidad" de sus egresados y la producción científica. La baja empleabilidad tiene múltiples causas, pero una de las más importantes es que el grado ya ha dejado de ser una garantía de estabilidad, lo cual también ha conducido a una serie de problemas que son conocidos por todos: precariedad laboral, dificultad para acceder al primer empleo, entre otros. Algunos culpan a la cuestionable calidad de la docencia (especialmente en la enseñanza preuniversitaria), y otros a la implementación de enfoques contemporáneos de enseñanza-aprendizaje, como el aprendizaje basado en competencias. Por otro lado, respecto de la producción científica en la academia, desde hace años se "vive" (o sobrevive) bajo el modelo *publish or perish*, el cual ha tenido consecuencias nefastas sobre qué conocimiento se produce en la universidad. Los académicos se ven bajo la presión de publicar, es decir, básicamente, publicar por publicar, y esto lleva a una feroz competencia por fondos, una banalización de la producción científico (e.g. *papers* irrelevantes), y a una falta de tiempo para la reflexión y el pensamiento crítico. Todo esto afecta a la calidad de la investigación, pero también a la formación de sus estudiantes. Súmale a todo lo anterior, la irrupción de la "inteligencia artificial generativa" (IA en lo adelante). La IA no vino a quitarte tu trabajo como muchos aseguran, sino más bien vino a visibilizar todos los problemas y déficits que ya de por sí tenía nuestro sistema docente. Uno de los principales problemas que, a mi entender, visibilizó la IA, fue la escasa capacidad que tenemos los docentes de hacer de tutores en el aprendizaje. Otro déficits que la IA visibilizó fue el hecho de que, tanto docentes como estudiantes, no podemos prescindir del aprendizaje basado en conocimiento, pues publicaciones recientes están demostrando que quienes más provecho le están sacando a la IA son quienes tienen un conocimiento sólido de la materia que están estudiando. Pero la IA no sólo visibilizó problemas y déficits, también expuso un aspecto relevante de la enseñanza y el aprendizaje: la capacidad de crear es esencial en la docencia universitaria, y la IA no puede (por ahora) sustituir la creatividad humana, pero puede ayudarla enormemente. En ciencias, necesitamos creatividad para muchas tareas, desde formular preguntas hasta resolver problemas. En definitiva, la IA vino a recordarnos que la docencia universitaria, además de ser crítica, creativa y motivadora, debe apoyarse en las herramientas más modernas en cada momento.
+## La crisis existencial de la academia
 
-Sobre lo segundo, la reproducibilidad en la ciencia, este es un tema más antiguo, pero aún vigente. Imagina la reproducibilidad como un "sello" de garantía que debería tener todo nuevo descubrimiento que certifica algo como esto: "si yo lo produje, tú también deberías poder producirlo". Contrario a como se la ha concebido tradicionalmente, la ciencia es un proceso creativo y crítico, que despierta la curiosidad y la motivación e, idealmente, es una producción humana justa. Pero la ciencia está inmersa, desde hace décadas, en una crisis de reproducibilidad que diezma su capacidad intrínseca para crear nuevo conocimiento, y que está convirtiéndola en una herramienta injusta. Diariamente, en todo el mundo millones de personas dedican ingentes cantidades de horas a la investigación. Aun así, difícilmente un equipo de investigadores ni tan siquiera intenta reproducir los estudios de otros, y mucho menos se consiguen replicar protocolos usando nuevos datos. Se atribuye este déficit a que, al publicar resultados científicos, no se aportan ni las fuentes, ni los métodos empleados. Aunque el panorama está cambiando, la única forma de aumentar la reproducibilidad, pasa por compartir las fuentes y utilizar métodos reproducibles. En definitiva, para hacer ciencia, necesitamos abrir nuestros métodos y publicar nuestros protocolos.
+Sobre lo primero, la crisis existencial de la academia, hay muchas opiniones, algunas de las cuales son muy críticas, aunque yo me considero "moderado". En general, se acepta que la academia está en crisis, una crisis que afecta a dos aspectos importantes: la "empleabilidad" de sus egresados y la producción científica. La baja empleabilidad tiene múltiples causas, pero una de las más importantes es que el grado ya ha dejado de ser una garantía de estabilidad, lo cual también ha conducido a una serie de problemas que son conocidos por todos: precariedad laboral, dificultad para acceder al primer empleo, entre otros. Algunos culpan a la cuestionable calidad de la docencia (especialmente en la enseñanza preuniversitaria), y otros a la implementación de enfoques contemporáneos de enseñanza-aprendizaje, como el aprendizaje basado en competencias.
+
+Por otro lado, en cuanto a lo segundo, la producción científica en la academia, desde hace años se "vive" (o se sobrevive) bajo el modelo *publish or perish*, el cual ha tenido consecuencias nefastas sobre qué conocimiento se produce en la universidad. Los académicos se ven bajo la presión de publicar, es decir, básicamente, publicar por publicar, y esto lleva a una feroz competencia por fondos, una banalización de la producción científico (e.g. *papers* irrelevantes), y a una falta de tiempo para la reflexión y el pensamiento crítico. Todo esto afecta a la calidad de la investigación, pero también a la formación de sus estudiantes.
+
+Súmale a todo lo anterior, la irrupción de la "inteligencia artificial generativa" (IA en lo adelante). La IA no vino a quitarte tu trabajo como muchos aseguran, sino más bien vino a visibilizar todos los problemas y déficits que ya de por sí tenía nuestro sistema docente. Uno de los principales problemas que, a mi entender, visibilizó la IA, fue la escasa capacidad que tenemos los docentes de hacer de tutores en el aprendizaje. Otro déficit que la IA visibilizó fue el hecho de que, tanto docentes como estudiantes, no podemos prescindir del aprendizaje basado en conocimiento, pues publicaciones recientes están demostrando que quienes más provecho le están sacando a la IA son quienes tienen un conocimiento sólido de la materia que están estudiando. Pero la IA no sólo visibilizó problemas y déficits, también expuso un aspecto relevante de la enseñanza y el aprendizaje: la capacidad de crear es esencial en la docencia universitaria, y la IA no puede (por ahora) sustituir la creatividad humana, pero sí que puede ayudarla enormemente. En ciencias, necesitamos creatividad para muchas tareas, desde formular preguntas hasta resolver problemas. En definitiva, la IA vino a recordarnos que la docencia universitaria, además de ser crítica, creativa y motivadora, debe apoyarse en las herramientas más modernas en cada momento.
+
+## Reproducibilidad en la ciencia
+
+La reproducibilidad en la ciencia es un problema antiguo pero aún vigente. Imagina la reproducibilidad como un "sello" de garantía que debería tener todo nuevo descubrimiento que certifica algo como esto: "si yo lo produje, tú también deberías poder producirlo". Contrario a como se la ha concebido tradicionalmente, la ciencia es un proceso creativo y crítico, que despierta la curiosidad y la motivación e, idealmente, es una producción humana justa. Pero la ciencia está inmersa, desde hace décadas, en una crisis de reproducibilidad que diezma su capacidad intrínseca para crear nuevo conocimiento, y que está convirtiéndola en una herramienta injusta. Diariamente, en todo el mundo millones de personas dedican ingentes cantidades de horas a la investigación. Aun así, difícilmente un equipo de investigadores ni tan siquiera intenta reproducir los estudios de otros, y mucho menos se consiguen replicar protocolos usando nuevos datos. Se atribuye este déficit a que, al publicar resultados científicos, no se aportan ni las fuentes, ni los métodos empleados. Aunque el panorama está cambiando, la única forma de aumentar la reproducibilidad, pasa por compartir las fuentes y utilizar métodos reproducibles. En definitiva, para hacer ciencia, necesitamos abrir nuestros métodos y publicar nuestros protocolos.
+
+## Volvamos a Geomorfología
 
 Ahora sí, hablemos de geomorfología, pasando por una cita, primero en su idioma original, luego traducida:
 
@@ -81,23 +91,30 @@ Al finalizar la asignatura, estas afirmaciones deberían ser ciertas:
 
 - RAE3. Comprendes los principios geográficos de la geomorfología, así como los procesos geomorfológicos y la historia geológica del planeta.
 
+- RAE4. Evalúas críticamente las respuestas y productos generados con apoyo de inteligencia artificial, identificando y demostrando errores, limitaciones o simplificaciones de carácter técnico, conceptual o epistemológico, y proponiendo, cuando corresponda, una alternativa fundamentada.
+
 ---
 
 # Organización del curso
 
 
-```{r, warning=F, message=F, echo=F}
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
 library(magick)
 
-# Leer el PDF
-pdf_img <- image_read_pdf("../esquema-comun-materias/esquema-comun-materias.pdf",
-                          density = 300)  # density mejora resolución
+tex_file <- "../esquema-comun-materias/esquema-comun-materias.tex"
+pdf_file <- "../esquema-comun-materias/esquema-comun-materias.pdf"
+jpg_file <- "../presentaciones/esquema-comun-materias.jpg"
 
-# Guardar como JPG
-image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", format = "jpg")
+# TEX -> PDF
+invisible(tinytex::latexmk(tex_file, engine = "pdflatex"))
+
+# PDF -> JPG
+pdf_img <- image_read_pdf(pdf_file, density = 300)
+image_write(pdf_img, path = jpg_file, format = "jpg")
 ```
 
-![](../presentaciones/esquema-comun-materias.jpg){width=90%}
+
+![](../presentaciones/esquema-comun-materias.jpg){width=100%}
 
 ## Unidad 1. Fundamentos, bases geológicas y tiempo en geomorfología
 
@@ -175,19 +192,28 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 
 ## Estrategias y actividades formativas
 
-* **E1. Curso organizado por prácticas integradoras (taller + defensa)**  
-  La asignatura se estructura en **4 prácticas de unidad** y **1 proyecto de desarrollo**.  
-  Cada práctica constituye un **ciclo completo de trabajo académico**, que puede ocupar **varios días de clase**, e incluye obligatoriamente:
+<!-- * **E1. Curso organizado por prácticas integradoras (taller + defensa)**   -->
+<!--   La asignatura se estructura en **4 prácticas de unidad** y **1 proyecto de desarrollo** (también llamado "proyecto de investigación" o "manuscrito final").   -->
 
-  1. planteamiento del problema y formulación de preguntas,
-  2. recorrido guiado por el contenido teórico de la unidad (evidenciado en el manuscrito),
-  3. desarrollo del análisis reproducible,
-  4. elaboración de un **manuscrito científico reproducible**,
-  5. elaboración de una **presentación de diapositivas**,
-  6. **presentación oral** (17 minutos) y espacio para preguntas (3 minutos), y
-  7. **evaluación en aula con calificación inmediata**.
+* **E1. Curso organizado por prácticas integradoras y proyecto de investigación (taller + defensa)**  
+  La asignatura se estructura en **4 prácticas de unidad** (también llamadas "minimanuscritos") y **1 proyecto de investigación** (también llamado "proyecto de desarrollo" o "manuscrito") de naturaleza y nivel de exigencia diferentes.
 
-  Las prácticas de unidad deberán realizarse **de forma individual, y deberá demostrar dominio completo del trabajo durante la defensa oral**.
+  Las **prácticas de unidad** son ejercicios formativos de alcance acotado. Cada una culmina en un **minimanuscrito científico reproducible**, de exigencia moderada, y una presentación y defensa oral. Su finalidad principal es recorrer, aplicar e integrar los contenidos de la unidad correspondiente.
+
+  El **proyecto de investigación** constituye el trabajo de mayor nivel de exigencia de la asignatura y culmina en un **manuscrito científico de mayor profundidad**. Debe realizar una aportación propia mediante, al menos, una de estas vías: **generar nuevo conocimiento en geomorfología, resolver un problema geomorfológico o desarrollar una herramienta, método o recurso que ayude a otras personas a resolver problemas geomorfológicos**.
+  
+  Las prácticas y el proyecto constituyen un **ciclo completo de trabajo académico**, que puede ocupar **varios días de clase**, e incluye obligatoriamente lo siguiente:
+
+  1. Planteamiento del problema y formulación de preguntas;
+  2. Recorrido guiado por el contenido teórico de la unidad (evidenciado en el manuscrito);
+  3. Desarrollo del análisis reproducible;
+  4. **Auditoría crítica del uso de IA**, en la que se identifique y demuestre al menos un error, limitación, simplificación injustificada o respuesta problemática producida por la IA durante el desarrollo de la práctica, ya sea de carácter **técnico, conceptual o epistemológico**;
+  5. Elaboración de un **minimanuscrito (en el caso de prácticas de unidad) o manuscrito (en el caso del proyecto) científico reproducible**;
+  6. Elaboración de una **presentación de diapositivas**;
+  7. **Presentación oral** (17 minutos) y espacio para preguntas (3 minutos);
+  8. **Evaluación en aula con calificación inmediata**.
+
+  Las prácticas de unidad y el proyecto deberán realizarse **de forma individual, y deberá demostrar dominio completo del trabajo durante la defensa oral**.
 
 * **E2. Ciclo estándar de desarrollo de cada práctica (trabajo en casa + taller en aula)**  
   Cada práctica se desarrolla siguiendo un ciclo estándar de trabajo progresivo, que combina estudio autónomo en casa y trabajo dirigido en aula.  
@@ -208,6 +234,7 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
   * **Día 4. Presentación, defensa y evaluación**
     * Presentación oral (**17 minutos + 3 minutos de preguntas**).
     * Defensa pública del trabajo.
+    * La presentación deberá incluir una sección explícita de **auditoría de la IA**, en la que se muestre al menos un producto o respuesta problemática obtenida durante el desarrollo de la práctica, se explique **dónde está el problema, por qué constituye un error o una limitación y mediante qué evidencia se demuestra**.
     * **Evaluación en aula** y comunicación inmediata de la calificación.
 
   Este esquema es flexible y puede ajustarse según la complejidad de cada práctica, pero en todos los casos se exige que **cada estudiante avance los apartados correspondientes en casa** y utilice el tiempo de aula principalmente para **resolver problemas, recibir retroalimentación y defender su trabajo**.  
@@ -221,9 +248,18 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
   * control de reproducibilidad y calidad,
   * presentaciones y defensas orales.
 
-* **E4. Tutoría con IA generativa como apoyo al estudio (supervisada y trazable)**  
-  La inteligencia artificial generativa se emplea como **tutor de apoyo** para el estudio del contenido teórico, la depuración de código, la redacción técnica y la estructuración de los manuscritos.  
-  Todo uso de IA debe ser **verificable y documentado** (fuentes, decisiones, supuestos, código reproducible). La evaluación se basa en el **razonamiento y la validación**, no en las respuestas generadas.
+<!-- * **E4. Tutoría con IA generativa como apoyo al estudio (supervisada y trazable)**   -->
+<!--   La inteligencia artificial generativa se emplea como **tutor de apoyo** para el estudio del contenido teórico, la depuración de código, la redacción técnica y la estructuración de los manuscritos.   -->
+<!--   Todo uso de IA debe ser **verificable y documentado** (fuentes, decisiones, supuestos, código reproducible). La evaluación se basa en el **razonamiento y la validación**, no en las respuestas generadas. -->
+
+* **E4. Tutoría con IA generativa como apoyo al estudio y objeto de evaluación crítica (supervisada y trazable)**
+
+  La inteligencia artificial generativa se emplea como **tutor de apoyo** para el estudio del contenido teórico, la depuración de código, la redacción técnica, la estructuración de los manuscritos y la exploración de posibles soluciones. Sus respuestas no se consideran una fuente de autoridad ni se presuponen correctas.
+
+  Todo uso de IA debe ser **verificable y documentado** (fuentes, decisiones, supuestos, código reproducible). Además, en cada práctica el estudiante deberá someter críticamente a evaluación alguna de las respuestas o soluciones obtenidas mediante IA e **identificar y demostrar al menos un error, limitación, simplificación injustificada o problema técnico, conceptual o epistemológico**. La demostración deberá apoyarse, según corresponda, en bibliografía, datos, resultados reproducibles, documentación técnica, razonamiento disciplinar u otras evidencias verificables.
+
+  Por tanto, la evaluación no se basa en la capacidad de obtener respuestas de una IA, sino en la capacidad de **interrogarlas, verificarlas, detectar sus límites, corregirlas y defender críticamente las decisiones adoptadas**.
+
 
 * **E5. Intervenciones docentes de alto valor (microclases y tutoría especializada)**  
   El profesor interviene mediante:
@@ -247,8 +283,9 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 * **Métodos y reproducibilidad**: datos/fuentes citadas, protocolo claro, código ejecutable de inicio a fin.
 * **Calidad de resultados e interpretación**: resultados correctos, interpretados y conectados con la teoría.
 * **Aporte, limitaciones y conclusiones**: aporte explícito (aunque sea pequeño), limitaciones reales y conclusiones defendibles.
+* **Nivel de exigencia diferenciado**: en las prácticas se evalúa principalmente el aprendizaje, la aplicación correcta de los contenidos y la reproducibilidad del trabajo. En el proyecto de investigación se exige, además, mayor profundidad conceptual y metodológica y una **contribución propia claramente identificable y defendible**.
 * **Comunicación escrita y oral**: manuscrito claro; presentación en **17 min + 3 min** con defensa adecuada.
-* **Uso responsable de IA**: se valora la verificación y la trazabilidad; se penaliza inventar, no citar o no poder explicar.
+* **Uso y auditoría crítica de IA**: se valora la trazabilidad de su uso, la verificación independiente de sus respuestas y, especialmente, la capacidad de **identificar, demostrar, explicar y corregir errores o limitaciones técnicas, conceptuales o epistemológicas**. No se considerará suficiente afirmar que la IA se equivocó: deberá aportarse evidencia o razonamiento que permita demostrarlo.
 
 ### Técnicas e instrumentos de evaluación
 
@@ -259,13 +296,13 @@ library(flextable)
 evaluacion <- data.frame(
   No = 1:6,
   Tecnicas = c(
-    "Prácticas de unidad (4): manuscrito reproducible",
-    "Prácticas de unidad (4): presentación y defensa",
-    "Proyecto de desarrollo: manuscrito reproducible (con datos de campo)",
-    "Proyecto de desarrollo: presentación y defensa",
-    "Revisión por pares + bitácora de decisiones (incluye IA supervisada)",
-    "Controles breves en aula (lectura/interpretación) cuando aplique"
-  ),
+  "Prácticas de unidad (4): minimanuscrito reproducible",
+  "Prácticas de unidad (4): presentación y defensa",
+  "Proyecto de investigación: manuscrito científico",
+  "Proyecto de investigación: presentación y defensa",
+  "Revisión por pares + bitácora de decisiones (incluye IA supervisada)",
+  "Controles breves en aula (lectura/interpretación) cuando aplique"
+),
   Instrumentos = c(
     "Rúbrica de manuscrito + checklist de reproducibilidad (repo)",
     "Rúbrica de defensa oral + hoja de evaluación (nota inmediata)",
@@ -304,7 +341,7 @@ flextable(evaluacion) |>
 * **Guías de recorrido teórico por unidad** (lista de conceptos/lecturas que deben reflejarse en el manuscrito).
 * **Plantilla RMarkdown por práctica** (manuscrito reproducible) y **plantilla Xaringan** (defensa).
 * **Rúbricas** (manuscrito y defensa) + **checklist de reproducibilidad**.
-* **Bitácora de decisiones** (incluye: fuentes consultadas, supuestos, decisiones metodológicas, uso de IA y verificación).
+* **Bitácora de decisiones** (incluye: fuentes consultadas, supuestos, decisiones metodológicas, uso de IA, verificación y registro de errores o limitaciones detectados en sus respuestas).
 * **IA generativa como tutor supervisado** (para estudio, depuración, redacción técnica y apoyo estadístico).
 
 ---
