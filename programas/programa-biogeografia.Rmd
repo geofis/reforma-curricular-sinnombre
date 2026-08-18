@@ -62,21 +62,29 @@ RAE2.	Aplicas métodos y técnicas usados en biogeografía para analizar la biod
 
 RAE3.	Comprendes los principios geográficos y ecológicos de la biogeografía, así como los procesos biogeográficos y la historia de la biota en la Tierra.
 
+RAE4. Evalúas críticamente las respuestas y productos generados con apoyo de inteligencia artificial, identificando y demostrando errores, limitaciones o simplificaciones de carácter técnico, conceptual o epistemológico, y proponiendo, cuando corresponda, una alternativa fundamentada.
+
+
 # Organización del curso
 
 
-```{r, warning=F, message=F, echo=F}
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
 library(magick)
 
-# Leer el PDF
-pdf_img <- image_read_pdf("../esquema-comun-materias/esquema-comun-materias.pdf",
-                          density = 300)  # density mejora resolución
+tex_file <- "../esquema-comun-materias/esquema-comun-materias.tex"
+pdf_file <- "../esquema-comun-materias/esquema-comun-materias.pdf"
+jpg_file <- "../presentaciones/esquema-comun-materias.jpg"
 
-# Guardar como JPG
-image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", format = "jpg")
+# TEX -> PDF
+invisible(tinytex::latexmk(tex_file, engine = "pdflatex"))
+
+# PDF -> JPG
+pdf_img <- image_read_pdf(pdf_file, density = 300)
+image_write(pdf_img, path = jpg_file, format = "jpg")
 ```
 
-![](../presentaciones/esquema-comun-materias.jpg){width=90%}
+
+![](../presentaciones/esquema-comun-materias.jpg){width=100%}
 
 ## Unidad 1. Fundamentos, contexto de la biogeografía y repaso de ecología numérica
 
@@ -122,40 +130,45 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 
 ## Estrategias y actividades formativas
 
-* **E1. Curso organizado por prácticas integradoras (taller + defensa)**  
-  La asignatura se estructura en **4 prácticas de unidad** y **1 proyecto de investigación/desarrollo**.  
+* **E1. Curso organizado por prácticas integradoras y proyecto de investigación (taller + defensa)**  
+  La asignatura se estructura en **4 prácticas de unidad** y **1 proyecto de investigación**, de naturaleza y nivel de exigencia diferentes.
+
+  Las **prácticas de unidad** son ejercicios formativos de alcance acotado. Cada una culmina en un **minimanuscrito científico reproducible**, de exigencia moderada, y una presentación y defensa oral. Su finalidad principal es recorrer, aplicar e integrar los contenidos de la unidad correspondiente.
+
+  El **proyecto de investigación** constituye el trabajo de mayor nivel de exigencia de la asignatura y culmina en un **manuscrito científico de mayor profundidad**. Debe realizar una aportación propia mediante, al menos, una de estas vías: **generar nuevo conocimiento en biogeografía, responder una pregunta biogeográfica no resuelta, resolver un problema biogeográfico o desarrollar una herramienta, método o recurso que ayude a otras personas a estudiar o resolver problemas biogeográficos**.
+
   Cada práctica constituye un **ciclo completo de trabajo académico**, que puede ocupar **varios días de clase**, e incluye obligatoriamente:
 
   1. planteamiento del problema y formulación de preguntas,
-  2. recorrido guiado por el contenido teórico de la unidad (evidenciado en el manuscrito),
+  2. recorrido guiado por el contenido teórico de la unidad (evidenciado en el minimanuscrito),
   3. desarrollo del análisis reproducible,
-  4. elaboración de un **manuscrito científico reproducible**,
-  5. elaboración de una **presentación de diapositivas**,
-  6. **presentación oral** (17 minutos) y espacio para preguntas (3 minutos), y
-  7. **evaluación en aula con calificación inmediata**.
-
-  Las prácticas de unidad podrán realizarse **de forma individual o en grupos de dos estudiantes**; en ambos casos, **cada integrante deberá demostrar dominio completo del trabajo durante la defensa oral**.
+  4. **auditoría crítica del uso de IA**, en la que se identifique y demuestre al menos un error, limitación, simplificación injustificada o respuesta problemática producida por la IA durante el desarrollo de la práctica, ya sea de carácter **técnico, conceptual o epistemológico**,
+  5. elaboración de un **minimanuscrito científico reproducible**,
+  6. elaboración de una **presentación de diapositivas**,
+  7. **presentación oral** (17 minutos) y espacio para preguntas (3 minutos), y
+  8. **evaluación en aula con calificación inmediata**.
 
 * **E2. Ciclo estándar de desarrollo de cada práctica (trabajo en casa + taller en aula)**  
   Cada práctica se desarrolla siguiendo un ciclo estándar de trabajo progresivo, que combina estudio autónomo en casa y trabajo dirigido en aula.  
   La regla general es: **cada persona (o pareja) avanza en casa los apartados del día correspondiente**, y utiliza el tiempo de aula para **traer problemas concretos**, resolver dudas, validar decisiones y preparar la defensa. En particular, **el Día 2 asume que el Día 1 ya está resuelto**, y así sucesivamente.
 
   * **Día 1. Planteamiento y diseño**
-    * En casa (previo a la clase): lectura inicial del contenido teórico de la unidad y exploración preliminar del problema con apoyo del tutor de IA; identificación de dudas concretas.
+    * En casa (previo a la clase): lectura inicial del contenido teórico de la unidad y exploración preliminar del problema con apoyo del tutor de IA; identificación de dudas concretas y de afirmaciones, explicaciones o propuestas de la IA que requieran verificación.
     * En aula: presentación del problema, formulación de preguntas de investigación, discusión de supuestos, definición de datos y planificación del análisis.
 
   * **Día 2. Desarrollo metodológico y análisis preliminar**
     * En casa: resolución completa de las tareas del día 1 y avance preliminar del análisis (lectura teórica, preparación de datos, primeros resultados).
-    * En aula: resolución de dudas conceptuales y metodológicas, verificación de reproducibilidad, revisión de resultados preliminares y ajustes del diseño.
+    * En aula: resolución de dudas conceptuales y metodológicas, verificación de reproducibilidad, revisión de resultados preliminares, ajustes del diseño y contraste de las respuestas o soluciones propuestas por la IA.
 
   * **Día 3. Resultados y redacción**
     * En casa: consolidación del análisis, redacción de métodos y resultados, elaboración preliminar de figuras y tablas, avance del manuscrito y de las diapositivas.
-    * En aula: revisión técnica rápida, discusión de interpretación, control de calidad y preparación de la defensa.
+    * En aula: revisión técnica rápida, discusión de interpretación, control de calidad, selección y documentación del error o limitación de IA que será defendido y preparación de la defensa.
 
   * **Día 4. Presentación, defensa y evaluación**
     * Presentación oral (**17 minutos + 3 minutos de preguntas**).
     * Defensa pública del trabajo.
     * **Evaluación en aula** y comunicación inmediata de la calificación.
+    * La presentación deberá incluir una sección explícita de **auditoría de la IA**, en la que se muestre al menos un producto o respuesta problemática obtenida durante el desarrollo de la práctica, se explique **dónde está el problema, por qué constituye un error o una limitación y mediante qué evidencia se demuestra**.
 
   Este esquema es flexible y puede ajustarse según la complejidad de cada práctica, pero en todos los casos se exige que **cada estudiante avance los apartados correspondientes en casa** y utilice el tiempo de aula principalmente para **resolver problemas, recibir retroalimentación y defender su trabajo**.  
   La transmisión extensiva de contenidos teóricos se realiza principalmente mediante estudio autónomo apoyado por el tutor de IA y los materiales del curso, y el profesor se enfoca en refuerzo conceptual, control de calidad y resolución de dudas.
@@ -168,9 +181,18 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
   * control de reproducibilidad y calidad,
   * presentaciones y defensas orales.
 
-* **E4. Tutoría con IA generativa como apoyo al estudio (supervisada y trazable)**  
-  La inteligencia artificial generativa se emplea como **tutor de apoyo** para el estudio del contenido teórico, la depuración de código, la redacción técnica y la estructuración de los manuscritos.  
-  Todo uso de IA debe ser **verificable y documentado** (fuentes, decisiones, supuestos, código reproducible). La evaluación se basa en el **razonamiento y la validación**, no en las respuestas generadas.
+* **E4. Tutoría con IA generativa como apoyo al estudio y objeto de evaluación crítica (supervisada y trazable)**  
+  La inteligencia artificial generativa se emplea como **tutor de apoyo** para el estudio del contenido teórico, la depuración de código, la redacción técnica, la estructuración de los manuscritos y la exploración de posibles soluciones. Sus respuestas no se consideran una fuente de autoridad ni se presuponen correctas.
+
+  Todo uso de IA debe ser **verificable y documentado** (fuentes, decisiones, supuestos, código reproducible). Además, en cada práctica el estudiante deberá someter críticamente a evaluación alguna de las respuestas o soluciones obtenidas mediante IA e **identificar y demostrar al menos un error, limitación, simplificación injustificada o problema técnico, conceptual o epistemológico**. La demostración deberá apoyarse, según corresponda, en documentación de el o los *prompts* enviados y la o las respuestas de la IA, bibliografía, datos, resultados reproducibles, documentación técnica, razonamiento disciplinar u otras evidencias verificables.
+  
+  Los errores o limitaciones identificados podrán pertenecer, entre otras, a las siguientes categorías: **técnico-metodológica**, cuando afecten al código, los datos, los procedimientos analíticos, los métodos estadísticos o espaciales o su aplicación; **conceptual-disciplinar**, cuando impliquen un uso incorrecto o insuficiente de conceptos, teorías o procesos propios de la biogeografía y la ecología; e **inferencial-epistemológica**, cuando afecten a la interpretación de la evidencia, los supuestos, la relación entre asociación y causalidad, el alcance de las conclusiones o aquello que los datos permiten afirmar. **No será necesario identificar errores de las tres categorías en cada práctica**.
+
+  En biogeografía se prestará especial atención a afirmaciones de la IA relativas a **distribución de especies, taxonomía, relaciones ecológicas, causalidad, procesos históricos y evolutivos, adecuación de los métodos estadísticos y espaciales, calidad de los datos y fuentes bibliográficas**, ámbitos en los que una respuesta aparentemente plausible puede ser incorrecta o estar insuficientemente fundamentada.
+
+  Por tanto, la evaluación no se basa en la capacidad de obtener respuestas de una IA, sino en la capacidad de **interrogarlas, verificarlas, detectar sus límites, corregirlas y defender críticamente las decisiones adoptadas**.
+  
+  Tener en cuenta lo siguiente: una IA puede afirmar, convincentemente, que una especie está presente en La Española cuando no lo está; confundir un sinónimo taxonómico; interpretar una correlación especie–elevación como causalidad; recomendar *Euclidean distance* donde la estructura de los datos exige otra cosa; confundir diversidad alfa/beta; ignorar autocorrelación espacial; tratar puntos de GBIF como ausencias; recomendar un SDM sin considerar sesgo de muestreo; o inventar una explicación vicariancista para un patrón que no permite inferirla. Es decir, allí donde el razonamiento, la interpretación y la validación son esenciales, la IA puede fallar y el/la estudiante debe ser capaz de detectarlo y demostrarlo.
 
 * **E5. Intervenciones docentes de alto valor (microclases y tutoría especializada)**  
   El profesor interviene mediante:
@@ -195,7 +217,8 @@ image_write(pdf_img, path = "../presentaciones/esquema-comun-materias.jpg", form
 * **Calidad de resultados e interpretación**: resultados correctos, interpretados y conectados con la teoría.
 * **Aporte, limitaciones y conclusiones**: aporte explícito (aunque sea pequeño), limitaciones reales y conclusiones defendibles.
 * **Comunicación escrita y oral**: manuscrito claro; presentación en **17 min + 3 min** con defensa adecuada.
-* **Uso responsable de IA**: se valora la verificación y la trazabilidad; se penaliza inventar, no citar o no poder explicar.
+* **Uso y auditoría crítica de IA**: se valora la trazabilidad de su uso, la verificación independiente de sus respuestas y, especialmente, la capacidad de **identificar, demostrar, explicar y corregir errores o limitaciones técnico-metodológicas, conceptuales-disciplinares o inferenciales-epistemológicas**. No se considerará suficiente afirmar que la IA se equivocó: deberá aportarse evidencia o razonamiento que permita demostrarlo. **La evaluación considerará la calidad y profundidad de la auditoría, no la cantidad de errores encontrados ni la cobertura de todas las categorías**.
+* **Nivel de exigencia diferenciado**: en las prácticas se evalúa principalmente el aprendizaje, la aplicación correcta de los contenidos y la reproducibilidad del trabajo. En el proyecto de investigación se exige, además, mayor profundidad conceptual y metodológica y una **contribución propia claramente identificable y defendible**.
 
 ### Técnicas e instrumentos de evaluación
 
@@ -206,12 +229,12 @@ library(flextable)
 evaluacion <- data.frame(
   No = 1:6,
   Tecnicas = c(
-    "Prácticas de unidad (4): manuscrito reproducible",
-    "Prácticas de unidad (4): presentación y defensa",
-    "Proyecto de investigación/desarrollo: manuscrito reproducible (con datos de campo)",
-    "Proyecto de investigación/desarrollo: presentación y defensa",
-    "Revisión por pares + bitácora de decisiones (incluye IA supervisada)",
-    "Controles breves en aula (lectura/interpretación) cuando aplique"
+  "Prácticas de unidad (4): minimanuscrito reproducible",
+  "Prácticas de unidad (4): presentación y defensa",
+  "Proyecto de investigación: manuscrito científico",
+  "Proyecto de investigación: presentación y defensa",
+  "Revisión por pares + bitácora de decisiones (incluye IA supervisada)",
+  "Controles breves en aula (lectura/interpretación) cuando aplique"
   ),
   Instrumentos = c(
     "Rúbrica de manuscrito + checklist de reproducibilidad (repo)",
@@ -251,7 +274,7 @@ flextable(evaluacion) |>
 * **Guías de recorrido teórico por unidad** (lista de conceptos/lecturas que deben reflejarse en el manuscrito).
 * **Plantilla RMarkdown por práctica** (manuscrito reproducible) y **plantilla Xaringan** (defensa).
 * **Rúbricas** (manuscrito y defensa) + **checklist de reproducibilidad**.
-* **Bitácora de decisiones** (incluye: fuentes consultadas, supuestos, decisiones metodológicas, uso de IA y verificación).
+* **Bitácora de decisiones** (incluye: fuentes consultadas, supuestos, decisiones metodológicas, uso de IA, procedimientos de verificación y registro de errores o limitaciones detectados en sus respuestas).
 * **IA generativa como tutor supervisado** (para estudio, depuración, redacción técnica y apoyo estadístico).
 
 ---
